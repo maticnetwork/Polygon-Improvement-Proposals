@@ -3,34 +3,7 @@
 | 1 | PIP Purpose and Guidelines  | PIP Guidelines | Harry Rook, Mateusz Rzeszowski | [Forum]  | Continuous | Informational | 2023-22-02
 ---
 
-## Table of Contents
-- What is a PIP?
-- PIP Rational 
-- PIP Principals
-- PIP Types
-  - PIP Flow In All Tracks
-  - Idea
-  - Draft
-  - Review 
-  - Last Call
-  - Final
-- PIP Body
-  - Title 
-  - Status
-  - Abstract 
-  - Motivation
-  - Specification 
-  - Rational
-  - Backward Compatibility
-  - Test Cases
-  - Reference Implementation
-  - Security Considerations
-  - Copyright
-- PIP Editor Responsibilities
-- PIP Editors
-- References 
-- Copyright 
-
+### Abstract 
 
 Polygon Improvement Proposals (PIPs) describe community standards for the Polygon ecosystem, including core protocol specifications such as Heimdall and Bor, client APIs, and contract standards, etc.
 

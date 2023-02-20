@@ -1,15 +1,15 @@
 ## Polygon Improvement Proposals (PIPs)
 
 **Before you initiate a pull request**, please read the [PIP-1](https://github.com/0xgioser/Polygon-Improvement-Proposals/tree/main/PIPs) and [PIP-8](https://github.com/0xgioser/Polygon-Improvement-Proposals/tree/main/PIPs) process documents. Ideas should be thoroughly discussed on the [Polygon Community Forum](https://forum.polygon.technology/) first.
-If your proposal is discussing a new contract standard, make sure you submit it under the [Polygon Request for Comment (PRC) folder](https://github.com/hrook1/Polygon-Improvement-Proposals/tree/main/PIP/PRC).
+If your proposal is discussing a new contract standard, make sure you submit it under the [Polygon Request for Comment (PRC) folder](https://github.com/0xgioser/Polygon-Improvement-Proposals/tree/main/PIPs/PRC).
 For more information on the processes and the PIP format, visit the [Guide on How to PIP.md](https://github.com/0xgioser/Polygon-Improvement-Proposals/blob/main/Guide%20on%20How%20to%20PIP.md)
 
-This repository tracks ongoing improvements to the Polygon Polygon protocols. It contains:
+This repository tracks ongoing improvements to the Polygon protocols. It contains:
 
 - The [process document](https://forum.polygon.technology/) that governs how protocol changes are published.
 - The successfully submitted PIPs.
 - The [PRC folder](https://github.com/0xgioser/Polygon-Improvement-Proposals/tree/main/PIPs/PRC), which, similarly to the "Ethereum Request for Comment" (ERC), is dedicated to PIP proposals that discuss token standards.
-- The Project Management of the PIPs process and the Builders Meetings (read below).
+- The Project Management of the PIPs process and the Builder Sessions (read below).
 
 If you would like to become a PIP Editor, please check [here](https://github.com/0xgioser/Polygon-Improvement-Proposals/blob/main/How%20to%20become%20a%20PIP%20Editor.md) and [fill out this form](https://docs.google.com/forms/d/e/1FAIpQLSc6GYClhafq5sPsRDhvJeCf66dCq_iwKzwdv8uVIfu_4Y1YLw/viewform).
 
@@ -27,7 +27,7 @@ Consider any document not published by the PIP repository as a working paper. Ad
 
 ### Purpose
 
-The Polygon Builders' Sessions is a technical call intended to bring together various Polygon Labs' developers like those on the Governance, Validator support, PoS, and Research teams with the broader Polygon community to provide updates on their projects, discuss various PIPs to improve the protocols and support each other as we build Web 3.0.
+The Polygon Builder Sessions is a technical call intended to bring together various Polygon Labs' developers like those on the Governance, Validator support, PoS, and Research teams with the broader Polygon community to provide updates on their projects, discuss various PIPs to improve the protocols and support each other as we build Web 3.0.
 The calls are transcribed and recorded and will be available immediately after the meetings conclude.
 
 ### Agenda
@@ -38,7 +38,7 @@ Anyone is welcome to add an item to the agenda as long as it follows the followi
 
 - The topic is technical in nature.
 - The topic involves the Polygon protocols at a low level. This means that specific Dapps are generally not allowed as topics.
-- The topic should not be philosophical. The Builders' Sessions are not meant to decide contentious philosophical issues that the community should decide. There are exceptions to this, but generally, these topics distract from more productive technical discussion.
+- The topic should not be philosophical. The Builder Sessions are not meant to decide contentious philosophical issues that the community should decide. There are exceptions to this, but generally, these topics distract from more productive technical discussion.
 
 ### Who Can Attend
 

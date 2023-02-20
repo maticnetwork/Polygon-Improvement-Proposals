@@ -154,8 +154,8 @@ Once the PIP has satisfied the above requirements, a PIP editor will upload the 
 
 The current PIP editors are comprised of:
 
-[Mateusz Rzeszowski](https://github.com/matrzeszowski)
-[Harry Rook](https://github.com/hrook1/)
+- [Mateusz Rzeszowski](https://github.com/matrzeszowski)
+- [Harry Rook](https://github.com/hrook1/)
 
 ### References
 

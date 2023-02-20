@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 1 | PIP Purpose and Guidelines  | PIP Guidelines | Harry Rook, Mateusz Rzeszowski | [Forum]  | Continuous | Informational | 2023-22-02
+| 1 | PIP Purpose and Guidelines  | Describes community standards for the Polygon ecosystem, including core protocol specifications | Harry Rook, Mateusz Rzeszowski | [Forum](https://forum.polygon.technology/t/pip-1-pip-purpose-and-guidelines/11356)  | Continuous | Informational | 2023-22-02
 ---
 
 ### Abstract 

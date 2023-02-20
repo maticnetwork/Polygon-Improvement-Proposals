@@ -1,17 +1,17 @@
 ## Polygon Improvement Proposals (PIPs)
 
-**Before you initiate a pull request**, please read the [PIP-1](https://github.com/hrook1/Polygon-Improvement-Proposals/blob/main/PIPs/PIP%20-1%20.md) process document. Ideas should be thoroughly discussed on the [Polygon Community Forum](https://forum.polygon.technology/) first.
+**Before you initiate a pull request**, please read the [PIP-1](https://github.com/0xgioser/Polygon-Improvement-Proposals/tree/main/PIPs) and [PIP-8](https://github.com/0xgioser/Polygon-Improvement-Proposals/tree/main/PIPs) process documents. Ideas should be thoroughly discussed on the [Polygon Community Forum](https://forum.polygon.technology/) first.
 If your proposal is discussing a new contract standard, make sure you submit it under the [Polygon Request for Comment (PRC) folder](https://github.com/hrook1/Polygon-Improvement-Proposals/tree/main/PIP/PRC).
-For more information on the processes and the PIP format, visit the [How to PIP.md](https://github.com/hrook1/Polygon-Improvement-Proposals/blob/main/How%20to%20PIP.md)
+For more information on the processes and the PIP format, visit the [Guide on How to PIP.md](https://github.com/0xgioser/Polygon-Improvement-Proposals/blob/main/Guide%20on%20How%20to%20PIP.md)
 
 This repository tracks ongoing improvements to the Polygon Polygon protocols. It contains:
 
 - The [process document](https://forum.polygon.technology/) that governs how protocol changes are published.
 - The successfully submitted PIPs.
-- The [PRC folder](https://github.com/hrook1/Polygon-Improvement-Proposals/tree/main/PIP/PRC), which, similarly to the "Ethereum Request for Comment" (ERC), is dedicated to PIP proposals that discuss token standards.
+- The [PRC folder](https://github.com/0xgioser/Polygon-Improvement-Proposals/tree/main/PIPs/PRC), which, similarly to the "Ethereum Request for Comment" (ERC), is dedicated to PIP proposals that discuss token standards.
 - The Project Management of the PIPs process and the Builders Meetings (read below).
 
-If you would like to become a PIP Editor, please check [here](https://github.com/hrook1/Polygon-Improvement-Proposals/blob/main/How%20to%20become%20a%20PIP%20Editor.md) and [fill out this form](https://docs.google.com/forms/d/e/1FAIpQLSc6GYClhafq5sPsRDhvJeCf66dCq_iwKzwdv8uVIfu_4Y1YLw/viewform).
+If you would like to become a PIP Editor, please check [here](https://github.com/0xgioser/Polygon-Improvement-Proposals/blob/main/How%20to%20become%20a%20PIP%20Editor.md) and [fill out this form](https://docs.google.com/forms/d/e/1FAIpQLSc6GYClhafq5sPsRDhvJeCf66dCq_iwKzwdv8uVIfu_4Y1YLw/viewform).
 
 ### Mission
 

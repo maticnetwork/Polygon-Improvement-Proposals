@@ -2,13 +2,13 @@
 
 This repository is used for the management of various initiatives affecting the different Polygon protocols. The main use of this repository is for the Builders meetings, but it is also used for other meetings/discussions related to Polygon protocols.
 
-## Polygon Builders Sessions
+## Polygon Builder Sessions
 
 This repository is used by the Polygon community to manage various initiatives related to various Polygon protocols. This information can be used at Builders' meetings and other forum for discussion of Polygon protocols.
 
 ### Purpose
 
-The Polygon Builders Sessions is a technical call intended to bring together various core Polygon Labs’ developers who help coordinate with the community to  help determine the direction of the protocol. Polygon Labs’ Governance, Validator support, PoS and Research teams provide updates on their projects, discuss various PIPs to improve the protocol, and support each other as we build Web 3.0.
+The Polygon Builder Sessions is a technical call intended to bring together various core Polygon Labs’ developers who help coordinate with the community to  help determine the direction of the protocol. Polygon Labs’ Governance, Validator support, PoS and Research teams provide updates on their projects, discuss various PIPs to improve the protocol, and support each other as we build Web 3.0.
 
 ### Agendas
 

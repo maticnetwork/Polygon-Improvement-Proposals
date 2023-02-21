@@ -12,7 +12,7 @@ The Polygon Builder Sessions is a technical call intended to bring together vari
 
 ### Agendas
 
-The agendas for the calls are tracked in the [Agenda folder](https://github.com/0xgioser/Polygon-Improvement-Proposals/tree/main/Project%20Management) this repository. To add an item to an agenda, please [send a PR to the Agenda folder in this repo](https://github.com/0xgioser/Polygon-Improvement-Proposals/tree/main/Project%20Management/Agenda) which mentions the topic you want to discuss and links any relevant materials (PIPs, prototypes, etc.). 
+The agendas for the calls are tracked in the [Agenda folder](https://github.com/maticnetwork/Polygon-Improvement-Proposals/tree/main/Project%20Management/Agenda) this repository. To add an item to an agenda, please [send a PR to the Agenda folder in this repo](https://github.com/maticnetwork/Polygon-Improvement-Proposals/tree/main/Project%20Management/Agenda) which mentions the topic you want to discuss and links any relevant materials (PIPs, prototypes, etc.). 
 
 Anyone is welcome to add an item to the agenda as long as it follows these guidelines:
 
@@ -35,4 +35,4 @@ The sessions are independent of any organization. However, participants in the m
 
 | №   | Date                                 | Agenda                                              | Notes                                                                                                                                                                    | Recording                                                                          |
 | --- | ------------------------------------ | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
-| 1 | November 10, 2022, 14:00 UTC         | [agenda](https://github.com/0xgioser/Polygon-Improvement-Proposals/tree/main/Project%20Management/Agenda) | [notes]() | [Video](https://www.youtube.com/watch?v=CuYIL7uJomQ)|_
+| 1 | November 10, 2022, 14:00 UTC         | [agenda](https://github.com/maticnetwork/Polygon-Improvement-Proposals/tree/main/Project%20Management/Agenda) | [notes]() | [Video](https://www.youtube.com/watch?v=CuYIL7uJomQ)|_

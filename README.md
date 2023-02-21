@@ -6,7 +6,7 @@ For more information on the processes and the PIP format, visit the [Guide on Ho
 
 This repository tracks ongoing improvements to the Polygon protocols. It contains:
 
-- The [process document]https://forum.polygon.technology/t/pip-1-pip-purpose-and-guidelines/11356) that governs how protocol changes are published.
+- The [process document](https://forum.polygon.technology/t/pip-1-pip-purpose-and-guidelines/11356) that governs how protocol changes are published.
 - The successfully submitted PIPs.
 - The [PRC folder](https://github.com/maticnetwork/Polygon-Improvement-Proposals/tree/main/PIPs/PRC), which, similarly to the "Ethereum Request for Comment" (ERC), is dedicated to PIP proposals that discuss token standards.
 - The Project Management of the PIPs process and the Builder Sessions (read below).

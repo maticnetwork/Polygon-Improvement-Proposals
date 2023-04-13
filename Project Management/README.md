@@ -22,7 +22,7 @@ Anyone is welcome to add an item to the agenda as long as it follows these guide
 
 ### Who Can Attend
 
-Protocol developers, client developers, network Validators and core Polygon Labs’ researchers, community members (e.g., dApp and ecosystem community members) are invited to attend the sessions. Sometimes a non-core developer with particular expertise on a topic is invited on to discuss a specific agenda item. If you feel you would contribute to the meetings by your attendance please reach out to [Jackson Lewis](mailto:jackson@polygon.technology).
+Protocol developers, client developers, network Validators and core Polygon Labs’ researchers, community members (e.g., dApp and ecosystem community members) are invited to attend the sessions. Sometimes a non-core developer with particular expertise on a topic is invited on to discuss a specific agenda item. If you feel you would contribute to the meetings by your attendance please reach out to [Harry Rook](mailto:hrook@polygon.technology).
 
 ### Who Manages the Sessions
 

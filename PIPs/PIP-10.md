@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 10 | Increase StateSync Confirmations  | Proposal to increase the statesync confirmations in bor | Krishna Upadhyaya, Manav Darji, Pratik Patil | [Forum](https://forum.polygon.technology/t/proposal-increase-statesync-confirmations/11779)  | WIP | Core | 2023-18-04
+| 10 | Increase StateSync Confirmations  | Proposal to increase the statesync confirmations in bor | Krishna Upadhyaya, Manav Darji, Pratik Patil | [Forum](https://forum.polygon.technology/t/proposal-increase-statesync-confirmations/11779)  | Draft | Core | 2023-18-04
 ---
 
 ### Abstract 
@@ -64,4 +64,6 @@ This PIP will not be backwards compatible with the current implementation of Bor
 
 * [PIP-7: Delhi Hardfork](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-7.md)
 
+### Copyright 
+All copyrights and related rights in this work are waived under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 

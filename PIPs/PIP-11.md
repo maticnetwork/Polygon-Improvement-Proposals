@@ -91,9 +91,9 @@ The major technology choice here is the decentralized pub/sub messaging protocol
 For the P2P data distribution in the Polygon Metrics network, the [Streamr](https://streamr.network) protocol is proposed for the following reasons:
 
 * It is [scalable, fast, and robust](https://streamr.network/network-whitepaper),
-* It is already being used for [decentralized metrics collection](https://streamr.network/core/streams/streamr.eth%2Fmetrics%2Fnetwork%2Fsec/preview),
+* It is already being used for [decentralized metrics collection](https://streamr.network/hub/streams/streamr.eth%2Fmetrics%2Fnetwork%2Fsec/live-data),
 * The Streamr protocol is native to the Polygon ecosystem: the involved smart contracts (for access control etc.) are on Polygon,
-* The core Streamr team runs a [Polygon validator node](https://staking.polygon.technology/validators/146),
+* The Streamr team runs a [Polygon validator node](https://staking.polygon.technology/validators/146),
 * No new tokens are necessary - the Streamr Network works on shared reciprocity.
 
 Additionally, the choice has the following advantages against libp2p for this particular use case:
@@ -114,10 +114,10 @@ There's an initial implementation of the Metrics node in [this Github repository
 
 The below links display the raw metrics data published in realtime to the following streams, one per each node type:
 
-* [polygon-validators.eth/validator/bor ](https://streamr.network/core/streams/polygon-validators.eth%2Fvalidator%2Fbor/preview)
-* [polygon-validators.eth/validator/heimdall ](https://streamr.network/core/streams/polygon-validators.eth%2Fvalidator%2Fheimdall/preview)
-* [polygon-validators.eth/sentry/bor](https://streamr.network/core/streams/polygon-validators.eth%2Fsentry%2Fbor/preview)
-* [polygon-validators.eth/sentry/heimdall](https://streamr.network/core/streams/polygon-validators.eth%2Fsentry%2Fheimdall/preview)
+* [polygon-validators.eth/validator/bor ](https://streamr.network/hub/streams/polygon-validators.eth%2Fvalidator%2Fbor/live-data)
+* [polygon-validators.eth/validator/heimdall ](https://streamr.network/hub/streams/polygon-validators.eth%2Fvalidator%2Fheimdall/live-data)
+* [polygon-validators.eth/sentry/bor](https://streamr.network/hub/streams/polygon-validators.eth%2Fsentry%2Fbor/live-data)
+* [polygon-validators.eth/sentry/heimdall](https://streamr.network/hub/streams/polygon-validators.eth%2Fsentry%2Fheimdall/live-data)
 
 Here are snapshot examples of what the data looks like: [Bor ](https://github.com/hpihkala/polygon-metrics-node/blob/main/exampledata/bor.json), [Heimdall ](https://github.com/hpihkala/polygon-metrics-node/blob/main/exampledata/heimdall.json). As you can see, the data contains a wealth of metrics. Important point: whatever metrics are added to the Bor/Heimdall nodes in the future automatically appear in the shared data. This makes the solution very future-proof and enables the Bor and Heimdall dev teams to extend the system with new variables as they please.
 

@@ -49,7 +49,7 @@ The technical architecture presented here is scalable and robust, contains no si
 
 This proposal does not specify what kind of end-user tools should be built on top of the data. It simply describes a pipeline and protocol for collecting and distributing data to such future tooling.
 
-![Polygon metrics PIP(13)|690x261](upload://1J1MVB2oa1Ds5YFkMjclWIDXkQD.jpeg)
+![polygon1](https://user-images.githubusercontent.com/1263120/234835930-be878584-157a-4e68-8116-04561955d509.jpeg)
 
 In scope:
   * What data is shared
@@ -67,13 +67,14 @@ Out of scope:
 
 The solution introduces a new component into a validator's setup: a Metrics node. The Metrics node has low resource requirements and can run on a separate VM. The Metrics node collects the metrics by periodically querying the Prometheus metrics API present on both Heimdall and Bor nodes.
 
-![Polygon metrics PIP(6)|690x339](upload://dtKr2fOhj84rM9ks4ZdxvdcN9R6.jpeg)
+![polygon2](https://user-images.githubusercontent.com/1263120/234835968-cee63e78-f011-4dd4-9812-9195ad286ce8.jpeg)
+
 
 The Metrics node publishes the metrics data over a decentralized peer-to-peer network that implements the publish/subscribe (a.k.a. pubsub) messaging pattern. In pubsub, data is published to a named ‘topic’, and anyone can join the topic as a subscriber to receive the stream of data. The peers, consisting of Metrics nodes and subscribers, form a mesh of connections with other peers. Each peer forwards the data to a number of other peers in the network, thereby eventually reaching all peers in the network. Since each node is connected to a limited number of peers, and the data travels through multiple redundant connections, such networks scale very well, are fault tolerant, and most importantly, don’t depend on any centralized server.
 
 Each data point is cryptographically signed, ensuring that data can not be tampered with or spoofed, and it can always be traced back to the source node. Subscribers validate the signatures to ensure that the data was indeed produced by one of the validators in the Polygon network.
 
-![Polygon metrics PIP(7)|662x500](upload://zhaKYBtlLQtp2dhX0TleYGLViyJ.jpeg)
+![polygon3](https://user-images.githubusercontent.com/1263120/234835999-57b069e9-c789-412a-8719-e682a56a6b78.jpeg)
 
 The subscribers can be any kind of applications: dashboards, analytics backends, alerting and monitoring systems, and so forth. The data is public and can be subscribed to by anyone, at massive scale. Applications built on top of the raw data can do whatever they wish with it, for example aggregate data, store a history of data, or even publish the aggregated data in realtime to another topic on the same data network. The network itself can also store the raw data points published by validator nodes for later retrieval and batch processing by applications.
 
@@ -81,7 +82,7 @@ The Metrics node can be distributed as a Docker image, making deployment and ins
 
 ### Rationale / Technology choices
 
-The main technology choice here is the decentralized pub/sub messaging protocol to be used. The main alternatives in the space are:
+The major technology choice here is the decentralized pub/sub messaging protocol to be used. The main alternatives in the space are:
 
 * [LibP2P pubsub](https://docs.libp2p.io/concepts/pubsub/overview/)
 *  Derivatives of libp2p, such as [Waku v2](https://waku.org/))
@@ -93,7 +94,7 @@ For the P2P data distribution in the Polygon Metrics network, the [Streamr](http
 * It is already being used for [decentralized metrics collection](https://streamr.network/core/streams/streamr.eth%2Fmetrics%2Fnetwork%2Fsec/preview),
 * The Streamr protocol is native to the Polygon ecosystem: the involved smart contracts (for access control etc.) are on Polygon,
 * The core Streamr team runs a [Polygon validator node](https://staking.polygon.technology/validators/146),
-* No new tokens are introduced - the Streamr Network works on shared reciprocity.
+* No new tokens are necessary - the Streamr Network works on shared reciprocity.
 
 Additionally, the choice has the following advantages against libp2p for this particular use case:
 

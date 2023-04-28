@@ -9,7 +9,7 @@ This repository tracks ongoing improvements to the Polygon protocols. It contain
 - The [process document](https://forum.polygon.technology/t/pip-1-pip-purpose-and-guidelines/11356) that governs how protocol changes are published.
 - The successfully submitted PIPs.
 - The [PRC folder](https://github.com/maticnetwork/Polygon-Improvement-Proposals/tree/main/PIPs/PRC), which, similarly to the "Ethereum Request for Comment" (ERC), is dedicated to PIP proposals that discuss token standards.
-- The Project Management of the PIPs process and the Builder Sessions (read below).
+- The Project Management of the PIPs process and the Polygon Protocol Governance Calls (read below).
 
 If you would like to become a PIP Editor, please check [here](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/How%20to%20become%20a%20PIP%20Editor.md) and [fill out this form](https://docs.google.com/forms/d/e/1FAIpQLSc6GYClhafq5sPsRDhvJeCf66dCq_iwKzwdv8uVIfu_4Y1YLw/viewform).
 
@@ -27,7 +27,7 @@ Consider any document not published by the PIP repository as a working paper. Ad
 
 ### Purpose
 
-The Polygon Builder Sessions is a technical call intended to bring together various Polygon Labs' developers like those on the Governance, Validator support, PoS, and Research teams with the broader Polygon community to provide updates on their projects, discuss various PIPs to improve the protocols and support each other as we build Web 3.0.
+The Polygon Protocol Governance Call, is a technical call intended to bring together various Polygon Labs' developers like those on the Governance, Validator support, PoS, and Research teams with the broader Polygon community to provide updates on their projects, discuss various PIPs to improve the protocols and support each other as we build Web 3.0.
 The calls are transcribed and recorded and will be available immediately after the meetings conclude.
 
 ### Agenda
@@ -38,7 +38,7 @@ Anyone is welcome to add an item to the agenda as long as it follows the followi
 
 - The topic is technical in nature.
 - The topic involves the Polygon protocols at a low level. This means that specific Dapps are generally not allowed as topics.
-- The topic should not be philosophical. The Builder Sessions are not meant to decide contentious philosophical issues that the community should decide. There are exceptions to this, but generally, these topics distract from more productive technical discussion.
+- The topic should not be philosophical. The Polygon Protocol Governance Calls are not meant to decide contentious philosophical issues that the community should decide. There are exceptions to this, but generally, these topics distract from more productive technical discussion.
 
 ### Who Can Attend
 

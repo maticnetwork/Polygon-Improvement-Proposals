@@ -1,14 +1,14 @@
 # Polygon Proposals Management Repository 
 
-This repository is used for the management of various initiatives affecting the different Polygon protocols. The main use of this repository is for the Builders meetings, but it is also used for other meetings/discussions related to Polygon protocols.
+This repository is used for the management of various initiatives affecting the different Polygon protocols. The main use of this repository is for the Polygon Protocol Governance Calls, but it is also used for other meetings/discussions related to Polygon protocols.
 
-## Polygon Builder Sessions
+## Polygon Protocol Governance Call 
 
-This repository is used by the Polygon community to manage various initiatives related to various Polygon protocols. This information can be used at Builders' meetings and other forum for discussion of Polygon protocols.
+This repository is used by the Polygon community to manage various initiatives related to various Polygon protocols. This information can be used at the PPGC meetings and other forum for discussion of Polygon protocols.
 
 ### Purpose
 
-The Polygon Builder Sessions is a technical call intended to bring together various core Polygon Labs’ developers who help coordinate with the community to  help determine the direction of the protocol. Polygon Labs’ Governance, Validator support, PoS and Research teams provide updates on their projects, discuss various PIPs to improve the protocol, and support each other as we build Web 3.0.
+The Polygon Protocol Governance Call is a technical call intended to bring together various core Polygon Labs’ developers who help coordinate with the community to  help determine the direction of the protocol. Polygon Labs’ Governance, Validator support, PoS and Research teams provide updates on their projects, discuss various PIPs to improve the protocol, and support each other as we build Web 3.0.
 
 ### Agendas
 
@@ -22,13 +22,13 @@ Anyone is welcome to add an item to the agenda as long as it follows these guide
 
 ### Who Can Attend
 
-Protocol developers, client developers, network Validators and core Polygon Labs’ researchers, community members (e.g., dApp and ecosystem community members) are invited to attend the sessions. Sometimes a non-core developer with particular expertise on a topic is invited on to discuss a specific agenda item. If you feel you would contribute to the meetings by your attendance please reach out to [Harry Rook](mailto:hrook@polygon.technology).
+Protocol developers, client developers, network Validators and core Polygon Labs’ researchers, community members (e.g., dApp and ecosystem community members) are invited to attend the calls. Sometimes a non-core developer with particular expertise on a topic is invited on to discuss a specific agenda item. If you feel you would contribute to the meetings by your attendance please reach out to [Harry Rook](mailto:hrook@polygon.technology).
 
-### Who Manages the Sessions
+### Who Manages the Calls
 
-The sessions are facilitated by Jackson Lewis. The meetings are recorded and transcribed. The transcripts, meeting minutes and video will be uploaded after the completion of the meetings in this public repository.
+The calls are facilitated by Jackson Lewis. The meetings are recorded and transcribed. The transcripts, meeting minutes and video will be uploaded after the completion of the meetings in this public repository.
 
-The sessions are independent of any organization. However, participants in the meetings may also be Polygon Labs' employees.
+The calls are independent of any organization. However, participants in the meetings may also be Polygon Labs' employees.
 
 
 ### Previous Meetings
@@ -36,4 +36,4 @@ The sessions are independent of any organization. However, participants in the m
 | №   | Date                                 | Agenda                                              | Notes                                                                                                                                                                    | Recording                                                                          |
 | --- | ------------------------------------ | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
 | 1 | November 10, 2022, 14:00 UTC         | [Agenda](https://github.com/maticnetwork/Polygon-Improvement-Proposals/tree/main/Project%20Management/Agenda) | [Notes]() | [Video](https://www.youtube.com/watch?v=CuYIL7uJomQ)|_
-| 2 | April 20, 2023, 13:00 UTC         | [Agenda](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/Project%20Management/Agenda/April_20th_2023.md) | [Notes]() | [Video]()|_
+| 2 | April 20, 2023, 13:00 UTC         | [Agenda](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/Project%20Management/Agenda/April_20th_2023.md) | [Notes](https://docs.google.com/document/d/19hwmBYwEQStr9iqypjvgQDhXf1YxBgmGXJ3xULvKzZ0/edit?usp=sharing) | [Video](https://www.youtube.com/watch?v=XbwFRZOORhY&list=PLslsfan1R_z3QPf8-UrcNhCKY8XaTHZE6&index=2)|_

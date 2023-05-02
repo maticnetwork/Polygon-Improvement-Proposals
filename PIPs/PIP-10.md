@@ -11,7 +11,7 @@ Following the bad block error, reorgs were occurring at a greater frequency than
 
 This caused issues with the user experience and chain stability which we seek to address with this proposed solution.
 
-### Rational
+### Rationale
 
 At the start of each sprint, when Bor commits the state (which includes state sync transactions), it fetches state sync events from Heimdall using the two arguments below:
 

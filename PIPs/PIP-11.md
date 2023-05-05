@@ -35,7 +35,7 @@ By introducing milestones, user experience could be enhanced as it can provide f
 
 ## Specification
 
-Milestones follow a comparable format to checkpoints, but rather than utilizing the rootHash in Bor, they utilize the hash of the endblock.
+Milestones follow a comparable format to checkpoints, but rather than utilizing the `rootHash` in Bor, they utilize the hash of the `endBlock`.
 
 ```
 type Milestone struct {
@@ -51,7 +51,7 @@ type Milestone struct {
 
 ### Milestone Length
 
-The `endblock` number will be calculated by fetching the latest block and using the `16 block` Matic chain confirmation. 
+The `endBlock` number will be calculated by fetching the latest block and using the `16 block` Matic chain confirmation. 
 
 The Matic Chain Confirmation process works by waiting for a certain number of blocks to be added to the Bor chain before the `endBlock` of the milestone is selected by the proposer. This mechanism is designed to ensure that a significant number of nodes have the same `endBlock` in their canonical chain, thereby increasing the level of consensus and reducing the probability of milestone failure.
 
@@ -70,7 +70,7 @@ The proposed milestone would go through these specific checks in the handler, si
 - Handler
     - Heimdall block height should be greater than or equal to the specified fork height.
     - Milestone Length (end-start+1) should be greater than or equal to the minimum milestone length.
-    - The start block number should be one more than the latest stored milestone’s endBlock
+    - The start block number should be one more than the latest stored milestone’s end block.
     - The proposer of the milestone should match the proposer from the `MilestoneValidatorSet`. If the proposer is down for any reason, after a specific time period, a new proposer is selected through the `MilestoneTimeout` Msg similar to the way No-Ack msg’s do when the checkpoint proposer is down.
     - And in every Handler call, `MilestoneValidatorSet` is rotated to change the proposer.
 
@@ -89,8 +89,8 @@ Only the latest 100 milestones will be stored to avoid over-usage of the databas
 
 `GetVoteOnHash(startBlock, endBlock, hash, milestoneID)`
   - It will be used by Heimdall for milestone validation.
-  - Accepts the `startBlock` number, `endblock` number, `hash` of the end block (all with respect to bor) and a `milestoneID`.
-  - The `hash` is then verified against the local chain, and if it returns true, the local chain will be locked until the `endblock` number and the milestoneID will be stored in the milestoneID list.
+  - Accepts the `startBlock` number, `endBlock` number, `hash` of the end block (all with respect to bor) and a `milestoneID`.
+  - The `hash` is then verified against the local chain, and if it returns true, the local chain will be locked until the `endBlock` number and the milestoneID will be stored in the milestoneID list.
   - After voting `YES` for a particular hash, Bor would not be allowed to reorg beyond that `endBlock` until the confirmation is received from Heimdall, whether the particular milestone has passed or not (this forms the additional fork choice rule).
   - This will prevent Bor from importing fork “B” after voting `YES` for fork “A”.
   - The milestoneID of failed milestones would continue to be fetched from Heimdall, to get the confirmation for that milestone for which has been voted `YES` (by the local node) but has failed in Heimdall. 
@@ -109,7 +109,7 @@ The *whitelisted* milestone and *future milestones* will be used to:
 
 ### Finality Tag
 
-Based on the whitelisted milestone, the chain will be treated as finalized until that end block number and a `finalized` API would be implemented similarly to Ethereum. An example request/response from a testing devnet is shown below: 
+Based on the whitelisted milestone, the chain will be treated as finalized until that `endBlock` number and a `finalized` API would be implemented similarly to Ethereum. An example request/response from a testing devnet is shown below: 
 
 Request:
 ```

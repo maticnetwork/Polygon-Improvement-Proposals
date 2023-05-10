@@ -23,5 +23,5 @@ This PIP specifies the changes included in the Polygon hardfork named Delhi.
 
 ### References
 
-- [Included PIPs were finalized in Polygon Builder Sessions 001.](https://www.youtube.com/watch?v=CuYIL7uJomQ)
+- [Included PIPs were finalized in Polygon Protocol Governance Call #1](https://www.youtube.com/watch?v=CuYIL7uJomQ&list=PLslsfan1R_z3QPf8-UrcNhCKY8XaTHZE6)
 - [Polygon Forum Discussions](https://forum.polygon.technology/t/pre-pip-discussion-addressing-reorgs-and-gas-spikes/10623)

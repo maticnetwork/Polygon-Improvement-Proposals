@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 12 | Time Based StateSync Confirmations Delay  | Permanent fix to the statesync confirmations issue in bor | Jerry Chen, Pratik Patil | [Forum](PSP)  | Draft | Core | 2023-11-05
+| 12 | Time Based StateSync Confirmations Delay  | Fix to the statesync confirmations issue in bor | Jerry Chen, Pratik Patil | [Forum]()  | Draft | Core | 2023-11-05
 ---
 
 ### Abstract 

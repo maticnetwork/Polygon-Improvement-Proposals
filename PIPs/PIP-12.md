@@ -10,7 +10,7 @@
 PIP-10 sought to delay state sync intervals so that the delay in the value of `to` is comfortably larger than the time of block `n = (current block number) - (sprint length)`.  This solution still depended on the assumption that, although less likely, if a reorg of length greater than 128 takes place, the bug's resultant `BADBLOCK` error can still occur for nodes on the incoming chain. 
 
 
-### Rational
+### Rationale
 
 When calculating the value of `to`, the block header is retrieved using the function `GetHeaderByNumber` which returns the header from Bor’s local database and not from the incoming fork. During a network partition (reorg), an ideal `to` value should be taken from the incoming fork. However, Bor chooses the value based on the existing chain written in the database, leading to different values of `to`.
 

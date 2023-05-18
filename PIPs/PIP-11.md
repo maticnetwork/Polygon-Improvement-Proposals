@@ -20,11 +20,11 @@
 
 ## Abstract
 
-This proposal describes a mechanism called `milestones` that enable deterministic finality by leveraging Polygon PoS’s dual client architecture. This is done using a hybrid system that utilizes Tendermint layer consensus, along with an additional fork choice rule within the execution layer. 
+This proposal describes a mechanism called `milestones` that enable faster deterministic finality by leveraging Polygon PoS’s dual client architecture. This is done using a hybrid system that utilizes Tendermint layer consensus, along with an additional fork choice rule within the execution layer.
 
 ## Motivation
 
-Currently, finality on Polygon PoS is probabilistic, meaning that the assurance a transaction cannot be changed is determined by the number of confirmation blocks. Bor picks the canonical chain via a fork choice rule that selects the longest chain with the highest difficulty.
+Currently, finality on Polygon PoS is probabilistic up until the last checkpointed block (~ 512 blocks) after which the chain state is finalised on layer 1 via checkpointing, meaning that the assurance a transaction cannot be changed is determined by the number of confirmation blocks (1 checkpoint in this case). Bor picks the canonical chain via a fork choice rule that selects the longest chain with the highest difficulty.
 
 Probabilistic finality indicates that there is always a chance for blocks to reorg themselves. This prompts dApps and users to require a relatively high number of confirmation blocks, thus negatively impacting user experience. 
 

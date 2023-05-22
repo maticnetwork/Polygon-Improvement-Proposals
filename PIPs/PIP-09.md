@@ -4,7 +4,7 @@
 
 ### Abstract
 
-Following on from the favorable signal received for [PIP-4](https:/https://snapshot.org/#/polygonvalidators.eth/proposal/0x1e9d79b6406870ebd0b66ac256b59012f97f3f4d652052681c6fb1077e251804/), the validator performance metrics were implemented and released as an additional feature to the [Polygon Staking Dashboard](https:/https://staking.polygon.technology/) to better inform delegators about validator health. 
+Following on from the favorable signal received for [PIP-4](https://snapshot.org/#/polygonvalidators.eth/proposal/0x1e9d79b6406870ebd0b66ac256b59012f97f3f4d652052681c6fb1077e251804/), the validator performance metrics were implemented and released as an additional feature to the [Polygon Staking Dashboard](https://staking.polygon.technology/) to better inform delegators about validator health. 
 
 The following PIP proposes to maintain the current level of Performance Benchmark at 95%, instead of changing it to 98% at checkpoint number 42,943, as defined in the initially-proposed timeline (in [PIP-4](https:/https://snapshot.org/#/polygonvalidators.eth/proposal/0x1e9d79b6406870ebd0b66ac256b59012f97f3f4d652052681c6fb1077e251804/)).
 

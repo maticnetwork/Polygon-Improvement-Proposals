@@ -1,6 +1,6 @@
 ## Polygon Improvement Proposals (PIPs)
 
-**Before you initiate a pull request**, please read the [PIP-1](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-1.md) and [PIP-8](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-8.md) process documents. Ideas should be thoroughly discussed on the [Polygon Community Forum](https://forum.polygon.technology/) first.
+**Before you initiate a pull request**, please read the [PIP-1](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-01.md) and [PIP-8](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-08.md) process documents. Ideas should be thoroughly discussed on the [Polygon Community Forum](https://forum.polygon.technology/) first.
 If your proposal is discussing a new contract standard, make sure you submit it under the [Polygon Request for Comment (PRC) folder](https://github.com/maticnetwork/Polygon-Improvement-Proposals/tree/main/PIPs).
 For more information on the processes and the PIP format, visit the [Guide on How to PIP.md](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/Guide%20on%20How%20to%20PIP.md)
 

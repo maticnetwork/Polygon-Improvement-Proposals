@@ -89,7 +89,7 @@ It should be considered that due to the use of sprint length within the `stateSy
 
 ### Appendix
 
-* [PIP-7: Delhi Hardfork](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-7.md)
+* [PIP-7: Delhi Hardfork](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-07.md)
 
 ### Copyright 
 All copyrights and related rights in this work are waived under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

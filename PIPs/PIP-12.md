@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 12 | Time Based StateSync Confirmations Delay  | Fix to the statesync confirmations issue in bor | [Jerry Chen](https://github.com/cffls), [Pratik Patil](https://github.com/pratikspatil024) | [Forum](https://forum.polygon.technology/t/pip-12-time-based-statesync-confirmations-delay/11950)  | Draft | Core | 2023-11-05
+| 12 | Time Based StateSync Confirmations Delay  | Fix to the statesync confirmations issue in bor | [Jerry Chen](https://github.com/cffls), [Pratik Patil](https://github.com/pratikspatil024) | [Forum](https://forum.polygon.technology/t/pip-12-time-based-statesync-confirmations-delay/11950)  | Review | Core | 2023-05-11
 ---
 
 ### Abstract 

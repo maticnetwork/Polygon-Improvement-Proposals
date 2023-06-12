@@ -16,9 +16,9 @@ Moreover, another issue (which was discovered later on) can occur causing `BADBL
 
 When calculating the value of `to`, the block header is retrieved using the function `GetHeaderByNumber` which returns the header from Bor’s local database and not from the incoming fork. During a network partition (reorg), an ideal `to` value should be taken from the incoming fork. However, Bor chooses the value based on the existing chain written in the database, leading to different values of `to`.
 
-When calculating the value of `from` ID which is `lastStateId+1`, the value of last state ID is fetched rom the genesis contracts using a normal `eth_call`. This call will perform this EVM call on the local state. Ideally, the query should be performed on the incoming chain's state instead. This leads to wrong calculation of the `from` field.
+When calculating the value of `from` ID which is `lastStateId+1`, the value of last state ID is fetched from the genesis contracts using a normal `eth_call`. This call will perform this EVM call on the local state. Ideally, the query should be performed on the incoming chain's state instead. This leads to wrong calculation of the `from` field.
 
-This PIP proposes 2 modifications.
+This PIP proposes 2 modifications:
 1. Calculating the value of `to` in a way that does not rely on querying Bor’s local database and instead uses the current block.
 2. Calculating the value of `from` in a way that does not rely on local state but instead uses incoming state.
 
@@ -47,7 +47,7 @@ Nodes from fork B will execute these blocks from fork A one block at a time. If 
   to = (current block timestamp) - (128 seconds).
   ```
 
-This values will then be used to query statesync transactions from Heimdall, returning 2 transactions (currently it would return 3, causing a `BADBLOCK` error).
+These values will then be used to query statesync transactions from Heimdall, returning 2 transactions (currently it would return 3, causing a `BADBLOCK` error).
 
 
 #### Genesis File
@@ -60,7 +60,7 @@ A new genesis parameter is introduced `stateSyncConfirmationDelay` which  is sto
 
 #### Bor Consensus Rules
 
-The existing implementation and proposed changes for calculating `from` and `to` are mentioned below (with few added abstractions from actual implementation for easy understanding):
+The existing implementation and proposed changes for calculating `from` and `to` are mentioned below (with several abstractions added from the actual implementation for ease of understanding):
 
 Current implementation for fetching from:
 ```

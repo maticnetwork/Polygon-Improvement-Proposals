@@ -21,5 +21,5 @@ This PIP specifies the changes included in the Polygon hard fork named Indore.
 
 ### References
 
-1. Included PIPs were finalized in [Polygon Protocol Governance Call Sessions 004](https://www.youtube.com/watch?v=DvL7-81IHbE&t=1s&ab_channel=PolygonLabs). 
-2. [PIP-12](https://forum.polygon.technology/t/pip-12-time-based-statesync-confirmations-delay/11950/4)
+1. Included PIPs were finalized in [Polygon Protocol Governance Call #4](https://www.youtube.com/watch?v=DvL7-81IHbE&t=1s&ab_channel=PolygonLabs). 
+2. [PIP-12 Forum Discussion](https://forum.polygon.technology/t/pip-12-time-based-statesync-confirmations-delay/11950/4)

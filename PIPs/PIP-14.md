@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 13 | Checkpoint Buffer Time  | Increase in Checkpoint Buffer Time | [Vaibhav Jindal](https://github.com/VAIBHAVJINDAL3012), [Sandeep Sreenath](https://github.com/ssandeep) |   | Final | Core | 2023-07-13
+| 13 | Checkpoint Buffer Time  | Increase in Checkpoint Buffer Time | [Vaibhav Jindal](https://github.com/VAIBHAVJINDAL3012), [Sandeep Sreenath](https://github.com/ssandeep) |   | Draft | Core | 2023-07-13
 
 
 ### Authors:
@@ -29,7 +29,7 @@ We propose to execute this change via the Heimdall Governance Module, which woul
             "key": "CheckpointBufferTime",
             "value": "1500000000000"
         }
-        
+
 ### Backward Compatibility
 This PIP will not be backward compatible with the current implementation of Bor and Heimdall. It would therefore require a hard fork, or, synchronous upgrade via the Heimdall Governance Module.
 

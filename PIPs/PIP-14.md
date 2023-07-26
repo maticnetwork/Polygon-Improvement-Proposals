@@ -34,4 +34,4 @@ We propose to execute this change via the Heimdall Governance Module, which woul
 This PIP will not be backward compatible with the current implementation of Bor and Heimdall. It would therefore require a hard fork, or, synchronous upgrade via the Heimdall Governance Module.
 
 ### Copyright
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+All copyrights and related rights in this work are waived under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

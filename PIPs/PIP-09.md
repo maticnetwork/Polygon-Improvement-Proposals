@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| PIP-9 | Performance Benchmark Adjustment | Maintaining the current level of Performance Benchmark at 95% | Delroy Bosco, Jackson Lewis, Harry Rook, Mateusz Rzeszowski| [Forum](https://forum.polygon.technology/t/pip-9-performance-benchmark-adjustment/11387) | Final | Contracts | 2023-02-23 |
+| 9 | Performance Benchmark Adjustment | Maintaining the current level of Performance Benchmark at 95% | Delroy Bosco, Jackson Lewis, Harry Rook, Mateusz Rzeszowski| [Forum](https://forum.polygon.technology/t/pip-9-performance-benchmark-adjustment/11387) | Final | Contracts | 2023-02-23 |
 
 ### Abstract
 

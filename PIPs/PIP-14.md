@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 13 | Checkpoint Buffer Time  | Increase in Checkpoint Buffer Time | [Vaibhav Jindal](https://github.com/VAIBHAVJINDAL3012), [Sandeep Sreenath](https://github.com/ssandeep) |   | Final | Core | 2023-07-13
+| 13 | Checkpoint Buffer Time  | Increase in Checkpoint Buffer Time | [Vaibhav Jindal](https://github.com/VAIBHAVJINDAL3012), [Sandeep Sreenath](https://github.com/ssandeep) | [Forum](https://forum.polygon.technology/t/pip-14-increase-checkpoint-buffer-time/12369)  | Final | Core | 2023-07-13
 
 
 ### Authors:

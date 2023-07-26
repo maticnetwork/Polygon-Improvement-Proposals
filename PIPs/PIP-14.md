@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 13 | Checkpoint Buffer Time  | Increase in Checkpoint Buffer Time | [Vaibhav Jindal](https://github.com/VAIBHAVJINDAL3012), [Sandeep Sreenath](https://github.com/ssandeep) |   | Draft | Core | 2023-07-13
+| 13 | Checkpoint Buffer Time  | Increase in Checkpoint Buffer Time | [Vaibhav Jindal](https://github.com/VAIBHAVJINDAL3012), [Sandeep Sreenath](https://github.com/ssandeep) |   | Last Call | Core | 2023-07-13
 
 
 ### Authors:

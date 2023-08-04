@@ -1,9 +1,6 @@
-
-## When you want to submit a new PIP, please follow the following format! 
-
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| To be assigned by PIP Editors | Transaction Dependency Data | Improving the efficiency of block validation by adding transaction dependency data to block header | [Jerry Chen](https://github.com/cffls), [Pratik Patil](https://github.com/pratikspatil024) | URL to Forum  | Draft  | Core | (yyyy-mm-dd) format |
+| 16 | Transaction Dependency Data | Improving the efficiency of block validation by adding transaction dependency data to block header | [Jerry Chen](https://github.com/cffls), [Pratik Patil](https://github.com/pratikspatil024) | URL to Forum  | Draft  | Core | 2023-08-04 |
 
 
 ## Abstract

@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 16 | Transaction Dependency Data | Improving the efficiency of block validation by adding transaction dependency data to block header | [Jerry Chen](https://github.com/cffls), [Pratik Patil](https://github.com/pratikspatil024) | URL to Forum  | Draft  | Core | 2023-08-04 |
+| 16 | Transaction Dependency Data | Improving the efficiency of block validation by adding transaction dependency data to block header | [Jerry Chen](https://github.com/cffls), [Pratik Patil](https://github.com/pratikspatil024) | [Forum](https://forum.polygon.technology/t/proposal-transaction-dependency-data/12705)  | Draft  | Core | 2023-08-04 |
 
 
 ## Abstract
@@ -190,4 +190,4 @@ This is a case where the miner could say that `Tx1` is dependent on `Tx2`, and `
 
 ## Copyright
 
-All PIPs must provide a license compatible with the original code it modifies or make available and waive all copyrights and related right under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
+All copyrights and related rights in this work are waived under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

@@ -17,6 +17,8 @@ To tackle this problem, Ethereum researchers introduced the `eth_sendRawTransact
 
 In this context, knownAccounts refers to a map of accounts with expected storage that must be verified before executing the transaction. By utilizing this feature, sequencers can now reject transactions that fail to meet the specified conditions for inclusion during the initial validation stage. Consequently, this effectively mitigates the risk associated with potential changes in in-account storage between the validation and execution phases of the transaction.
 
+The `eth_sendRawTransactionConditional` API is privileged and can only be used if the bundler is connected to the validator (block producer). The conditional transactions will not be broadcasted to the peers, so if the bundler sends the conditional transaction to the sentry node, it will not be executed. There is a bidirectional trust involved between the validator and the bundler. The validator trusts that the bundler is not going to spam him, and the bundler trusts that the validator will not front-run the transaction.
+
 ### Specification
 
 The reference implementation in Bor adds support for the `eth_sendRawTransactionConditional` API. It also adds checks to validate the ranges for block height, timestamps, and knownAccounts. These checks are performed at two locations, one at the API level (when the transaction is sent to the Bor client), and other in the worker module (when the transaction gets picked up from the transaction pool for inclusion in the block). The number of the slots/accounts in the knownAccounts structure is expected to be below 1000 entries, else the transaction will be rejected.

@@ -5,7 +5,7 @@
 
 ### Abstract 
 
-The Ethereum researchers have put forth a proposal for a new RPC endpoint called `eth_sendRawTransactionConditional`, which is designed to facilitate the bundled transactions introduced in [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337). This proposal has been successfully implemented in [PR#945](https://github.com/maticnetwork/bor/pull/945) within the Bor client. The plan is to incorporate this endpoint into Bor's Mumbai and Mainnet versions to provide support for bundled transactions.
+The Ethereum researchers have put forth a proposal for a new RPC endpoint called `eth_sendRawTransactionConditional` (implemented as `bor_sendRawTransactionConditional`), which is designed to facilitate the bundled transactions introduced in [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337). This proposal has been successfully implemented in [PR#945](https://github.com/maticnetwork/bor/pull/945) within the Bor client in the `bor` namespace. The plan is to incorporate this endpoint into Bor's Mumbai and Mainnet versions to provide support for bundled transactions.
 
 ### Motivation
 
@@ -13,15 +13,15 @@ EIP-4337 aims to enable account abstraction while maintaining decentralization a
 
 The problem arises from the time delay between the bundlers' simulated transaction validation and the final inclusion of those transactions by sequencers. This delay poses a risk of reverting bundle submissions. The reason for this risk is the lag between the initial submission of a transaction and its ultimate inclusion, during which a smart contract account's storage can change and invalidate the transaction. When bundled transactions are reverted, it results in a loss of value for the bundler. Consequently, this discourages the operation of these services until the issue is effectively addressed.
 
-To tackle this problem, Ethereum researchers introduced the `eth_sendRawTransactionConditional` endpoint. This enhanced endpoint extends the functionality of the standard `eth_sendRawTransaction` endpoint by incorporating additional options that enable users to define specific valid ranges for block height, timestamps, and knownAccounts.
+To tackle this problem, Ethereum researchers introduced the `bor_sendRawTransactionConditional` endpoint. This enhanced endpoint extends the functionality of the standard `eth_sendRawTransaction` endpoint by incorporating additional options that enable users to define specific valid ranges for block height, timestamps, and knownAccounts.
 
 In this context, knownAccounts refers to a map of accounts with expected storage that must be verified before executing the transaction. By utilizing this feature, sequencers can now reject transactions that fail to meet the specified conditions for inclusion during the initial validation stage. Consequently, this effectively mitigates the risk associated with potential changes in in-account storage between the validation and execution phases of the transaction.
 
-The `eth_sendRawTransactionConditional` API is privileged and can only be used if the bundler is connected to the validator (block producer). The conditional transactions will not be broadcasted to the peers, so if the bundler sends the conditional transaction to the sentry node, it will not be executed. There is a bidirectional trust involved between the validator and the bundler. The validator trusts that the bundler is not going to spam him, and the bundler trusts that the validator will not front-run the transaction.
+The `bor_sendRawTransactionConditional` API is privileged and can only be used if the bundler is connected to the validator (block producer). The conditional transactions will not be broadcasted to the peers, so if the bundler sends the conditional transaction to the sentry node, it will not be executed. There is a bidirectional trust involved between the validator and the bundler. The validator trusts that the bundler is not going to spam him, and the bundler trusts that the validator will not front-run the transaction.
 
 ### Specification
 
-The reference implementation in Bor adds support for the `eth_sendRawTransactionConditional` API. It also adds checks to validate the ranges for block height, timestamps, and knownAccounts. These checks are performed at two locations, one at the API level (when the transaction is sent to the Bor client), and other in the worker module (when the transaction gets picked up from the transaction pool for inclusion in the block). The number of the slots/accounts in the knownAccounts structure is expected to be below 1000 entries, else the transaction will be rejected.
+The reference implementation in Bor adds support for the `bor_sendRawTransactionConditional` API. It also adds checks to validate the ranges for block height, timestamps, and knownAccounts. These checks are performed at two locations, one at the API level (when the transaction is sent to the Bor client), and other in the worker module (when the transaction gets picked up from the transaction pool for inclusion in the block). The number of the slots/accounts in the knownAccounts structure is expected to be below 1000 entries, else the transaction will be rejected.
 
 #### Sample Requests
 
@@ -29,7 +29,7 @@ The reference implementation in Bor adds support for the `eth_sendRawTransaction
 {
     "jsonrpc": "2.0",
     "id": 1,
-    "method": "eth_sendRawTransactionConditional",
+    "method": "bor_sendRawTransactionConditional",
     "params": [
         "0x2815c17b00...",
         {
@@ -46,7 +46,7 @@ The reference implementation in Bor adds support for the `eth_sendRawTransaction
 }
 
 // A curl request will look something like
-curl localhost:8545 -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0", "id": 1, "method":"eth_sendRawTransactionConditional", "params": ["0x2815c17b00...", {"knownAccounts": {"0xadd1": "0xfedc...", "0xadd2": {"0x1111": "0x1234...", "0x2222": "0x4567..."}}, "blockNumberMax": 12345, "blockNumberMin": 12300, "timestampMax": 1700000000, "timestampMin": 1600000000}]}'
+curl localhost:8545 -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0", "id": 1, "method":"bor_sendRawTransactionConditional", "params": ["0x2815c17b00...", {"knownAccounts": {"0xadd1": "0xfedc...", "0xadd2": {"0x1111": "0x1234...", "0x2222": "0x4567..."}}, "blockNumberMax": 12345, "blockNumberMin": 12300, "timestampMax": 1700000000, "timestampMin": 1600000000}]}'
 ```
 
 #### Sample Responses
@@ -94,7 +94,7 @@ This PIP has no effect on the consensus rules of the network and aims to add one
 
 ### Reference Implementation
 
-- [New RPC endpoint (eth_sendRawTransactionConditional) to support EIP-4337 Bundled Transactions](https://github.com/maticnetwork/bor/pull/945)
+- [New RPC endpoint (bor_sendRawTransactionConditional) to support EIP-4337 Bundled Transactions](https://github.com/maticnetwork/bor/pull/945)
 
 ### Copyright 
 

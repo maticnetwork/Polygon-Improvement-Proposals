@@ -1,6 +1,6 @@
 | PIP| Title| Description| Author| Discussion | Status | Type | Date|
 |-|-|-|-|-|-|-|-|
-| 18 | Polygon 2.0 Phase 0 - Frontier| Specification of Polygon 2.0 - Phase 0 |David Schwartz, Mihailo Bjelic, Mudit Gupta, Grace Torrellas, Mateusz Rzeszowski, Daniel Gretzke, David Silverman, Paul Gebheim| [Forum]()| Draft | Informational | 2023-09-14 |
+| 18 | Polygon 2.0 Phase 0 - Frontier| Specification of Polygon 2.0 - Phase 0 |David Schwartz, Mihailo Bjelic, Mudit Gupta, Grace Torrellas, Mateusz Rzeszowski, Daniel Gretzke, David Silverman, Paul Gebheim| [Forum](https://forum.polygon.technology/t/pip-18-polygon-2-0-phase-0-frontier/12913)| Draft | Informational | 2023-09-14 |
 
 
 ### Abstract
@@ -57,8 +57,8 @@ Polygon 2.0 is a significant technical upgrade of the Polygon system with broads
 
 ### References
 
--   PIP-17: Polygon Ecosystem Token (POL)
--   PIP-19: Update Polygon PoS Native Token to POL
+-   [PIP-17: Polygon Ecosystem Token (POL)](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md)
+-   [PIP-19: Update Polygon PoS Native Token to POL](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-19.md)
 
 ### Copyright
 

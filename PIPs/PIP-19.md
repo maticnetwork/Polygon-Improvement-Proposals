@@ -40,8 +40,8 @@ This upgrade adjusts a core contract of the Polygon Ecosystem, all proper securi
  
 ### References
 
--   PIP-17: Polygon Ecosystem Token (POL) 
--   PIP-18: Polygon 2.0 Phase 0 - Frontier
+-   [PIP-17: Polygon Ecosystem Token (POL)](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md)
+-   [PIP-18: Polygon 2.0 Phase 0 - Frontier](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-18.md)
     
 ### Copyright
 

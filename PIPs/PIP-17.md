@@ -340,7 +340,7 @@ Due to the size, complexity, and importance of the proposed POL contracts, there
 
 ### Implementation 
 
-* [https://github.com/0xPolygon/pol-token/tree/main](https://github.com/0xPolygon/pol-token) 
+* [https://github.com/0xPolygon/pol-token](https://github.com/0xPolygon/pol-token) 
 
 ### Copyright
 

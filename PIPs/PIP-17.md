@@ -1,6 +1,6 @@
 | PIP| Title| Description| Author| Discussion | Status | Type | Date|
 |-|-|-|-|-|-|-|-|
-|17| Polygon Ecosystem Token (POL) | Upgrade to MATIC in the form of the Polygon Ecosystem Token (POL) |Mihailo Bjelic, Mudit Gupta, Will Schwab, Daniel Gretzke, Dhariya Seth, Ankit Maity, Harry Rook, Mateusz Rzeszowski| [Forum](https://forum.polygon.technology/t/pip-17-polygon-ecosystem-token-pol/12912) | Draft | Contracts | 2023-09-14 |
+|17| Polygon Ecosystem Token (POL) | Upgrade to MATIC in the form of the Polygon Ecosystem Token (POL) |Mihailo Bjelic, Mudit Gupta, Will Schwab, Daniel Gretzke, Dhairya Sethi, Ankit Maity, Harry Rook, Mateusz Rzeszowski| [Forum](https://forum.polygon.technology/t/pip-17-polygon-ecosystem-token-pol/12912) | Draft | Contracts | 2023-09-14 |
  
 ### Abstract
 

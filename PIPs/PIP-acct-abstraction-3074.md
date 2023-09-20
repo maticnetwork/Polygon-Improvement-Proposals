@@ -1,27 +1,23 @@
 
-## When you want to submit a new PIP, please follow the following format! 
-
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
 | To be assigned by PIP Editors | EIP-3074-style Account Abstraction | Implementation of the `AUTH` and `AUTHCALL` EVM opcodes  | Will Schwab (@wschwab) | URL to Forum  | Draft  | Core | (yyyy-mm-dd) format |
 
 ## Abstract
 
-This EIP proposes the implementation of two new EVM opcodes: `AUTH` and `AUTHCALL`, enabling account abstraction. This is not a novel proposal; this was proposed for Ethereum in [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074), which is as of yet not implemented on Ethereum.
+This PIP proposes the implementation of two new EVM opcodes: `AUTH` and `AUTHCALL`, enabling account abstraction. This is not a novel proposal; this was proposed for Ethereum in [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074), which is as of yet not implemented on Ethereum.
 
 ## Motivation
 
-Motivation is critical for PIPs that want to change the Polygon protocol. The motivation section should describe the "why" of this PIP. What problem does it solve? Why should someone want to implement this standard? What are the benefits it provides to the Polygon ecosystem? What are the use cases for this PIP?
-
 Account Abstraction is the name given to a number of proposals and tools intended to extend the functionality of "accounts" in Ethereum, whether contracts or EOAs. [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074) was proposed as an avenue to increase the power of EOAs (by using heavily audited and vetted entry point contracts traditionally called invokers) by enabling the ability at the protocol level for one EOA to authorize another address to spend its native asset. This unlocks a number of functionalities, and also stands to potentially enhance UX. Advanbced use cases built on this concept include session keys for games and allowing gas payment in ERC20 tokens, both without needing the standard two transaction approve-and-transfer mechanism which currently dominates the ecosystem with ERC20 tokens.
 
-While [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074) has not been implemented on Ethereum as of this writing, it is the author's opinion that this does not reflect poorly on the EIP. EIP-3074 has been developed significantly, primarily by Quilt, and included repositories of patched versions of Solidity and the Geth client. It is also the author's belief that this is an excellent opportunity for Ethereum-aligned ecosystems to serve as the proving ground for proposals that can aid Ethereum.
+While [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074) has not been implemented on Ethereum as of this writing, it is the author's opinion that this does not reflect poorly on the EIP/PIP. EIP-3074 has been developed significantly, primarily by Quilt, and included repositories of patched versions of Solidity and the Geth client. It is also the author's belief that this is an excellent opportunity for Ethereum-aligned ecosystems to serve as the proving ground for proposals that can aid Ethereum.
 
-**_Note_:** The Specification and other sections of the PIP lean heavily on, or are outright copied from, [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074), written by Ansgar Dietrichs, Sam Wilson, lightclients, and Micah Zoltu. The authors have been contacted, though the work is copyright-waived via [CC0](https://eips.ethereum.org/LICENSE).
+**_Note_:** The Specification and other sections of the PIP lean heavily on, or are outright copied from, [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074), written by Ansgar Dietrichs, Sam Wilson, lightclients, and Micah Zoltu. The authors have been contacted and have given their permission, and the work is also copyright-waived via [CC0](https://eips.ethereum.org/LICENSE).
 
 ## Specification
 
-_copied from [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074) permission pending from the authors_
+_copied from [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074) with permission from the authors_
 
 ### Conventions
 
@@ -191,7 +187,7 @@ As with `CALL`, the full gas cost is charged immediately, independently of actua
 
 ## Rationale
 
-_copied from [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074), permission pending from the authors_
+_copied from [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074) with permission from the authors_
 
 ### Signature in Memory
 
@@ -320,7 +316,7 @@ Github user Mrtenz created a sample invoker contract on a patched version of Sol
 
 ## Security Considerations
 
-_copied from [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074) permission pending from the authors_
+_copied from [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074) with permission from the authors_
 
 ### Secure Invokers
 

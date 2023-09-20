@@ -2,7 +2,7 @@
 
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-|  | State-Sync Verbosity | Proposal to introduce more visibility of state-sync transactions | [Shivam Sharma](https://github.com/0xsharma), [Sandeep Sreenath](https://github.com/ssandeep), [William Schwab](https://github.com/wschwab) |  | Draft  | Core and Contracts | 2023-09-14 |
+| 20 | State-Sync Verbosity | Proposal to introduce more visibility of state-sync transactions | [Shivam Sharma](https://github.com/0xsharma), [Sandeep Sreenath](https://github.com/ssandeep), [William Schwab](https://github.com/wschwab) |  | Draft  | Core | 2023-09-14 |
 
 ## Abstract
 

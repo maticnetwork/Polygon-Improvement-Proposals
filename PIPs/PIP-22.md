@@ -1,7 +1,6 @@
-
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| To be assigned by PIP Editors | EIP-3074-style Account Abstraction | Implementation of the `AUTH` and `AUTHCALL` EVM opcodes  | Will Schwab (@wschwab) | [Forum](https://forum.polygon.technology/t/pip-add-eip-3074-style-account-abstraction/12959/1)  | Draft  | Core | 2023-09-22 |
+| 22 | EIP-3074-style Account Abstraction | Implementation of the `AUTH` and `AUTHCALL` EVM opcodes  | Will Schwab (@wschwab) | [Forum](https://forum.polygon.technology/t/pip-add-eip-3074-style-account-abstraction/12959/1)  | Draft  | Core | 2023-09-22 |
 
 ## Abstract
 

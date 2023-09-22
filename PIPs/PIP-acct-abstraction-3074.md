@@ -308,11 +308,21 @@ Please see the [Reference Implementation](#reference-implementation) section for
 
 ## Reference Implementation
 
-Quilt's original implementation of [EIP-3074](https://eips.ethereum.org/EIPS/eip-3074) can be accessed on this fork of Geth, tthe most recent branch is [here](https://github.com/quilt/go-ethereum/tree/3074-two-values). Note that this fork does not reflect the latest version of the EIP.
+* https://github.com/quilt/go-ethereum/tree/3074-two-values, Quilt
 
-Paul O'Leary worked on a test implementation of 3074 on the Bor client, his work can be accessed on [this](https://github.com/maticnetwork/bor/tree/poleary/wip-eip-3074), but should be viewed as a work in progress as opposed to final product. The author believes that this work is also based on Quilt's 3074 implementation in Geth, and therefore does not reflect the current state of the EIP.
+Quilt's implementation of 3074 on a fork of Geth (on the specific branch linked). Note that it does not follow the latest version of the EIP.
 
-Github user Mrtenz created a sample invoker contract on a patched version of Solidity [here](https://github.com/Mrtenz/transaction-invoker). Zero Ekkusu used this as reference for work on invokers for Polygon's Edge project [here](https://github.com/0xPolygon/account-abstraction-invoker). (3074 was not ultimately included in the Edge project, however.)
+* https://github.com/maticnetwork/bor/tree/poleary/wip-eip-3074 (WIP), [Paul O'Leary](https://github.com/paulgoleary)
+
+Test implementation of 3074 on the Bor client, should be viewed as a work in progress as opposed to final product. The author believes that this work is also based on Quilt's 3074 implementation in Geth, and therefore does not reflect the current state of the EIP.
+
+* https://github.com/Mrtenz/transaction-invoker, Mrtenz
+
+A sample invoker contract along with a patched version of Solidity. This version of Solidity also follows the outdated version of the EIP.
+
+* https://github.com/0xPolygon/account-abstraction-invoker, [Zero Ekkusu](https://github.com/ZeroEkkusu)
+
+Reference for work on invokers for Polygon's Edge project based on Mrtenz's invoker, linked above. (3074 was not ultimately included in the Edge project, however.)
 
 ## Security Considerations
 

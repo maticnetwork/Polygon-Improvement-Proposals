@@ -1,4 +1,4 @@
-# Meeting Agenda
+# Meeting Agenda - September 21 2023
 
 1. Polygon Ecosystem Token (POL) - [PIP-17](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md)
 2. Polygon 2.0 Phase 0 - Frontier - [PIP-18](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-18.md)

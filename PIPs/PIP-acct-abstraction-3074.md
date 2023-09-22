@@ -294,7 +294,9 @@ Sending non-zero value with `CALL` increases its cost by 9,000. Of that, 6,700 c
 
 ## Backwards Compatibility
 
-There are no issues with backwards compatability in the implementation of the `AUTH` and `AUTHCALL` opcodes.
+There are no issues with backwards compatability in the implementation of the `AUTH` and `AUTHCALL` opcodes. 
+
+As the EIP upon which this PIP is based is itself is not Final, it is possible for the specification of EIP-3074 could change. While the Polygon ecosystems could hardfork to reflect the final version of 3074 in such a scenario, this may cause contracts that were written on an older specification of 3074 to become incompatible. As a part of this PIP, we propose working with the EIP-3074 authors to bring the specification of the EIP to Final status as a part of its implementation in the Polygon ecosystems in order to avoid this issue.
 
 The original EIP mentions a concern with future upgrades being potentially limited by the presence of `AUTH` and `AUTHCALL` which we will quote here:
 

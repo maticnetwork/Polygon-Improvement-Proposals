@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 11 | Deterministic finality via Milestones | Proposal to introduce Milestones in Polygon PoS to have deterministic finality | [Vaibhav Jindal](https://github.com/VAIBHAVJINDAL3012), [Arpit Temani](https://github.com/temaniarpit27), [Evgeniy Danilenko](https://github.com/JekaMas/), [Manav Darji](https://github.com/manav2401), [Sandeep Sreenath](https://github.com/ssandeep) | [Forum Post](https://forum.polygon.technology/t/pip-11-deterministic-finality-via-milestones/11918/)  | Review  | Core | 2023-05-05 |
+| 11 | Deterministic finality via Milestones | Proposal to introduce Milestones in Polygon PoS to have deterministic finality | [Vaibhav Jindal](https://github.com/VAIBHAVJINDAL3012), [Arpit Temani](https://github.com/temaniarpit27), [Evgeniy Danilenko](https://github.com/JekaMas/), [Manav Darji](https://github.com/manav2401), [Sandeep Sreenath](https://github.com/ssandeep) | [Forum Post](https://forum.polygon.technology/t/pip-11-deterministic-finality-via-milestones/11918/)  | Last Call  | Core | 2023-09-25 |
 ---
 
 ## Table of contents

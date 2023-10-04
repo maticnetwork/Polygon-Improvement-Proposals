@@ -4,7 +4,7 @@
 
 ### Abstract
 
-This proposal calls for a set of changes to the [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) burn system and constitutes a prerequisite for the implementation of Phase 0 - Frontier of Polygon 2.0, introduced in [PIP-18](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-18.md).  This document proposes changing the recipient of the EIP-1559 burn on the Polygon PoS network from 0x70bca57f4579f58670ab2d18ef16e02c17553c38 to <insert new address> in order to prepare for updates to the Plasma bridges as part of upgrades proposed in [PIP-19](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-19.md).
+This proposal calls for a set of changes to the [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) burn system and constitutes a prerequisite for the implementation of Phase 0 - Frontier of Polygon 2.0, introduced in [PIP-18](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-18.md).  This document proposes changing the recipient of the EIP-1559 burn on the Polygon PoS network from 0x70bca57f4579f58670ab2d18ef16e02c17553c38 to (contract to be deployed) in order to prepare for updates to the Plasma bridges as part of upgrades proposed in [PIP-19](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-19.md).
 
 ### Definitions 
 
@@ -23,7 +23,7 @@ As part of the upcoming Polygon 2.0 series of proposed upgrades, changes to the 
 
 ### Specification
 
-Change the recipient of EIP-1559 Burn by adding a new entry in burntContract with the hardfork block number and the new address in Bor’s Genesis file to <address to be determined>.
+Change the recipient of EIP-1559 Burn by adding a new entry in burntContract with the hardfork block number and the new address in Bor’s Genesis file to (contract to be deployed).
 
 ### Backward Compatibility
 

@@ -4,3 +4,4 @@
 * [PIP-24](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-24.md) : Change EIP-1559 Policy
 * [PIP-25](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-25.md) : Adjust POL Total Supply
 * [PIP-17](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md) : Upgrade to MATIC in the form of the Polygon Ecosystem Token (POL) - POL contracts on Mumbai
+* Snapshot System Satisfaction (by gaia)

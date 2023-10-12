@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| TBD | Precompiled for secp256r1 Curve Support | Proposal to add precompiled contract that performs signature verifications in the “secp256r1” elliptic curve. | Ulaş Erdoğan (@ulerdogan), Doğan Alpaslan (@doganalpaslan) | TBD  | Draft  | Core | 2023-10-12 |
+| 27 | Precompiled for secp256r1 Curve Support | Proposal to add precompiled contract that performs signature verifications in the “secp256r1” elliptic curve. | Ulaş Erdoğan (@ulerdogan), Doğan Alpaslan (@doganalpaslan) | [Forum](https://forum.polygon.technology/t/new-pip-precompiled-for-secp256r1-curve-support/13049?u=ulerdogan) | Draft  | Core | 2023-10-12 |
 
 ## Abstract
 
@@ -133,8 +133,8 @@ This section includes the test cases and benchmark results for the proposed prec
 
 > Functional tests are applied for multiple cases in the [reference implementation](#reference-implementation) of `P256VERIFY` precompiled contract and they succeed. Benchmark tests are also applied for both `P256VERIFY` and `ECRECOVER` with some pre-calculated data and signatures in the “go-ethereum”s precompile testing structure to propose a meaningful gas cost for the “secp256r1” signature verifications by the precompiled contract implemented in the [reference implementation](#reference-implementation). The benchmark test results by example data in the assets can be checked:
 >
-> - [P256Verify Benchmark Test Results](../assets/pip-draft_title_abbrew/p256Verify_benchmark_test)
-> - [Ecrecover Benchmark Test Results](../assets/pip-draft_title_abbrew/ecrecover_benchmark_test)
+> - [P256Verify Benchmark Test Results](../assets/PIP-27/p256Verify_benchmark_test)
+> - [Ecrecover Benchmark Test Results](../assets/PIP-27/ecrecover_benchmark_test)
 >
 > ```
 > # results of geth benchmark tests of

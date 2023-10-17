@@ -21,6 +21,9 @@ The Shanghai PIP will enable the following upgrades:
 * [EIP-3860: Limit and meter initcode](https://eips.ethereum.org/EIPS/eip-3860)
 * [EIP-6049: Deprecate SELFDESTRUCT](https://eips.ethereum.org/EIPS/eip-6049)
 
+Compared to Ethereum Shanghai upgrade, the following EIP will not be included in Polygon specs, for obvious reasons:
+* [EIP-4898: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)
+
 ## Backwards Compatibility
 
 This PIP will not be backward compatible with the current implementation of `bor` and will therefore require a hard fork.

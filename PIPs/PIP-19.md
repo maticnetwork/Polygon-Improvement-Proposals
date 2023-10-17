@@ -1,6 +1,6 @@
 | PIP| Title| Description| Author| Discussion | Status | Type | Date|
 |-|-|-|-|-|-|-|-|
-| 19 | Update Polygon PoS Native Token to POL| Upgrades the native token of the Polygon PoS network from MATIC to POL |Will Schwab, Daniel Gretzke, Dhairya Sethi, Zero Ekkusu| [Forum](https://forum.polygon.technology/t/pip-19-update-polygon-pos-native-token-to-pol/12914)| Draft | Contracts | 2023-09-14 |**
+| 19 | Update Polygon PoS Native Token to POL| Upgrades the native token of the Polygon PoS network from MATIC to POL |Will Schwab, Daniel Gretzke, Dhairya Sethi, Zero Ekkusu| [Forum](https://forum.polygon.technology/t/pip-19-update-polygon-pos-native-token-to-pol/12914)| Peer Review | Contracts | 2023-09-14 |**
 
     
 

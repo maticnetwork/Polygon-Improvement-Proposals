@@ -21,8 +21,10 @@ The Shanghai PIP will enable the following upgrades:
 * [EIP-3860: Limit and meter initcode](https://eips.ethereum.org/EIPS/eip-3860)
 * [EIP-6049: Deprecate SELFDESTRUCT](https://eips.ethereum.org/EIPS/eip-6049)
 
-Compared to Ethereum Shanghai upgrade, the following EIP will not be included in Polygon specs, for obvious reasons:
+Compared to Ethereum Shanghai upgrade, the following EIP will not be included in Polygon specs:
 * [EIP-4898: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)
+ 
+The aforementioned EIP has been specifically excluded because Polygon PoS has no concept of beacon chain. Whilst Ethereum validators are now enabled to withdraw ETHs, in Polygon PoS chain the validators staking is done on Ethereum L1 directly, and its operations are synced with `bor` chain by using `heimdall` layer.
 
 ## Backwards Compatibility
 

@@ -1,8 +1,8 @@
 
 
-| PIP | Title                         | Description                                     | Author                                                                                                | Discussion | Status   | Type                                     | Date       |
-|-----|-------------------------------|-------------------------------------------------|-------------------------------------------------------------------------------------------------------|------------|----------|------------------------------------------|------------|
-| 23  | Shanghai | Proposal to activate Ethereum Shanghai features | [Marcello Ardizzone](https://github.com/marcello33), [Sandeep Sreenath](https://github.com/ssandeep)  |  | Draft   | Core | 2023-09-22 |
+| PIP | Title                         | Description                                     | Author                                                                                                | Discussion | Status      | Type                                     | Date       |
+|-----|-------------------------------|-------------------------------------------------|-------------------------------------------------------------------------------------------------------|------------|-------------|------------------------------------------|------------|
+| 23  | Shanghai | Proposal to activate Ethereum Shanghai features | [Marcello Ardizzone](https://github.com/marcello33), [Sandeep Sreenath](https://github.com/ssandeep)  | [Forum](https://forum.polygon.technology/t/pip-23-proposal-to-activate-ethereum-shanghai-features/13065)  | Peer Review | Core | 2023-09-22 |
 
 ## Abstract
 
@@ -27,8 +27,9 @@ This PIP will not be backward compatible with the current implementation of `bor
 
 ## Reference Implementation
 
-The following PR implements the changes from upstream `go-ethereum` [v1.11.6](https://github.com/ethereum/go-ethereum/tree/v1.11.6), including the mentioned Shanghai related EIPs. 
+The following PRs implements the changes from upstream `go-ethereum` [v1.11.6](https://github.com/ethereum/go-ethereum/tree/v1.11.6), including the mentioned Shanghai related EIPs. 
 - https://github.com/maticnetwork/bor/pull/901
+- https://github.com/maticnetwork/bor/pull/1025
 
 New changes to the code will be made once the block heights for the hard forks (on testnet and mainnet) are defined. 
 

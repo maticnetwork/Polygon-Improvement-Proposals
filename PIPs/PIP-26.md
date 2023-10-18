@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 26 | Transition from MATIC to POL Validator Rewards | Proposes aligning the initial POL Validator Rewards to current rewards schedule | [Derek Meyer](https://twitter.com/data_nexus) [Dimitri Nikolaros](https://twitter.com/dnikolaros)  | [Forum Post](https://forum.polygon.technology/t/pip-26-transition-from-matic-to-pol-validator-rewards/13046) | Draft  | Contracts | 2023-10-12
+| 26 | Transition from MATIC to POL Validator Rewards | Proposes aligning the initial POL Validator Rewards to current rewards schedule | [Derek Meyer](https://twitter.com/data_nexus) [Dimitri Nikolaros](https://twitter.com/dnikolaros)  | [Forum Post](https://forum.polygon.technology/t/pip-26-transition-from-matic-to-pol-validator-rewards/13046) | Peer Review  | Contracts | 2023-10-12
 
 ### Abstract
 

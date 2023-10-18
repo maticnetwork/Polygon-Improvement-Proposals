@@ -1,6 +1,13 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 21 | Aalborg Hard Fork | Specifies the changes included in the Polygon hard fork named Aalborg | [Sandeep Sreenath](https://github.com/ssandeep)  | Draft  | Last Call | Core |2023-09-21
+---
+pip: 21
+title: Aalborg Hard Fork
+description: Specifies the changes included in the Polygon hard fork named Aalborg
+author: Sandeep Sreenath (@ssandeep)
+discussion: Draft
+status: Last Call
+type: Core
+date: 2023-09-21
+---
 
 ### Abstract
 

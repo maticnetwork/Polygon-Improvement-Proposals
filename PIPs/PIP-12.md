@@ -1,9 +1,15 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 12 | Time Based StateSync Confirmations Delay  | Fix to the statesync confirmations issue in bor | [Jerry Chen](https://github.com/cffls), [Pratik Patil](https://github.com/pratikspatil024), [Manav Darji](https://github.com/manav2401) | [Forum](https://forum.polygon.technology/t/pip-12-time-based-statesync-confirmations-delay/11950)  | Final | Core | 2023-05-11
+---
+pip: 12
+title: Time Based StateSync Confirmations Delay
+description: Fix to the statesync confirmations issue in bor
+author: Jerry Chen (@cffls), Pratik Patil (@pratikspatil024), Manav Darji (@manav2401)
+discussion: https://forum.polygon.technology/t/pip-12-time-based-statesync-confirmations-delay/11950
+status: Final
+type: Core
+date: 2023-05-11
 ---
 
-### Abstract 
+### Abstract
 
 [PIP-10](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-10.md) outlined a state sync bug that can arise when network partitions (reorg) have lengths  > `sprintLength` (16 blocks). In summary, the issue occurs when the two chains eventually merge, as the current value of  `to` (which is used to fetch the state sync events) is based on `sprintLength`. Block production will occur at different times on each fork, meaning nodes on the incoming chain may have a different number of state sync transactions.
 

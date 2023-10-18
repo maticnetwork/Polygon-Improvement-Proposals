@@ -1,0 +1,83 @@
+[[modifiers]]
+kind = "set-default-annotation"
+name = "status"
+value = "Stagnant"
+annotation_type = "warning"
+
+[[modifiers]]
+kind = "set-default-annotation"
+name = "status"
+value = "Withdrawn"
+annotation_type = "warning"
+
+[lints.preamble-author]
+kind = "preamble-author"
+name = "author"
+
+[lints.preamble-order]
+kind = "preamble-order"
+names = [
+    "pip",
+    "title",
+    "description",
+    "author",
+    "discussion",
+    "status",
+    "type",
+    "date",
+]
+
+[lints.preamble-req]
+kind = "preamble-required"
+names = [
+    "pip",
+    "title",
+    "description",
+    "author",
+    "discussion",
+    "status",
+    "type",
+    "date",
+]
+
+[lints.preamble-date-created]
+kind = "preamble-date"
+name = "date"
+
+[lints.preamble-trim]
+kind = "preamble-trim"
+
+[lints.preamble-pip]
+kind = "preamble-uint"
+name = "pip"
+
+[lints.preamble-no-dup]
+kind = "preamble-no-duplicates"
+
+[lints.preamble-re-description-pip-dash]
+kind = "preamble-regex"
+name = "description"
+mode = "excludes"
+pattern = '(?i)pip[\s]*[0-9]+'
+message = "proposals must be referenced with the form `PIP-N` (not `PIPN` or `PIP N`)"
+
+[lints.preamble-re-title-pip-dash]
+kind = "preamble-regex"
+name = "title"
+mode = "excludes"
+pattern = '(?i)pip[\s]*[0-9]+'
+message = "proposals must be referenced with the form `PIP-N` (not `PIPN` or `PIP N`)"
+
+[lints.preamble-discussion]
+kind = "preamble-url"
+name = "discussion"
+
+[lints.preamble-list-author]
+kind = "preamble-list"
+name = "author"
+
+[lints.markdown-re-pip-dash]
+kind = "markdown-regex"
+mode = "excludes"
+pattern = '(?i)pip[\s]*[0-9]+'
+message = "proposals must be referenced with the form `PIP-N` (not `PIPN` or `PIP N`)"

@@ -1,8 +1,13 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 7 | Delhi Hardfork  | Proposes the Delhi Hardfork | Harry Rook | [Forum](https://forum.polygon.technology/t/pip-7-delhi-hardfork/10904/2) | Final  | Core | 2023-01-12 |
-
-
+---
+pip: 7
+title: Delhi Hardfork
+description: Proposes the Delhi Hardfork
+author: Harry Rook (@hrook1)
+discussion: https://forum.polygon.technology/t/pip-7-delhi-hardfork/10904/2
+status: Final
+type: Core
+date: 2023-01-12
+---
 
 ### Abstract
 

@@ -1,9 +1,15 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 1 | PIP Purpose and Guidelines  | Describes community standards for the Polygon ecosystem, including core protocol specifications | Harry Rook, Mateusz Rzeszowski | [Forum](https://forum.polygon.technology/t/pip-1-pip-purpose-and-guidelines/11356)  | Continuous | Informational | 2023-22-02
+---
+pip: 1
+title: PIP Purpose and Guidelines
+description: Describes community standards for the Polygon ecosystem, including core protocol specifications
+author: Harry Rook (@hrook1), Mateusz Rzeszowski
+discussion: https://forum.polygon.technology/t/pip-1-pip-purpose-and-guidelines/11356
+status: Continuous
+type: Informational
+date: 2023-02-22
 ---
 
-### Abstract 
+### Abstract
 
 Polygon Improvement Proposals (PIPs) describe community standards for the Polygon ecosystem, including core protocol specifications such as Heimdall and Bor, client APIs, and contract standards, etc.
 

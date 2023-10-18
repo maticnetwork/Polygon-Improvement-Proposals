@@ -1,7 +1,14 @@
-| PIP              | Title                          | Description         | Author                       | Discussion | Status | Type                                    | Date                 |  
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|  
-| 25 | Adjust POL Total Supply | Proposes burning POL tokens corresponding to previously burned MATIC | David Silverman, Paul Gebheim, Harry Rook, Mateusz Rzeszowski | [Forum](https://forum.polygon.technology/t/pip-25-adjust-pol-total-supply/13008) |  Draft | Contracts |2023-10-04
- 
+---
+pip: 25
+title: Adjust POL Total Supply
+description: Proposes burning POL tokens corresponding to previously burned MATIC
+author: David Silverman, Paul Gebheim, Harry Rook, Mateusz Rzeszowski (@matrzeszowski)
+discussion: https://forum.polygon.technology/t/pip-25-adjust-pol-total-supply/13008
+status: Draft
+type: Contracts
+date: 2023-10-04
+---
+
 ### Abstract
 
 In response to community feedback, this PIP proposes that the `burn()` function be called on the migrator contract, introduced in [PIP-17](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md), in order to burn an amount of POL equivalent to MATIC in the addresses currently used to permanently remove MATIC tokens from supply (ex: 0x000..dEaD) as well as other permanently inaccessible tokens, thus bringing the POL circulating supply inline with the MATIC supply.

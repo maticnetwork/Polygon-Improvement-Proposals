@@ -1,0 +1,27 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+      - edited
+
+jobs:
+  eipw-validator:
+    name: PIP Validator
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@47fbe2df0ad0e27efb67a70beac3555f192b062f
+
+      - uses: ethereum/eipw-action@88d2e579767028a48f712cd9e8d25639347dc236
+        id: eipw
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          unchecked: 1
+          path: PIPs/
+          options-file: .eipw.toml

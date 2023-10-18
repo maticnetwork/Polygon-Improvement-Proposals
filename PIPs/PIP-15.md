@@ -1,6 +1,12 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 15 | Adding support for EIP-4337 Bundled Transactions  | Proposes and Implements an additional API to support Bundled Transactions | [Pratik Patil](https://github.com/pratikspatil024) | [Forum](https://forum.polygon.technology/t/pip-adding-support-for-eip-4337-bundled-transactions/12679)  | Final | Interface | 2023-08-2
+---
+pip: 15
+title: Adding support for EIP-4337 Bundled Transactions
+description: Proposes and Implements an additional API to support Bundled Transactions
+author: Pratik Patil (@pratikspatil024)
+discussion: https://forum.polygon.technology/t/pip-adding-support-for-eip-4337-bundled-transactions/12679
+status: Final
+type: Interface
+date: 2023-08-02
 ---
 
 ### Abstract 

@@ -1,6 +1,12 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 13 | Indore Hard Fork  | Proposes the Indore Hardfork | [Pratik Patil](https://github.com/pratikspatil024), [Sandeep Sreenath](https://github.com/ssandeep) | [Forum](https://forum.polygon.technology/t/indore-hard-fork/12272)  | Final | Core | 2023-06-27
+---
+pip: 13
+title: Indore Hard Fork
+description: Proposes the Indore Hardfork
+author: Pratik Patil (@pratikspatil024), Sandeep Sreenath (@ssandeep)
+discussion: https://forum.polygon.technology/t/indore-hard-fork/12272
+status: Final
+type: Core
+date: 2023-06-27
 ---
 
 ### Abstract 

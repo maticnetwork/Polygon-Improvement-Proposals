@@ -1,6 +1,12 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 10 | Increase StateSync Confirmations  | Proposal to increase the statesync confirmations in bor | [Krishna Upadhyaya](https://github.com/0xKrishna), [Manav Darji](https://github.com/manav2401), [Pratik Patil](https://github.com/pratikspatil024) | [Forum](https://forum.polygon.technology/t/proposal-increase-statesync-confirmations/11779)  | Draft | Core | 2023-18-04
+---
+pip: 10
+title: Increase StateSync Confirmations
+description: Proposal to increase the statesync confirmations in bor
+author: Krishna Upadhyaya (@0xKrishna), Manav Darji (@manav2401), Pratik Patil (@pratikspatil024)
+discussion: https://forum.polygon.technology/t/proposal-increase-statesync-confirmations/11779
+status: Draft
+type: Core
+date: 2023-04-18
 ---
 
 ### Abstract 

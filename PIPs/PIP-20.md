@@ -1,8 +1,13 @@
-
-
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 20 | State-Sync Verbosity | Proposal to introduce more visibility of state-sync transactions | [Shivam Sharma](https://github.com/0xsharma), [Sandeep Sreenath](https://github.com/ssandeep), [William Schwab](https://github.com/wschwab) | [Forum](https://forum.polygon.technology/t/pip-20-state-sync-verbosity/13050) | Peer Review | Core | 2023-09-14 |
+---
+pip: 20
+title: State-Sync Verbosity
+description: Proposal to introduce more visibility of state-sync transactions
+author: Shivam Sharma (@0xsharma), Sandeep Sreenath (@ssandeep), William Schwab (@wschwab)
+discussion: https://forum.polygon.technology/t/pip-20-state-sync-verbosity/13050
+status: Peer Review
+type: Core
+date: 2023-09-14
+---
 
 ## Abstract
 

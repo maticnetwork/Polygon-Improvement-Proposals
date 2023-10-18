@@ -1,9 +1,15 @@
-| PIP | Title          | Description                | Author                        | Discussion | Status | Type                                     | Date                  |
-|-----|----------------|----------------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 28  | Agra Hard Fork | Proposes the Agra Hardfork | [Marcello Ardizzone](https://github.com/marcello33), [Sandeep Sreenath](https://github.com/ssandeep) | [Forum](https://forum.polygon.technology/t/pip-28-agra-hardfork/13067)  | Draft  | Core | 2023-10-17
+---
+pip: 28
+title: Agra Hard Fork
+description: Proposes the Agra Hardfork
+author: Marcello Ardizzone (@marcello33), Sandeep Sreenath (@ssandeep)
+discussion: https://forum.polygon.technology/t/pip-28-agra-hardfork/13067
+status: Draft
+type: Core
+date: 2023-10-17
 ---
 
-### Abstract 
+### Abstract
 
 This PIP specifies the changes included in the Polygon hard fork named Agra.
 

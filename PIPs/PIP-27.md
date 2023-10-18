@@ -1,6 +1,13 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 27 | Precompiled for secp256r1 Curve Support | Proposal to add precompiled contract that performs signature verifications in the “secp256r1” elliptic curve. | Ulaş Erdoğan (@ulerdogan), Doğan Alpaslan (@doganalpaslan) | [Forum](https://forum.polygon.technology/t/new-pip-precompiled-for-secp256r1-curve-support/13049?u=ulerdogan) | Draft  | Core | 2023-10-12 |
+---
+pip: 27
+title: Precompiled for secp256r1 Curve Support
+description: Proposal to add precompiled contract that performs signature verifications in the “secp256r1” elliptic curve.
+author: Ulaş Erdoğan (@ulerdogan), Doğan Alpaslan (@doganalpaslan)
+discussion: https://forum.polygon.technology/t/new-pip-precompiled-for-secp256r1-curve-support/13049?u=ulerdogan
+status: Draft
+type: Core
+date: 2023-10-12
+---
 
 ## Abstract
 

@@ -1,7 +1,13 @@
-| PIP| Title| Description| Author| Discussion | Status | Type | Date|
-|-|-|-|-|-|-|-|-|
-| 18 | Polygon 2.0 Phase 0 - Frontier| Specification of Polygon 2.0 - Phase 0 |David Schwartz, Mihailo Bjelic, Mudit Gupta, Grace Torrellas, Mateusz Rzeszowski, Daniel Gretzke, David Silverman, Paul Gebheim| [Forum](https://forum.polygon.technology/t/pip-18-polygon-2-0-phase-0-frontier/12913)| Draft | Informational | 2023-09-14 |
-
+---
+pip: 18
+title: Polygon 2.0 Phase 0 - Frontier
+description: Specification of Polygon 2.0 - Phase 0
+author: David Schwartz, Mihailo Bjelic, Mudit Gupta, Grace Torrellas, Mateusz Rzeszowski (@matrzeszowski), Daniel Gretzke, David Silverman, Paul Gebheim
+discussion: https://forum.polygon.technology/t/pip-18-polygon-2-0-phase-0-frontier/12913
+status: Draft
+type: Informational
+date: 2023-09-14
+---
 
 ### Abstract
 

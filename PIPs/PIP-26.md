@@ -14,7 +14,7 @@ The original and proposed outline for emissions can be seen in the table below.
 
 *Proposed Emissions Schedule With Comparison:*
 
-| Year    | Dates                         | Original Reward Pool | Original POL Proposed Reward Pool | PIP-2X Proposed Reward Pool |
+| Year    | Dates                         | Original Reward Pool | Original POL Proposed Reward Pool | PIP-26 Proposed Reward Pool |
 | ------- | ----------------------------- | -------------------- | --------------------------------- | --------------------------- |
 | First   | June 2020 - June  2021        | 312,917,639          | -                                 | -                           |
 | Second  | July 2021 - July 2022         | 275,625,675          | -                                 | -                           |

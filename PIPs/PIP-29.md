@@ -1,6 +1,6 @@
  | PIP | Title          | Description                | Author                        | Discussion | Status | Type                                     | Date                  |
 |-----|----------------|----------------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 29  | Polygon Protocol Council | Proposes a Protocol Council for Polygon 2.0 | Mihailo Bjelic, Mateusz Rzeszowski | [Forum](https://forum.polygon.technology/t/pip-29-polygon-protocol-council/13075) | Draft  | Contracts | 2023-10-18
+| 29  | Polygon Protocol Council | Proposes a Protocol Council for Polygon 2.0 | Mihailo Bjelic, Mateusz Rzeszowski | [Forum](https://forum.polygon.technology/t/pip-29-polygon-protocol-council/13075) | Peer Review  | Contracts | 2023-10-18
 
 ## Abstract
 

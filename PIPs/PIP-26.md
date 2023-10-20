@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 26 | Transition from MATIC to POL Validator Rewards | Proposes aligning the initial POL Validator Rewards to current rewards schedule | [Derek Meyer](https://twitter.com/data_nexus) [Dimitri Nikolaros](https://twitter.com/dnikolaros)  | [Forum Post](https://forum.polygon.technology/t/pip-26-transition-from-matic-to-pol-validator-rewards/13046) | Peer Review  | Contracts | 2023-10-12
+| 26 | Transition from MATIC to POL Validator Rewards | Proposes aligning the initial POL Validator Rewards to current rewards schedule | [Derek Meyer](https://twitter.com/data_nexus) [Dimitri Nikolaros](https://twitter.com/dnikolaros)  | [Forum Post](https://forum.polygon.technology/t/pip-26-transition-from-matic-to-pol-validator-rewards/13046) | Last Call  | Contracts | 2023-10-12
 
 ### Abstract
 
@@ -14,7 +14,7 @@ The original and proposed outline for emissions can be seen in the table below.
 
 *Proposed Emissions Schedule With Comparison:*
 
-| Year    | Dates                         | Original Reward Pool | Original POL Proposed Reward Pool | PIP-2X Proposed Reward Pool |
+| Year    | Dates                         | Original Reward Pool | Original POL Proposed Reward Pool | PIP-26 Proposed Reward Pool |
 | ------- | ----------------------------- | -------------------- | --------------------------------- | --------------------------- |
 | First   | June 2020 - June  2021        | 312,917,639          | -                                 | -                           |
 | Second  | July 2021 - July 2022         | 275,625,675          | -                                 | -                           |

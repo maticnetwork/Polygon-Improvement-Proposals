@@ -18,24 +18,31 @@ The Protocol Council is an initial step towards the final result of Polygon 2.0 
 
 ## Specification
 
-### Multisig Contract 
- 
-It is proposed for the contract to be a [Gnosis Safe](https://github.com/safe-global/safe-contracts). 
+### Protocol Council Contracts
+It is proposed that the Protocol Council be composed of four separate [Gnosis Safe](https://github.com/safe-global/safe-contracts) contracts.
+
+- an Ethereum mainnet contract with 7/13 consensus requirement (0x9A53B1651C8Dd587c30392f8931e61daBBB50899)
+- an Ethereum mainnet contract with 10/13 consensus requirement (0x37D085ca4a24f6b29214204E8A8666f12cf19516)
+- a Polygon PoS contract with 7/13 consensus requirement
+- a Polygon PoS contract with 10/13 consensus requirement
+
+Timelocks are configured relative to the consensus requirements and are described in detail below.
 
 ### Ownership
 
-It is proposed that the Protocol Council will represent the community in governing all future Polygon 2.0 system smart contracts. 
+It is proposed that the Protocol Council will represent the community in governing all future Polygon 2.0 system smart contracts.
 
-Initially, the Council will have the ability to make emergency and regular track changes to the following contracts:
+Initially, the Council will have the ability to make emergency and regular track changes to the following contracts described in [PIP-17](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md):
 
--   [POL Migration Contract](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md#migration-contract) 
--   [Emission Manager Contract](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md#emission-manager-contract) 
+- [POL Token Contract](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md#pol-token-contract) (*Note: the contract is nonupgradable. 10/13 Emergency route can enable/disable Permit2 approvals*)
+- [POL Migration Contract](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md#migration-contract)
+- [Emission Manager Contract](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md#emission-manager-contract)
 
 ### Timelock 
 
 The above contracts will be changeable by use of one of the two routes:  
   
--   a regular change route requiring 7/13 consensus of the Protocol Council with a 10-day timelock, which will be used for all configuration changes in the contract;
+-   a regular change route requiring 7/13 consensus of the Protocol Council with a 10-day timelock (0x29A6f32f36EDeD399763524018F17F03B1435b18), which will be used for all configuration changes in the contract;
 -   an emergency change route requiring 10/13 consensus of the Protocol Council with no timelock, which will be used to upgrade contract implementations in the proxy contracts.
 
 ### Proposed Signers: 

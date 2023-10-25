@@ -76,7 +76,7 @@ No entity should hold wide sway over the decision-making of the Protocol Council
 
 Protocol Council members should demonstrate a level of technical, security, and governance competence, necessary for performing their duties and relevant to ensuring they’re acting in the community's best interest. This competence can be quantified by looking at member’s past participation in Web3 governance frameworks, security Councils, and technical involvement in the L2 space, among other experiences.
 
-The Protocol Council will be able to add or remove members via a 7/13 consensus with a 10-day timelock, and otherwise determine its affairs among the members, governed by the PIP framework.
+The Protocol Council will be able to add or remove members and otherwise determine its affairs among the members, governed by the PIP framework.
 
 ### Principles for Protocol Council Architecture
 
@@ -91,7 +91,7 @@ At the same time, an emergency route can facilitate immediate changes to system 
 
 As a result, any immediately-executable malicious change would require a large number (10) of  hypothetically-compromised actors, who at the same time make up the overwhelming majority (77%) of the Protocol Council set, leading to the conclusion that a successful attack is improbable.
 
-While in the initial implementation POL contracts will be governed by either one of the execution routes (regular or emergency), a future PIP will introduce dual route execution allowing the regular change route to be the main execution route, with the emergency route being enabled for a select number of system contracts. 
+While in the initial implementation POL contract changes will be governed by either one of the execution routes (regular or emergency), a future PIP will introduce dual route execution allowing the regular change route to be the main execution route, with the emergency route being enabled for a select number of system contract changes. 
 
 ## Backward Compatibility
 

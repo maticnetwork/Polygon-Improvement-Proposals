@@ -25,7 +25,7 @@ A token contract, POL, is proposed, broadly based on the MIT-licensed OpenZeppel
 
 Upon genesis, an initial supply of 10 billion will be minted to a migration contract (see below for details). Further mints may be called by an emission manager contract (see below for details). Emission Managers can be managed by Governance. An additional check-in mint function requires the mint rate to be less than 10 POL per second.
 
-The POL token contract is not upgradeabl, however Permit2 default approvals can be enabled or disabled by Governance and is enabled by default.
+The POL token contract is not upgradeable, however Permit2 default approvals can be enabled or disabled by Governance and is enabled by default.
 
 ```solidity
 // SPDX-License-Identifier: MIT

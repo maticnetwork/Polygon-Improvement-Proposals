@@ -23,48 +23,56 @@ POL represents a next-generation token able to accommodate an ecosystem of zk-ba
 
 A token contract, POL, is proposed, broadly based on the MIT-licensed OpenZeppelin ERC20 implementations which provide support for the default ERC20 standard, along with some non-standard functions for allowance modifications. The implementation also provides support for EIP-2612: Signature-Based Permit Approvals.
 
-Upon genesis, an initial supply of 10 billion will be minted to a migration contract (see below for details). Further mints may be called by an emission manager contract (see below for details). An additional check-in mint function requires the mint rate to be less than 10 POL per second.
+Upon genesis, an initial supply of 10 billion will be minted to a migration contract (see below for details). Further mints may be called by an emission manager contract (see below for details). Emission Managers can be managed by Governance. An additional check-in mint function requires the mint rate to be less than 10 POL per second.
 
-The POL token contract is not upgradeable.
+The POL token contract is not upgradeabl, however Permit2 default approvals can be enabled or disabled by Governance and is enabled by default.
 
-```
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.21;
 
-import {ERC20, ERC20Permit} from "openzeppelin-contracts/contracts/token/ERC20/extensions/ERC20Permit.sol";
+import {ERC20, ERC20Permit, IERC20} from "openzeppelin-contracts/contracts/token/ERC20/extensions/ERC20Permit.sol";
 import {AccessControlEnumerable} from "openzeppelin-contracts/contracts/access/AccessControlEnumerable.sol";
 import {IPolygonEcosystemToken} from "./interfaces/IPolygonEcosystemToken.sol";
 
 /// @title Polygon ERC20 token
-/// @author Polygon Labs (@DhairyaSethi, @gretzke, @qedk)
+/// @author Polygon Labs (@DhairyaSethi, @gretzke, @qedk, @simonDos)
 /// @notice This is the Polygon ERC20 token contract on Ethereum L1
 /// @dev The contract allows for a 1-to-1 representation between $POL and $MATIC and allows for additional emission based on hub and treasury requirements
 /// @custom:security-contact security@polygon.technology
 contract PolygonEcosystemToken is ERC20Permit, AccessControlEnumerable, IPolygonEcosystemToken {
     bytes32 public constant EMISSION_ROLE = keccak256("EMISSION_ROLE");
     bytes32 public constant CAP_MANAGER_ROLE = keccak256("CAP_MANAGER_ROLE");
-    uint256 public mintPerSecondCap = 10e18; // 10 POL tokens per second
+    bytes32 public constant PERMIT2_REVOKER_ROLE = keccak256("PERMIT2_REVOKER_ROLE");
+    address public constant PERMIT2 = 0x000000000022D473030F116dDEE9F6B43aC78BA3;
+    uint256 public mintPerSecondCap = 13.37e18;
     uint256 public lastMint;
+    bool public permit2Enabled;
 
     constructor(
         address migration,
         address emissionManager,
-        address governance
+        address protocolCouncil,
+        address emergencyCouncil
     ) ERC20("Polygon Ecosystem Token", "POL") ERC20Permit("Polygon Ecosystem Token") {
-        if (migration == address(0) || emissionManager == address(0) || governance == address(0))
-            revert InvalidAddress();
-        _grantRole(DEFAULT_ADMIN_ROLE, governance);
+        if (
+            migration == address(0) ||
+            emissionManager == address(0) ||
+            protocolCouncil == address(0) ||
+            emergencyCouncil == address(0)
+        ) revert InvalidAddress();
+        _grantRole(DEFAULT_ADMIN_ROLE, protocolCouncil);
         _grantRole(EMISSION_ROLE, emissionManager);
-        _grantRole(CAP_MANAGER_ROLE, governance);
+        _grantRole(CAP_MANAGER_ROLE, protocolCouncil);
+        _grantRole(PERMIT2_REVOKER_ROLE, protocolCouncil);
+        _grantRole(PERMIT2_REVOKER_ROLE, emergencyCouncil);
         _mint(migration, 10_000_000_000e18);
         // we can safely set lastMint here since the emission manager is initialised after the token and won't hit the cap.
         lastMint = block.timestamp;
+        _updatePermit2Allowance(true);
     }
 
-    /// @notice Mint token entrypoint for the emission manager contract
-    /// @dev The function only validates the sender, the emission manager is responsible for correctness
-    /// @param to Address to mint to
-    /// @param amount Amount to mint
+    /// @inheritdoc IPolygonEcosystemToken
     function mint(address to, uint256 amount) external onlyRole(EMISSION_ROLE) {
         uint256 timeElapsedSinceLastMint = block.timestamp - lastMint;
         uint256 maxMint = timeElapsedSinceLastMint * mintPerSecondCap;
@@ -74,11 +82,31 @@ contract PolygonEcosystemToken is ERC20Permit, AccessControlEnumerable, IPolygon
         _mint(to, amount);
     }
 
-    /// @notice Update the limit of tokens that can be minted per second
-    /// @param newCap the amount of tokens in 18 decimals as an absolute value
+    /// @inheritdoc IPolygonEcosystemToken
     function updateMintCap(uint256 newCap) external onlyRole(CAP_MANAGER_ROLE) {
         emit MintCapUpdated(mintPerSecondCap, newCap);
         mintPerSecondCap = newCap;
+    }
+
+    /// @inheritdoc IPolygonEcosystemToken
+    function updatePermit2Allowance(bool enabled) external onlyRole(PERMIT2_REVOKER_ROLE) {
+        _updatePermit2Allowance(enabled);
+    }
+
+    /// @dev The permit2 contract has full approval by default. If the approval is revoked, it can still be manually approved.
+    function allowance(address owner, address spender) public view override(ERC20, IERC20) returns (uint256) {
+        if (spender == PERMIT2 && permit2Enabled) return type(uint256).max;
+        return super.allowance(owner, spender);
+    }
+
+    /// @inheritdoc IPolygonEcosystemToken
+    function version() external pure returns (string memory) {
+        return "1.1.0";
+    }
+
+    function _updatePermit2Allowance(bool enabled) private {
+        emit Permit2AllowanceUpdated(enabled);
+        permit2Enabled = enabled;
     }
 }
 ```
@@ -90,9 +118,9 @@ The contract shall receive the entire initial 10 billion POL supply in order to 
 
 Governance can lock and unlock the ability to unmigrate POL tokens back into an equivalent amount of MATIC. 
 
-This contract is upgradeable via Governance. The initial implementation is described below.
+This contract is upgradeable via Governance with POL tokens also being burnable via Governance. The initial implementation is described below.
 
-```
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.21;
 
@@ -111,8 +139,8 @@ contract PolygonMigration is Ownable2StepUpgradeable, IPolygonMigration {
     using SafeERC20 for IERC20;
     using SafeERC20 for IERC20Permit;
 
+    IERC20 public immutable matic;
     IERC20 public polygon;
-    IERC20 public matic;
     bool public unmigrationLocked;
 
     modifier onlyUnmigrationUnlocked() {
@@ -120,15 +148,15 @@ contract PolygonMigration is Ownable2StepUpgradeable, IPolygonMigration {
         _;
     }
 
-    constructor() {
+    constructor(address matic_) {
+        if (matic_ == address(0)) revert InvalidAddress();
+        matic = IERC20(matic_);
         // so that the implementation contract cannot be initialized
         _disableInitializers();
     }
 
-    function initialize(address matic_) external initializer {
+    function initialize() external initializer {
         __Ownable_init();
-        if (matic_ == address(0)) revert InvalidAddress();
-        matic = IERC20(matic_);
     }
 
     /// @notice This function allows owner/governance to set POL token address *only once*
@@ -138,9 +166,7 @@ contract PolygonMigration is Ownable2StepUpgradeable, IPolygonMigration {
         polygon = IERC20(polygon_);
     }
 
-    /// @notice This function allows for migrating MATIC tokens to POL tokens
-    /// @dev The function does not do any validation since the migration is a one-way process
-    /// @param amount Amount of MATIC to migrate
+    /// @inheritdoc IPolygonMigration
     function migrate(uint256 amount) external {
         emit Migrated(msg.sender, amount);
 
@@ -148,27 +174,23 @@ contract PolygonMigration is Ownable2StepUpgradeable, IPolygonMigration {
         polygon.safeTransfer(msg.sender, amount);
     }
 
-    /// @notice This function allows for unmigrating from POL tokens to MATIC tokens
-    /// @param amount Amount of POL to migrate
+    /// @inheritdoc IPolygonMigration
     function unmigrate(uint256 amount) external onlyUnmigrationUnlocked {
-        emit Unmigrated(msg.sender, amount);
+        emit Unmigrated(msg.sender, msg.sender, amount);
 
         polygon.safeTransferFrom(msg.sender, address(this), amount);
         matic.safeTransfer(msg.sender, amount);
     }
 
-    /// @notice This function allows for unmigrating POL tokens (from msg.sender) to MATIC tokens (to account)
-    /// @param amount Amount of POL to migrate
-    /// @param account Address to receive MATIC tokens
-    function unmigrateTo(address account, uint256 amount) external onlyUnmigrationUnlocked {
-        emit Unmigrated(msg.sender, amount);
+    /// @inheritdoc IPolygonMigration
+    function unmigrateTo(address recipient, uint256 amount) external onlyUnmigrationUnlocked {
+        emit Unmigrated(msg.sender, recipient, amount);
 
         polygon.safeTransferFrom(msg.sender, address(this), amount);
-        matic.safeTransfer(account, amount);
+        matic.safeTransfer(recipient, amount);
     }
 
-    /// @notice This function allows for unmigrating from POL tokens to MATIC tokens using an EIP-2612 permit
-    /// @param amount Amount of POL to migrate
+    /// @inheritdoc IPolygonMigration
     function unmigrateWithPermit(
         uint256 amount,
         uint256 deadline,
@@ -176,27 +198,30 @@ contract PolygonMigration is Ownable2StepUpgradeable, IPolygonMigration {
         bytes32 r,
         bytes32 s
     ) external onlyUnmigrationUnlocked {
-        emit Unmigrated(msg.sender, amount);
+        emit Unmigrated(msg.sender, msg.sender, amount);
 
         IERC20Permit(address(polygon)).safePermit(msg.sender, address(this), amount, deadline, v, r, s);
         polygon.safeTransferFrom(msg.sender, address(this), amount);
         matic.safeTransfer(msg.sender, amount);
     }
 
-    /// @notice Allows governance to lock or unlock the unmigration process
-    /// @dev The function does not do any validation since governance can update the unmigration process if required
-    /// @param unmigrationLocked_ New unmigration lock status
+    /// @inheritdoc IPolygonMigration
     function updateUnmigrationLock(bool unmigrationLocked_) external onlyOwner {
-        unmigrationLocked = unmigrationLocked_;
         emit UnmigrationLockUpdated(unmigrationLocked_);
+        unmigrationLocked = unmigrationLocked_;
     }
 
-    /**
-     * @dev This empty reserved space is put in place to allow future versions to add new
-     * variables without shifting down storage in the inheritance chain.
-     * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
-     */
-    uint256[50] private __gap;
+    /// @inheritdoc IPolygonMigration
+    function version() external pure returns (string memory) {
+        return "1.1.0";
+    }
+
+    /// @inheritdoc IPolygonMigration
+    function burn(uint256 amount) external onlyOwner {
+        polygon.safeTransfer(0x000000000000000000000000000000000000dEaD, amount);
+    }
+
+    uint256[49] private __gap;
 }
 ```
 
@@ -212,7 +237,7 @@ A publicly callable function that is callable by any address can trigger the imm
 
 This contract is upgradeable via Governance. The initial implementation is described below.
 
-```
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.21;
 

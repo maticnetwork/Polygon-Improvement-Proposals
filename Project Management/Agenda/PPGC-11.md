@@ -1,5 +1,6 @@
 # Meeting Agenda - November 2, 2023
 
+- [RollCall 0 Review](https://github.com/ethereum/pm/issues/885)
 
 - [PIP-28: Agra HF](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-28.md):
     
@@ -19,3 +20,7 @@
   -   Cancun Changes
   -   TSTORE, TLOAD & MCOPY
   -   [PIP-27: Precompiled for secp256r1 Curve Support](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-27.md)
+
+- Amoy PoS Testnet (Sepolia)
+  -   Proposed Dates
+  -   Mumbai Testnet Committee -> Polygon PoS Testnet Committee

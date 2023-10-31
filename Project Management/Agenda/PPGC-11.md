@@ -1,20 +1,20 @@
 # Meeting Agenda - November 2, 2023
 
 
-- Agra HF:
+- [PIP-28: Agra HF](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-28.md):
     
   - Mumbai Testing Committee Feedback
   - Mainnet Dates
 
-- [PIP-25: Adjust POL Total Supply ](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-25.md)
+- [PIP-25: Adjust POL Total Supply ](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-25.md):
 
   -   Dates for Testnet + Mainnet
 
-- [PIP-19: Update Polygon PoS Native Token to POL](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-19.md)
+- [PIP-19: Update Polygon PoS Native Token to POL](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-19.md):
 
   -   Date for Testnet + Mainnet
 
-- First HF of 2024
+- First HF of 2024:
 
   -   Cancun Changes
   -   TSTORE, TLOAD & MCOPY

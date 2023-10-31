@@ -26,7 +26,7 @@ Protocol developers, client developers, network Validators and core Polygon Labs
 
 ### Who Manages the Calls
 
-The calls are facilitated by Jackson Lewis. The meetings are recorded and transcribed. The transcripts, meeting minutes, and video will be uploaded after the completion of the meetings in this public repository.
+The calls are facilitated by Harry Rook. The meetings are recorded and transcribed. The transcripts, meeting minutes, and video will be uploaded after the completion of the meetings in this public repository.
 
 The calls are independent of any organization. However, participants in the meetings may also be Polygon Labs' employees.
 

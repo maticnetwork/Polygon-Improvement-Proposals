@@ -1,32 +1,27 @@
-# Polygon Proposals Management Repository 
 
-This repository is used for the management of various initiatives affecting the different Polygon protocols. The main use of this repository is for the Polygon Protocol Governance Calls, but it is also used for other meetings/discussions related to Polygon protocols.
+## Polygon Protocol Governance Call
 
-## Polygon Protocol Governance Call 
+This repository is used by the Polygon community to manage various initiatives related to Polygon protocols, including the Polygon Protocol Governance Calls.
 
-This repository is used by the Polygon community to manage various initiatives related to various Polygon protocols. This information can be used at the PPGC meetings and other forums for discussion of Polygon protocols.
-
-### Purpose
-
-The Polygon Protocol Governance Call is a technical call intended to bring together various core Polygon Labs developers who help coordinate with the community to  help determine the direction of the protocol. Polygon Labs’ Governance, Validator support, PoS, and Research teams provide updates on their projects, discuss various PIPs to improve the protocol, and support each other as we build Web 3.0.
+The Polygon Protocol Governance Call is a technical call intended to bring together the technical Polygon community to help determine the direction of the protocol. Infrastructure providers, dapps, developers, validators, as well as Polygon Labs’ Governance, Validator support, PoS, and Research teams discuss various PIPs to improve the protocol and work with each other as we build the Internet of Value.
 
 ### Agendas
 
-The agendas for the calls are tracked in the [Agenda folder](https://github.com/maticnetwork/Polygon-Improvement-Proposals/tree/main/Project%20Management/Agenda) this repository. To add an item to an agenda, please [send a PR to the Agenda folder in this repo](https://github.com/maticnetwork/Polygon-Improvement-Proposals/tree/main/Project%20Management/Agenda) which mentions the topic you want to discuss and links any relevant materials (PIPs, prototypes, etc.). 
+The agendas for the calls are tracked in the [Agenda folder](https://github.com/maticnetwork/Polygon-Improvement-Proposals/tree/main/Project%20Management/Agenda) of this repository. To add an item to the agenda, please [send a PR to the Agenda folder](https://github.com/maticnetwork/Polygon-Improvement-Proposals/tree/main/Project%20Management/Agenda) which lays out the topic you want to discuss, alongside any relevant materials (PIPs, prototypes, etc.). 
 
-Anyone is welcome to add an item to the agenda as long as it follows these guidelines:
+Anyone is welcome to add an item to the agenda following the guidelines:
 
 - The topic is technical in nature.
-- The topic involves the Polygon protocol at a low level. This means Dapps and PRCs are generally not allowed as topics.
-- The topic should ideally not be philosophical in nature. The core developer meetings are not meant to decide philosophical or contentious issues that should be decided by the community. There are exceptions to this, but generally, these topics distract from more productive technical discussion.
+- The topic involves the Polygon protocol at a low level of consideration. This means, for example, that Dapps and PRCs are generally not allowed as topics.
+- The topic should be laser-focused. The core developer meetings are not meant to decide philosophical or contentious issues that are decided by the community. There are exceptions to this, but generally, these topics distract from productive technical discussion.
 
 ### Who Can Attend
 
-Protocol developers, client developers, network Validators and core Polygon Labs’ researchers, and community members (e.g., dApp and ecosystem community members) are invited to attend the calls. Sometimes a non-core developer with particular expertise on a topic is invited to discuss a specific agenda item. If you feel you would contribute to the meetings by your attendance please reach out to [Harry Rook](mailto:hrook@polygon.technology).
+Protocol developers, client developers, network Validators and core Polygon Labs’ researchers, and community members (e.g., dApp and ecosystem community members) are invited to attend the calls. Sometimes a non-core developer with particular expertise on a topic is invited to discuss a specific agenda item. If you feel you would contribute to the meetings by your attendance, please reach out to [Harry Rook](mailto:hrook@polygon.technology).
 
 ### Who Manages the Calls
 
-The calls are facilitated by Harry Rook. The meetings are recorded and transcribed. The transcripts, meeting minutes, and video will be uploaded after the completion of the meetings in this public repository.
+The calls are facilitated by Harry Rook. The meetings are recorded and transcribed. The transcripts and video will be uploaded after the meeting in this repository.
 
 The calls are independent of any organization. However, participants in the meetings may also be Polygon Labs' employees.
 

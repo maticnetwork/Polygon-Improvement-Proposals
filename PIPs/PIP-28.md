@@ -1,6 +1,6 @@
 | PIP | Title          | Description                | Author                        | Discussion | Status      | Type                                     | Date                  |
 |-----|----------------|----------------------------|-------------------------------|------------|-------------|------------------------------------------|-----------------------|
-| 28  | Agra Hard Fork | Proposes the Agra Hardfork | [Marcello Ardizzone](https://github.com/marcello33), [Sandeep Sreenath](https://github.com/ssandeep) | [Forum](https://forum.polygon.technology/t/pip-28-agra-hardfork/13067)  | Peer Review | Core | 2023-10-17
+| 28  | Agra Hard Fork | Proposes the Agra Hardfork | [Marcello Ardizzone](https://github.com/marcello33), [Sandeep Sreenath](https://github.com/ssandeep) | [Forum](https://forum.polygon.technology/t/pip-28-agra-hardfork/13067)  | Last Call | Core | 2023-10-17
 ---
 
 ### Abstract 

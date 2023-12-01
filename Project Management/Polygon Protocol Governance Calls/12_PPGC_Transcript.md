@@ -1,8 +1,10 @@
-Polygon Protocol Governance Call (2023-11-16 16:05 GMT) - Transcript
-Attendees
+## Polygon Protocol Governance Call (2023-11-16 16:05 GMT) - Transcript
 
-Aakriti Jain, Aleksei, Derek Meyer, Devesh Gupta, Fireflies.ai Notetaker Flavian, Frisson, Harry Rook, Jackson Lewis, Jerome de Tychey, Junji Hashimoto, Justice Conder, Mariano Conti, Mateusz Rzeszowski, Michel Muniz, Mike Brucken, Mirella Guglielmi, Nicholas Cannon, Panagiotis Alexiou (Peter Alexiou), Parvez Shaikh, Quentin Chabert, Quentin de Beauchesne, Sandeep Sreenath, Scott Lilliston, Stephen Ross, Takasugu Murata, Tiago - Stakin, Vincent Taglia, WebDev StakeWorks, Will White, Yuling Ma
-Transcript
+## Attendees
+
+Aakriti Jain, Aleksei, Derek Meyer, Devesh Gupta, Fireflies.ai Notetaker Flavian, Frisson, Harry Rook, Jackson Lewis, Jerome de Tychey, Junji Hashimoto, Justice Conder, Mariano Conti, Mateusz Rzeszowski, Michel Muniz, Mike Brucken, Mirella Guglielmi, Nicholas Cannon, Panagiotis Alexiou (Peter Alexiou), Parvez Shaikh, Quentin Chabert, Quentin de Beauchesne, Sandeep Sreenath, Scott Lilliston, Stephen Ross, Takasugu Murata, Tiago - Stakin, Vincent Taglia, WebDev StakeWorks, Will White, Yuling Ma.
+
+## Transcript
 
 Harry Rook: In terms of the agenda for today, it's fairly brief, but the main things are Agra folk related. So we had the test net roll out on the first of November and we've recently had the main net release patch with a mainnet block number countdown, which I can share for you in the chat. So, in terms of the main buckets for today, we're going to have some feedback from the Mumbai testing committee. And then we can discuss in more depth the plan for mainnet rollout. I'll just share the agenda in the chat and then I can hand it over to Proton gaming. I don't know if you guys are in the call yet, but if you are feel free to begin some of the feedback you've had from Agra test Network.
 

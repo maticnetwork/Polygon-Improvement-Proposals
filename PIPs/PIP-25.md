@@ -14,10 +14,10 @@ In response to community feedback, this PIP proposes that the `burn()` function 
 
 Call `burn()` on the migrator contract with an amount reflective of the MATIC balances of the following addresses:
 
--   0x000000000000000000000000000000000000dEaD \[MATIC burn address\] - ~16M MATIC 
--   0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0 \[MATIC token address\] - ~500k MATIC 
+-   0x000000000000000000000000000000000000dEaD \[MATIC burn address\] - 28,048,923.20944512682731682 MATIC 
+-   0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0 \[MATIC token address\] - 479,955.33752218388182171 MATIC 
 
-*Exact values to be updated upon EIP-1559 recipient change, should PIP-24 be adopted*
+*Exact values determined by the [Agra Hardfork](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-28.md)*
 
 ### Backward Compatibility
 

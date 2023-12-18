@@ -60,7 +60,7 @@ Manual testing as well as end to end unit testing have been carried for this fea
 
 The reference implementation is available as a part of [this pull request](https://github.com/maticnetwork/bor/pull/751). Huge shoutout and thanks to external contributor [jsvisa](https://github.com/maticnetwork/bor/pull/751) for implementing this feature.
 
-## Security Considerations (#security-considerations)
+## Security Considerations
 
 Although, having this in PoS is very helpful, it does raise some concerns over data availability. This section will try to put forward some of them in form of pros and cons list.
 

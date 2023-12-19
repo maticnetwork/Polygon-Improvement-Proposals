@@ -108,6 +108,8 @@ This change causes no identifiable backward incompatibilities.
 
 Polygon 2.0 is a significant technical upgrade of the Polygon system with broadscale changes to the PoS network, as well as the introduction of several novel systems. There are inherent risks in this migration, however, each component will undergo extensive testing, auditing, and public scrutiny prior to activation. The staging of the PIPs and the methodical, piecemeal upgrade of the system are intended to ensure there is sufficient time for testing, auditing, and scrutiny. 
 
+During the setup of the `TIMELOCK`, and as part of the default parameters, the address `0x0000000000000000000000000000000000000001` is assigned to the `TIMELOCK_ADMIN_ROLE`. This address does not introduce any security risks, however for system hygiene reasons it is proposed to be removed.
+
 ## Copyright
 
 All copyrights and related rights in this work are waived under CC0 1.0 Universal.

@@ -1,6 +1,6 @@
 | PIP | Title          | Description                | Author                        | Discussion | Status      | Type                                     | Date                  |
 |-----|----------------|----------------------------|-------------------------------|------------|-------------|------------------------------------------|-----------------------|
-| 28  | Agra Hard Fork | Proposes the Agra Hardfork | [Marcello Ardizzone](https://github.com/marcello33), [Sandeep Sreenath](https://github.com/ssandeep) | [Forum](https://forum.polygon.technology/t/pip-28-agra-hardfork/13067)  | Last Call | Core | 2023-10-17
+| 28  | Agra Hard Fork | Proposes the Agra Hardfork | [Marcello Ardizzone](https://github.com/marcello33), [Sandeep Sreenath](https://github.com/ssandeep) | [Forum](https://forum.polygon.technology/t/pip-28-agra-hardfork/13067)  | Final | Core | 2023-10-17
 ---
 
 ### Abstract 
@@ -13,7 +13,8 @@ This PIP specifies the changes included in the Polygon hard fork named Agra.
 
 ### Activation
 
-- Blocks for Mainnet and Mumbai Testnet will be updated once the decision is finalized.
+- Mainnet Block: 50,523,000
+- Mumbai Block: 41,874,000
 
 ### Included PIPs
 

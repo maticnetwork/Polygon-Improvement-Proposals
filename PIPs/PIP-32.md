@@ -5,9 +5,8 @@
 ### Abstract
 
 A full node of the primary client of Polygon PoS, [bor](https://github.com/maticnetwork/bor) bifurcates data storage to the following areas:
-
-1.  LevelDB (A key-value store)
-2.  Freezer Database
+1. LevelDB (A key-value store)
+2. Freezer Database
 
 The most recent data (the past `90000` blocks (a configurable limit)) is stored in LevelDB for faster read/write on the most recent block data and state. The data beyond this limit is moved to the Freezer Database, which stores the historical data. For a full node, the Freezer Database stores block headers, body and receipts for fulfilling RPC requests over them in a flattened raw binary format. Currently, as bor is derived from geth, it supports state pruning, which prunes the old state present in the key-value store, accumulating as the chain progresses. This reduces disk space as we remove the state data that is not required.
 

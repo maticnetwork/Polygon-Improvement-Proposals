@@ -12,3 +12,5 @@
 * [PIP-32](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-32.md): Ancient data pruning
   
 * [PIP-18](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-18.md): Roadmap Timing Update
+
+*  Bor v1.2.0 rollback

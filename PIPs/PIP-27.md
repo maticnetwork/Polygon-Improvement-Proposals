@@ -1,18 +1,18 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 27 | Precompiled for secp256r1 Curve Support | Proposal to add precompiled contract that performs signature verifications in the “secp256r1” elliptic curve. | Ulaş Erdoğan (@ulerdogan), Doğan Alpaslan (@doganalpaslan) | [Forum](https://forum.polygon.technology/t/new-pip-precompiled-for-secp256r1-curve-support/13049?u=ulerdogan) | Peer Review  | Core | 2023-10-12 |
+| 27 | Precompiled for secp256r1 Curve Support | Proposal to add precompiled contract that performs signature verifications in the “secp256r1” elliptic curve. | Ulaş Erdoğan (@ulerdogan), Doğan Alpaslan (@doganalpaslan) | [Forum](https://forum.polygon.technology/t/new-pip-precompiled-for-secp256r1-curve-support/13049?u=ulerdogan) | Last Call  | Core | 2023-10-12 |
 
 ## Abstract
 
-This PIP follows the [EIP-7212](https://eips.ethereum.org/EIPS/eip-7212) proposal and brings the idea of inclusion before the Ethereum L1 to be discussed.
+This PIP follows the [RIP-7212](https://github.com/ethereum/RIPs/blob/master/RIPS/rip-7212.md) proposal and brings the idea of inclusion with the RIP initiative.
 
-> This proposal creates a precompiled contract that performs signature verifications in the “secp256r1” elliptic curve by given parameters of message hash, `r` and `s` components of the signature, and `x`, `y` coordinates of the public key. So that, any EVM chain - principally Ethereum rollups - will be able to integrate this precompiled contract easily.
+> This proposal creates a precompiled contract that performs signature verifications in the “secp256r1” elliptic curve by given parameters of message hash, `r` and `s` components of the signature, `x` and `y` coordinates of the public key. So that, any EVM chain - principally Ethereum rollups - will be able to integrate this precompiled contract easily.
 
 ## Motivation
 
 Polygon as one of the pioneer blockchains in the account abstraction ecosystem, so it's important to enhance chains capabilities and provide the best security, development experience, and user experience by following latest improvements.
 
-> “secp256r1” elliptic curve is a standardized curve by NIST which has the same calculations by different input parameters with “secp256k1” elliptic curve used by the “ecrecover” precompiled contract. The cost of combined attacks and the security conditions are almost the same for both curves. Adding a precompiled contract which is similar to "ecrecover" can provide signature verifications using the “secp256r1” elliptic curve in the smart contracts and multi-faceted benefits can occur. One important factor is that this curve is widely used and supported in many modern devices such as Apple’s Secure Enclave, Webauthn, Android Keychain which proves the user adoption. Additionally, the introduction of this precompile could enable valuable features in the account abstraction which allows more efficient and flexible management of accounts by transaction signs in mobile devices. 
+> “secp256r1” elliptic curve is a standardized curve by NIST which has the same calculations by different input parameters with “secp256k1” elliptic curve used by the “ecrecover” precompiled contract. The cost of combined attacks and the security conditions are almost the same for both curves. Adding a precompiled contract which is similar to "ecrecover" can provide signature verifications using the “secp256r1” elliptic curve in the smart contracts and multi-faceted benefits can occur. One important factor is that this curve is widely used and supported in many modern devices such as Apple’s Secure Enclave, Webauthn, Android Keychain which proves the user adoption. Additionally, the introduction of this precompiled contract could enable valuable features in the account abstraction which allows more efficient and flexible management of accounts by transaction signs in mobile devices.
 > Most of the modern devices and applications rely on the “secp256r1” elliptic curve. The addition of this precompiled contract enables the verification of device native transaction signing mechanisms. For example:
 >
 > 1. **Apple's Secure Enclave:** There is a separate “Trusted Execution Environment” in Apple hardware which can sign arbitrary messages and can only be accessed by biometric identification.
@@ -24,11 +24,13 @@ Polygon as one of the pioneer blockchains in the account abstraction ecosystem, 
 
 ## Specification
 
-Polygon is compatible to follow the original EIP specification and implementations.
+Polygon is compatible to follow the original RIP specification and implementations.
 
-> ### Elliptic Curve Information
+> The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 and RFC 8174.
 >
-> As of `FORK_TIMESTAMP` in the integrated EVM chain, add precompiled contract `P256VERIFY` for signature verifications in the “secp256r1” elliptic curve at address `PRECOMPILED_ADDRESS` in `0x19`.
+> As of `FORK_TIMESTAMP` in the integrated EVM chain, add precompiled contract `P256VERIFY` for signature verifications in the “secp256r1” elliptic curve at address `PRECOMPILED_ADDRESS` in `0x100` (indicates 0x00...00100).
+> 
+> ### Elliptic Curve Information
 >
 > “secp256r1” is a specific elliptic curve, also known as “P-256” and “prime256v1” curves. The curve is defined with the following equation and domain parameters:
 >
@@ -81,14 +83,14 @@ Polygon is compatible to follow the original EIP specification and implementatio
 >
 > ### Required Checks in Verification
 >
-> The following requirements **must** be checked by the precompile to verify signature components are valid:
+> The following requirements **MUST** be checked by the precompiled contract to verify signature components are valid:
 >
 > - Verify that the `r` and `s` values are in `(0, n)` (exclusive) where `n` is the order of the subgroup.
 > - Verify that the point formed by `(x, y)` is on the curve and that both `x` and `y` are in `[0, p)` (inclusive 0, exclusive p) where `p` is the prime field modulus. Note that many implementations use `(0, 0)` as the reference point at infinity, which is not on the curve and should therefore be rejected.
 >
 > ### Precompiled Contract Specification
 >
->The `P256VERIFY` precompiled contract is proposed with the following input and outputs, which are big-endian values:
+> The `P256VERIFY` precompiled contract is proposed with the following input and outputs, which are big-endian values:
 >
 > - **Input data:** 160 bytes of data including:
 >   - 32 bytes of the signed data `hash`
@@ -105,7 +107,7 @@ Polygon is compatible to follow the original EIP specification and implementatio
 
 ## Rationale
 
-The following rationales are provided by the original EIP and also valid for the PIP scope.
+The following rationales are provided by the original RIP and also valid for the PIP scope.
 
 > “secp256r1” ECDSA signatures consist of `v`, `r`, and `s` components. While the `v` value makes it possible to recover the public key of the signer, most signers do not generate the `v` component of the signature since `r` and `s` are sufficient for verification. In order to provide an exact and more compatible implementation, verification is preferred over recovery for the precompile.
 >
@@ -115,11 +117,11 @@ The following rationales are provided by the original EIP and also valid for the
 >
 > Another important difference is that the NIST FIPS 186-5 specification does not include a malleability check. We've matched that here in order to maximize compatibility with the large existing NIST P-256 ecosystem.
 > 
-> Wrapper libraries **should** add a malleability check by default, with functions wrapping the raw precompile call (exact NIST FIPS 186-5 spec, without malleability check) clearly identified. For example, `P256.verifySignature` and `P256.verifySignatureWithoutMalleabilityCheck`. Adding the malleability check is straightforward and costs minimal gas.
+> Wrapper libraries **SHOULD** add a malleability check by default, with functions wrapping the raw precompile call (exact NIST FIPS 186-5 spec, without malleability check) clearly identified. For example, `P256.verifySignature` and `P256.verifySignatureWithoutMalleabilityCheck`. Adding the malleability check is straightforward and costs minimal gas.
 >
-> The `PRECOMPILED_ADDRESS` is chosen as `0x19` as it is the next available address in the precompiled address set.
+> The `PRECOMPILED_ADDRESS` is chosen as `0x100` as `P256VERIFY` is the first precompiled contract presented as an RIP, and the address is the first available address in the precompiled address set that is reserved for the RIP precompiles.
 >
-> The gas cost is proposed by comparing the performance of the `P256VERIFY` and the `ECRECOVER` precompile which is implemented in the EVM at `0x01` address. It is seen that “secp256r1” signature verification is ~15% slower (elaborated in [test cases](#test-cases)) than “secp256k1” signature recovery, so `3450` gas is proposed by comparison which causes similar “mgas/op” values in both precompiles.
+> The gas cost is proposed by comparing the performance of the `P256VERIFY` and the `ECRECOVER` precompiled contract which is implemented in the EVM at `0x01` address. It is seen that “secp256r1” signature verification is ~15% slower (elaborated in [test cases](#test-cases)) than “secp256k1” signature recovery, so `3450` gas is proposed by comparison which causes similar “mgas/op” values in both precompiled contracts.
 
 ## Backwards Compatibility
 
@@ -190,4 +192,4 @@ No additional security issues are found for Polygon.
 
 ## Copyright
 
-Copyright and related rights waived via [CC0](https://eips.ethereum.org/LICENSE), follows the original proposal [EIP-7212](https://eips.ethereum.org/EIPS/eip-7212).
+Copyright and related rights waived via [CC0](https://eips.ethereum.org/LICENSE), follows the original proposal [RIP-7212](https://github.com/ethereum/RIPs/blob/master/RIPS/rip-7212.md).

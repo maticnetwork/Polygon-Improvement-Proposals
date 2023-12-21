@@ -1,6 +1,6 @@
 | PIP | Title | Description | Author | Discussion | Status | Type | Date |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 32 | Ancient data pruning | Ability to prune ancient blockchain data for PoS | [Manav Darji](https://github.com/manav2401/) | TBD | Draft | Core | 2023-12-18 |
+| 32 | Ancient data pruning | Ability to prune ancient blockchain data for PoS | [Manav Darji](https://github.com/manav2401/) | [Forum](https://forum.polygon.technology/t/pip-32-ancient-data-pruning/13346) | Draft | Core | 2023-12-18 |
 
 ### Abstract
 

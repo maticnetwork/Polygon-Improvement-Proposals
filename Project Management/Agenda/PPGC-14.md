@@ -1,13 +1,13 @@
 # Meeting Agenda - December 21, 2023
 
-* Napoli HardFork
+* [PIP-31](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-31.md): Napoli HardFork
   * Cancun Changes
-  * PIP-27 (EIP-7212)
+  * [PIP-27](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-27.md) (EIP-7212)
 * Considerations for Inclusion
-  * PIP-22 (EIP-3074)
-  * PIP-30
+  * [PIP-22](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-22.md) (EIP-3074)
+  * [PIP-30](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-30.md)
 * Amoy testnet Launch & Mumbai Testnet Deprecation 
   
-* Ancient data pruning
+* [PIP-32](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-32.md): Ancient data pruning
   
-* PIP-18 Roadmap Timing Update
+* [PIP-18](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-18.md) Roadmap Timing Update

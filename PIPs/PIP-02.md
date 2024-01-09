@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 2 | Proposal to distribute and decentralize staking power across the Polygon chain  | Proposal to increase the minimun commission. | Delroy Bosco | [Forum](https://forum.polygon.technology/t/pip-2-proposal-to-distribute-and-decentralize-staking-power-across-the-polygon-chain/219/11)  | Stagnant | Contracts | 2021-11-01
+| 2 | Proposal to distribute and decentralize staking power across the Polygon chain  | Proposal to increase the minimum commission. | Delroy Bosco | [Forum](https://forum.polygon.technology/t/pip-2-proposal-to-distribute-and-decentralize-staking-power-across-the-polygon-chain/219/11)  | Stagnant | Contracts | 2021-11-01
 ---
 
 ### Abstract:

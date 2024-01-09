@@ -91,7 +91,7 @@ The staking contracts are responsible for the following:
 2. Earn staking rewards for validating state transitions on the Polygon network.
 3. Save checkpoints on the Ethereum mainnet.
 
-The Polygon Layer 1 contracts are controlled by the 5/9 mulit-sig contract 0xFa7D2a996aC6350f4b56C043112Da0366a59b74c. 
+The Polygon Layer 1 contracts are controlled by the 5/9 multi-sig contract 0xFa7D2a996aC6350f4b56C043112Da0366a59b74c. 
 
 There is currently no prescribed consensus frameworks, processes, or voting parameters for contract layer PIPs. A voting outcome can be presented to all ecosystem participants, including all multi-sig key holders, to show preference and signal potential development on an issue.
 
@@ -101,7 +101,7 @@ The multi-sig signatories are therefore not obligated to follow the result of a 
 
 ## Implementation Flow
 
-The Polygon Layer 1 contracts signaling and mutli-sig activity outlined above are implemented in accordance with the flow set forth below.
+The Polygon Layer 1 contracts signaling and multi-sig activity outlined above are implemented in accordance with the flow set forth below.
 
 ## PIP Creation
 

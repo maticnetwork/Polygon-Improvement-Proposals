@@ -1,8 +1,8 @@
 
 
-| PIP | Title                         | Description                                     | Author                                                                                                | Discussion | Status    | Type                                     | Date       |
-|-----|-------------------------------|-------------------------------------------------|-------------------------------------------------------------------------------------------------------|------------|-----------|------------------------------------------|------------|
-| 23  | Shanghai | Proposal to activate Ethereum Shanghai features | [Marcello Ardizzone](https://github.com/marcello33), [Sandeep Sreenath](https://github.com/ssandeep)  | [Forum](https://forum.polygon.technology/t/pip-23-proposal-to-activate-ethereum-shanghai-features/13065)  | Last Call | Core | 2023-09-22 |
+| PIP | Title                         | Description                                     | Author                                                                                                | Discussion | Status | Type                                     | Date       |
+|-----|-------------------------------|-------------------------------------------------|-------------------------------------------------------------------------------------------------------|------------|--------|------------------------------------------|------------|
+| 23  | Shanghai | Proposal to activate Ethereum Shanghai features | [Marcello Ardizzone](https://github.com/marcello33), [Sandeep Sreenath](https://github.com/ssandeep)  | [Forum](https://forum.polygon.technology/t/pip-23-proposal-to-activate-ethereum-shanghai-features/13065)  | Final  | Core | 2023-09-22 |
 
 ## Abstract
 

@@ -1,6 +1,6 @@
 | PIP| Title| Description| Author| Discussion | Status | Type | Date|
 |-|-|-|-|-|-|-|-|
-|17| Polygon Ecosystem Token (POL) | Upgrade to MATIC in the form of the Polygon Ecosystem Token (POL) |Mihailo Bjelic, Mudit Gupta, Will Schwab, Daniel Gretzke, Dhairya Sethi, Ankit Maity, Harry Rook, Mateusz Rzeszowski| [Forum](https://forum.polygon.technology/t/pip-17-polygon-ecosystem-token-pol/12912) | Last Call | Contracts | 2023-09-14 |
+|17| Polygon Ecosystem Token (POL) | Upgrade to MATIC in the form of the Polygon Ecosystem Token (POL) |Mihailo Bjelic, Mudit Gupta, Will Schwab, Daniel Gretzke, Dhairya Sethi, Ankit Maity, Harry Rook, Mateusz Rzeszowski|[Forum](https://forum.polygon.technology/t/pip-17-polygon-ecosystem-token-pol/12912) | Last Call | Contracts | 2023-09-14 |
  
 ### Abstract
 
@@ -110,13 +110,14 @@ contract PolygonEcosystemToken is ERC20Permit, AccessControlEnumerable, IPolygon
     }
 }
 ```
+
 #### Migration Contract
 
 The migration contract will accept two addresses, one for the MATIC token and one for the POL token respectively.
 
 The contract shall receive the entire initial 10 billion POL supply in order to allow 1-to-1 swaps for the entire 10 billion MATIC supply.
 
-Governance can lock and unlock the ability to unmigrate POL tokens back into an equivalent amount of MATIC. 
+Governance can lock and unlock the ability to unmigrate POL tokens back into an equivalent amount of MATIC.
 
 This contract is upgradeable via Governance with POL tokens also being burnable via Governance. The initial implementation is described below.
 
@@ -227,13 +228,25 @@ contract PolygonMigration is Ownable2StepUpgradeable, IPolygonMigration {
 
 #### Emission Manager Contract
 
-The emission manager contract has the exclusive ability to mint new POL tokens and is implemented to distribute the tokens as follows: 
+The emission manager contract has the exclusive ability to mint new POL tokens and is implemented to distribute the tokens as follows:
 
--   1% annual compounding emission is minted to the PoS staking contract (0x5e3ef299fddf15eaa0432e6e66473ace8c13d908) for staking rewards. After minting the appropriate amount of POL, the migration contract will be used to ensure that staking rewards continue to be paid out in MATIC, maximizing backward compatibility.
+#### Validator Rewards 
+
+Emissions are minted to the PoS staking contract (0x5e3ef299fddf15eaa0432e6e66473ace8c13d908) for staking rewards. After minting the appropriate amount of POL, the migration contract will be used to ensure that staking rewards continue to be paid out in MATIC, maximizing backward compatibility.
+
+Year 1-3:
+
+For years 1-3, the POL emissions schedule will follow the schedule defined in [PIP-26](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-26.md).
+
+After Year 3:
+
+-   1% annual compounding. 
+
+#### Community Treasury
+
 -   1% annual compounding emission is minted to a community treasury. Upon the deployment of contracts introduced in this proposal, a multi-signature wallet (0x2ff25495d77f380d5F65B95F103181aE8b1cf898) will be used to safeguard the funds until Community Board supervision is enacted.
     
-
-A publicly callable function that is callable by any address can trigger the immediate minting of all vested emission. 
+A publicly callable function that is callable by any address can trigger the immediate minting of all vested emission.
 
 This contract is upgradeable via Governance. The initial implementation is described below.
 
@@ -245,106 +258,87 @@ import {IPolygonEcosystemToken} from "./interfaces/IPolygonEcosystemToken.sol";
 import {IPolygonMigration} from "./interfaces/IPolygonMigration.sol";
 import {IDefaultEmissionManager} from "./interfaces/IDefaultEmissionManager.sol";
 import {Ownable2StepUpgradeable} from "openzeppelin-contracts-upgradeable/contracts/access/Ownable2StepUpgradeable.sol";
-import {Initializable} from "openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol";
 import {SafeERC20} from "openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
 import {PowUtil} from "./lib/PowUtil.sol";
 
 /// @title Default Emission Manager
-/// @author Polygon Labs (@DhairyaSethi, @gretzke, @qedk)
+/// @author Polygon Labs (@DhairyaSethi, @gretzke, @qedk, @simonDos)
 /// @notice A default emission manager implementation for the Polygon ERC20 token contract on Ethereum L1
-/// @dev The contract allows for a 1% mint *each* per year (compounded every year) to the stakeManager and treasury contracts
+/// @dev The contract allows for a 3% mint per year (compounded). 2% staking layer and 1% treasury
 /// @custom:security-contact security@polygon.technology
-contract DefaultEmissionManager is Initializable, Ownable2StepUpgradeable, IDefaultEmissionManager {
+contract DefaultEmissionManager is Ownable2StepUpgradeable, IDefaultEmissionManager {
     using SafeERC20 for IPolygonEcosystemToken;
 
-    // log2(2%pa continuously compounded emission per year) in 18 decimals, see _inflatedSupplyAfter
-    uint256 public constant INTEREST_PER_YEAR_LOG2 = 0.028569152196770894e18;
+    uint256 public constant INTEREST_PER_YEAR_LOG2 = 0.04264433740849372e18;
     uint256 public constant START_SUPPLY = 10_000_000_000e18;
     address private immutable DEPLOYER;
 
-    IPolygonEcosystemToken public token;
-    IPolygonMigration public migration;
-    address public stakeManager;
-    address public treasury;
+    IPolygonMigration public immutable migration;
+    address public immutable stakeManager;
+    address public immutable treasury;
 
+    IPolygonEcosystemToken public token;
     uint256 public startTimestamp;
 
-    constructor() {
+    constructor(address migration_, address stakeManager_, address treasury_) {
+        if (migration_ == address(0) || stakeManager_ == address(0) || treasury_ == address(0)) revert InvalidAddress();
         DEPLOYER = msg.sender;
+        migration = IPolygonMigration(migration_);
+        stakeManager = stakeManager_;
+        treasury = treasury_;
+
         // so that the implementation contract cannot be initialized
         _disableInitializers();
     }
 
-    function initialize(
-        address token_,
-        address migration_,
-        address stakeManager_,
-        address treasury_,
-        address owner_
-    ) external initializer {
+    function initialize(address token_, address owner_) external initializer {
         // prevent front-running since we can't initialize on proxy deployment
         if (DEPLOYER != msg.sender) revert();
-        if (
-            token_ == address(0) ||
-            migration_ == address(0) ||
-            stakeManager_ == address(0) ||
-            treasury_ == address(0) ||
-            owner_ == address(0)
-        ) revert InvalidAddress();
+        if (token_ == address(0) || owner_ == address(0)) revert InvalidAddress();
 
         token = IPolygonEcosystemToken(token_);
-        migration = IPolygonMigration(migration_);
-        stakeManager = stakeManager_;
-        treasury = treasury_;
         startTimestamp = block.timestamp;
 
         assert(START_SUPPLY == token.totalSupply());
 
-        token.safeApprove(migration_, type(uint256).max);
+        token.safeApprove(address(migration), type(uint256).max);
         // initial ownership setup bypassing 2 step ownership transfer process
         _transferOwnership(owner_);
     }
 
-    /// @notice Allows anyone to mint tokens to the stakeManager and treasury contracts based on current emission rates
-    /// @dev Minting is done based on totalSupply diffs between the currentTotalSupply (maintained on POL, which includes any
-    /// previous mints) and the newSupply (calculated based on the time elapsed since deployment)
+    /// @inheritdoc IDefaultEmissionManager
     function mint() external {
         uint256 currentSupply = token.totalSupply(); // totalSupply after the last mint
-        uint256 newSupply = _inflatedSupplyAfter(
+        uint256 newSupply = inflatedSupplyAfter(
             block.timestamp - startTimestamp // time elapsed since deployment
         );
         uint256 amountToMint = newSupply - currentSupply;
         if (amountToMint == 0) return; // no minting required
 
-        uint256 treasuryAmt = amountToMint / 2;
+        uint256 treasuryAmt = amountToMint / 3;
         uint256 stakeManagerAmt = amountToMint - treasuryAmt;
 
         emit TokenMint(amountToMint, msg.sender);
 
-        token.mint(address(this), amountToMint);
-        token.safeTransfer(treasury, treasuryAmt);
+        IPolygonEcosystemToken _token = token;
+        _token.mint(address(this), amountToMint);
+        _token.safeTransfer(treasury, treasuryAmt);
         // backconvert POL to MATIC before sending to StakeManager
         migration.unmigrateTo(stakeManager, stakeManagerAmt);
     }
 
-    /// @notice Returns total supply from compounded emission after timeElapsed from startTimestamp (deployment)
-    /// @param timeElapsed The time elapsed since startTimestamp
-    /// @dev interestRatePerYear = 1.02; 2% per year
-    /// approximate the compounded interest rate using x^y = 2^(log2(x)*y)
-    /// where x is the interest rate per year and y is the number of seconds elapsed since deployment divided by 365 days in seconds
-    /// log2(interestRatePerYear) = 0.028569152196770894 with 18 decimals, as the interest rate does not change, hard code the value
-    /// @return supply total supply from compounded emission after timeElapsed
-    function _inflatedSupplyAfter(uint256 timeElapsed) private pure returns (uint256 supply) {
+    /// @inheritdoc IDefaultEmissionManager
+    function inflatedSupplyAfter(uint256 timeElapsed) public pure returns (uint256 supply) {
         uint256 supplyFactor = PowUtil.exp2((INTEREST_PER_YEAR_LOG2 * timeElapsed) / 365 days);
         supply = (supplyFactor * START_SUPPLY) / 1e18;
     }
 
-    /**
-     * @dev This empty reserved space is put in place to allow future versions to add new
-     * variables without shifting down storage in the inheritance chain.
-     * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
-     */
-    uint256[50] private __gap;
+    /// @inheritdoc IDefaultEmissionManager
+    function version() external pure returns (string memory) {
+        return "1.1.0";
+    }
+
+    uint256[48] private __gap;
 }
 ```
 ### Backward Compatibility

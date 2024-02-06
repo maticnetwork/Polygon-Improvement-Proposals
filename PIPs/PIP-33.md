@@ -1,6 +1,6 @@
 | PIP | Title          | Description                | Author                                                                    | Discussion                                                               | Status      | Type                                     | Date                  |
 |-----|----------------|----------------------------|---------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------|------------------------------------------|-----------------------|
-| 33 | Napoli | Proposes the Napoli Hardfork | [Arpit Temani](https://github.com/temaniarpit27) [Marcello Ardizzone](https://github.com/marcello33)      | [Forum]() | Draft | Core | 2024-01-11
+| 33 | Napoli | Proposes the Napoli Hardfork | [Arpit Temani](https://github.com/temaniarpit27) [Marcello Ardizzone](https://github.com/marcello33)      | [Forum]() | Peer Review | Core | 2024-01-11
 ---
 
 ### Abstract

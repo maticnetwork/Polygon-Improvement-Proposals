@@ -1,6 +1,6 @@
-| pip | title               | description                                                                            | author                                    | discussions-to | status | type            | category | created    |
-| --- | ------------------- | -------------------------------------------------------------------------------------- | ----------------------------------------- | -------------- | ------ | --------------- | -------- | ---------- |
-| 34  | Polygon Staking Hub | Proposes the new staking layer architecture and standardizes smart contract interfaces | @Daniel Gretzke @Zero Ekkusu @Simon Dosch |                | Draft  | Standards Track | PRC      | 2024-02-23 |
+| PIP | Title               | Description                                                                            | Author                                    | Discussion                                                                     | Status | Type            | Category | Created    |
+| --- | ------------------- | -------------------------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------ | ------ | --------------- | -------- | ---------- |
+| 34  | Polygon Staking Hub | Proposes the new staking layer architecture and standardizes smart contract interfaces | @Daniel Gretzke @Zero Ekkusu @Simon Dosch | [Forum](https://forum.polygon.technology/t/prc-34-polygon-staking-layer/13587) | Draft  | Standards Track | PRC      | 2024-02-23 |
 
 # Abstract
 

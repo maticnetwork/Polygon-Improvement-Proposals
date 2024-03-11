@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 27 | Precompiled for secp256r1 Curve Support | Proposal to add precompiled contract that performs signature verifications in the “secp256r1” elliptic curve. | Ulaş Erdoğan (@ulerdogan), Doğan Alpaslan (@doganalpaslan) | [Forum](https://forum.polygon.technology/t/new-pip-precompiled-for-secp256r1-curve-support/13049?u=ulerdogan) | Final  | Core | 2023-10-12 |
+| 27 | Precompiled for secp256r1 Curve Support | Proposal to add precompiled contract that performs signature verifications in the “secp256r1” elliptic curve. | Ulaş Erdoğan (@ulerdogan), Doğan Alpaslan (@doganalpaslan) | [Forum](https://forum.polygon.technology/t/new-pip-precompiled-for-secp256r1-curve-support/13049?u=ulerdogan) | Last Call  | Core | 2023-10-12 |
 
 ## Abstract
 
@@ -29,7 +29,7 @@ Polygon is compatible to follow the original RIP specification and implementatio
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 and RFC 8174.
 >
 > As of `FORK_TIMESTAMP` in the integrated EVM chain, add precompiled contract `P256VERIFY` for signature verifications in the “secp256r1” elliptic curve at address `PRECOMPILED_ADDRESS` in `0x100` (indicates 0x00...00100).
-> 
+>
 > ### Elliptic Curve Information
 >
 > “secp256r1” is a specific elliptic curve, also known as “P-256” and “prime256v1” curves. The curve is defined with the following equation and domain parameters:
@@ -37,13 +37,13 @@ Polygon is compatible to follow the original RIP specification and implementatio
 > ```
 > # curve: short weierstrass form
 > y^2 ≡ x^3 + ax + b
-> 
+>
 > # p: curve prime field modulus
 > 0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff
-> 
+>
 > # a: elliptic curve short weierstrass first coefficient
 > 0xffffffff00000001000000000000000000000000fffffffffffffffffffffffc
-> 
+>
 > # b: elliptic curve short weierstrass second coefficient
 > 0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b
 >
@@ -56,7 +56,7 @@ Polygon is compatible to follow the original RIP specification and implementatio
 >
 > # h: cofactor of the subgroup
 > 0x1
-> 
+>
 > ```
 >
 > ### Elliptic Curve Signature Verification Steps
@@ -66,7 +66,7 @@ Polygon is compatible to follow the original RIP specification and implementatio
 > ```
 > # h (message hash)
 > # pubKey = (public key of the signer private key)
-> 
+>
 > # Calculate the modular inverse of the signature proof:
 > s1 = s^(−1) (mod n)
 >
@@ -116,7 +116,7 @@ The following rationales are provided by the original RIP and also valid for the
 > This is different from the `ecrecover` precompiled address specification. The advantage is that it 1. follows the NIST specification (as defined in NIST FIPS 186-5 Digital Signature Standard (DSS)), 2. matches the rest of the (large) P256 ecosystem, and most importantly 3. allows execution clients to use existing well-vetted verifier implementations and test vectors.
 >
 > Another important difference is that the NIST FIPS 186-5 specification does not include a malleability check. We've matched that here in order to maximize compatibility with the large existing NIST P-256 ecosystem.
-> 
+>
 > Wrapper libraries **SHOULD** add a malleability check by default, with functions wrapping the raw precompile call (exact NIST FIPS 186-5 spec, without malleability check) clearly identified. For example, `P256.verifySignature` and `P256.verifySignatureWithoutMalleabilityCheck`. Adding the malleability check is straightforward and costs minimal gas.
 >
 > The `PRECOMPILED_ADDRESS` is chosen as `0x100` as `P256VERIFY` is the first precompiled contract presented as an RIP, and the address is the first available address in the precompiled address set that is reserved for the RIP precompiles.
@@ -151,31 +151,31 @@ This section includes the test cases and benchmark results for the proposed prec
 > PrecompiledP256Verify/p256Verify-Gas=3450-8          57.75µ ± 1%
 > PrecompiledEcrecover/-Gas=3000-8                                   50.48µ ± 1%
 > geomean                                              57.75µ        50.48µ
-> 
+>
 >                                             │ compare_p256Verify │ compare_ecrecover  │
 >                                             │       gas/op       │   gas/op           │
 > PrecompiledP256Verify/p256Verify-Gas=3450-8          3.450k ± 0%
 > PrecompiledEcrecover/-Gas=3000-8                                   3.000k ± 0%
 > geomean                                              3.450k        3.000k
-> 
+>
 >                                             │ compare_p256Verify │ compare_ecrecover │
 >                                             │       mgas/s       │   mgas/s          │
 > PrecompiledP256Verify/p256Verify-Gas=3450-8           59.73 ± 1%
 > PrecompiledEcrecover/-Gas=3000-8                                   59.42 ± 1%
 > geomean                                               59.73        59.42
-> 
+>
 >                                             │ compare_p256Verify │ compare_ecrecover │
 >                                             │        B/op        │    B/op           │
 > PrecompiledP256Verify/p256Verify-Gas=3450-8         1.523Ki ± 0%
 > PrecompiledEcrecover/-Gas=3000-8                                   800.0 ± 0%
 > geomean                                             1.523Ki        800.0
-> 
+>
 >                                             │ compare_p256Verify │ compare_ecrecover │
 >                                             │     allocs/op      │ allocs/op         │
 > PrecompiledP256Verify/p256Verify-Gas=3450-8           33.00 ± 0%
 > PrecompiledEcrecover/-Gas=3000-8                                   7.000 ± 0%
 > geomean                                               33.00        7.000
-> 
+>
 > ```
 
 ## Reference Implementation

@@ -1,6 +1,6 @@
 | PIP | Title          | Description                | Author                                                                    | Discussion                                                               | Status      | Type                                     | Date                  |
 |-----|----------------|----------------------------|---------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------|------------------------------------------|-----------------------|
-| 31 | Cancun EIPs | Proposes the Polygon Cancun EIPs changes | [Arpit Temani](https://github.com/temaniarpit27) | [Forum]() | Peer Review | Core | 2024-01-11
+| 31 | Cancun EIPs | Proposes the Polygon Cancun EIPs changes | [Arpit Temani](https://github.com/temaniarpit27) | [Forum]() | Last Call | Core | 2024-01-11
 ---
 
 ### Abstract

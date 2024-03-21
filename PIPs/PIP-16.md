@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 16 | Transaction Dependency Data | Improving the efficiency of block validation by adding transaction dependency data to block header | [Jerry Chen](https://github.com/cffls), [Pratik Patil](https://github.com/pratikspatil024) | [Forum](https://forum.polygon.technology/t/proposal-transaction-dependency-data/12705)  | Last Call  | Core | 2023-08-04 |
+| 16 | Transaction Dependency Data | Improving the efficiency of block validation by adding transaction dependency data to block header | [Jerry Chen](https://github.com/cffls), [Pratik Patil](https://github.com/pratikspatil024) | [Forum](https://forum.polygon.technology/t/proposal-transaction-dependency-data/12705)  | Final  | Core | 2023-08-04 |
 
 
 ## Abstract

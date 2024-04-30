@@ -1,6 +1,6 @@
 | PIP | Title          | Description                | Author                        | Discussion | Status      | Type                                     | Date                  |
 |-----|----------------|----------------------------|------------------------------|------------|-------------|------------------------------------------|-----------------------|
-| 35  | MinGas Increase | Increase minimum gas to 30gwei| [Marcello Ardizzone](https://https://github.com/marcello33)| | Draft | Core | 2024-04-30
+| 35  | MinGas Increase | Increase minimum gas to 30gwei| [Marcello Ardizzone](https://https://github.com/marcello33)| [Forum](https://forum.polygon.technology/t/pip-for-min-gas-increase-in-polygon-pos/13856)  | Draft | Core | 2024-04-30
 
 ### Abstract
 

@@ -1,6 +1,6 @@
 | PIP | Title                     | Description                                     | Author                                                                                       | Discussion | Status | Type | Date      |
 | --- | ------------------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------- | ---------- | ------ | ---- | --------- |
-| 36  | Replay Failed State Syncs | Enable replay of failed state sync transactions | [Dhairya Sethi](https://github.com/DhairyaSethi), [Simon Dosch](https://github.com/simonDos) |            | Draft  | Core | 2024-4-30 |
+| 36  | Replay Failed State Syncs | Enable replay of failed state sync transactions | [Dhairya Sethi](https://github.com/DhairyaSethi), [Simon Dosch](https://github.com/simonDos) | [Forum](https://forum.polygon.technology/t/pip-36-replay-failed-state-syncs/13864) | Draft  | Core | 2024-4-30 |
 
 ### Abstract
 

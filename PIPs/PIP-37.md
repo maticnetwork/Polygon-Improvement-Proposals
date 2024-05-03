@@ -1,6 +1,6 @@
-| PIP | Title          | Description                | Author                        | Discussion | Status      | Type                                     | Date                  |
-|-----|----------------|----------------------------|-------------------------------|------------|-------------|------------------------------------------|-----------------------|
-| 37  |Ahmedabad Hardfork| Proposes the Ahmedabad Hardfork | [Marcello Ardizzone](https://github.com/marcello33), [Manav Darji](https://github.com/manav2401)|  | Draft | Core | 2024-30-4
+| PIP | Title          | Description                | Author                        | Discussion                                                                  | Status      | Type                                     | Date                  |
+|-----|----------------|----------------------------|-------------------------------|-----------------------------------------------------------------------------|-------------|------------------------------------------|-----------------------|
+| 37  |Ahmedabad Hardfork| Proposes the Ahmedabad Hardfork | [Marcello Ardizzone](https://github.com/marcello33), [Manav Darji](https://github.com/manav2401)| [Forum](https://forum.polygon.technology/t/pip-37-ahmedabad-hardfork/13885) | Draft | Core | 2024-30-4
 
 ### Abstract
 

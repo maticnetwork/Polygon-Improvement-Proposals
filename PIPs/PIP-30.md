@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 30 | Increase Max Code Size Limit to 32KB | Proposal to increase Max Code Size Limit from 24KB to 32KB | Mudit Gupta, David Silverman (@oneski22) | [Forum](https://forum.polygon.technology/t/pip-30-increase-max-code-size-limit-to-32kb/13266) | Draft | Core | 2023-11-29 |
+| 30 | Increase Max Code Size Limit to 32KB | Proposal to increase Max Code Size Limit from 24KB to 32KB | Mudit Gupta, David Silverman (@oneski22) | [Forum](https://forum.polygon.technology/t/pip-30-increase-max-code-size-limit-to-32kb/13266) | Peer Review | Core | 2023-11-29 |
 
 ### Abstract
 

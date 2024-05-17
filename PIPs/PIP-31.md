@@ -9,7 +9,7 @@ This proposal specifies the activation of Cancun features (introduced by Ethereu
 
 ### Motivation
 As [bor](https://github.com/maticnetwork/bor) is a fork of [geth](https://github.com/ethereum/go-ethereum), the practice of merging upstream changes gives Polygon the opportunity to enable new features defined in the L1.
-With the this PIP, we plan to upgrade our network with a subset of EIPs included in Ethereum.
+With this PIP, we plan to upgrade our network with a subset of EIPs included in Ethereum.
 
 ### Specification
 
@@ -23,7 +23,7 @@ Compared to Ethereum Cancun upgrade, the following EIPs will not be included in 
 2. [EIP-4844: Shard Blob Transactions](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4844.md)
 3. [EIP-7516: BLOBBASEFEE opcode](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7516.md)
 
-The aforementioned EIPs has been specifically excluded because Polygon PoS has no concept of beacon chain and blobs.
+The aforementioned EIPs have been specifically excluded because Polygon PoS has no concept of beacon chain and blobs.
 
 ### Backwards Compatibility
 

@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 1 | Validator Admissions into PoS Network  | Proposes Validator Admission Framework | Jackson Lewis, Tanisha Katara, Parvez Shaikh, Vasanti Rode | Forum  | Draft | Contracts | 2023-12-05
+| 39 | Validator Admissions into PoS Network  | Proposes Validator Admission Framework | Jackson Lewis, Tanisha Katara, Parvez Shaikh, Vasanti Rode | Forum  | Draft | Contracts | 2023-12-05
 
 ### Abstract
 

@@ -12,13 +12,12 @@ This PIP specifies the changes included in the Polygon PoS hard fork named Ahmed
 
 ### Activation
 
-- Activation block to be added when consensus for the change acheived.
+- Activation block to be added when consensus for the change achieved.
 
 ### Included PIPs
 
   *   [PIP-30: Increase Max Code Size Limit to 32KB](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-30.md)
   *   [PIP-36: Replay Failed State Syncs](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-36.md)
-  *   [PIP-35: MinGas Increase](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-35.md)
 
 ### Copyright
 

@@ -1,7 +1,6 @@
 | PIP | Title          | Description                | Author                        | Discussion | Status | Type                                     | Date                  |
 |-----|----------------|----------------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| X  | Support for Community Treasury Contracts | Enables support for the new Community Treasury contracts
- | Simon Dosch, Mateusz Rzeszowski | [Forum]() | Peer Review | Contracts | 2024-06-24
+| 40  | Support for Community Treasury Contracts | Enables support for the new Community Treasury contracts | Simon Dosch, Mateusz Rzeszowski | [Forum](https://forum.polygon.technology/t/pip-40-support-for-community-treasury-contracts/17641) | Peer Review | Contracts | 2024-06-24
 
 ## Abstract
 

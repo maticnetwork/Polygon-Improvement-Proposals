@@ -2,6 +2,7 @@
 
 Bor Release v1.3.4:
 * [PIP-35: MinGas Increase](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-35.md)
+  *   https://github.com/maticnetwork/Polygon-Improvement-Proposals/pull/316
 
 Polygon 2.0:
 * [PIP-42: Polygon 2.0 - Upgrade PoS Staking to Use POL](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-42.md)

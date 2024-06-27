@@ -1,6 +1,6 @@
 | PIP | Title          | Description                | Author                        | Discussion                                                                  | Status      | Type                                     | Date                  |
 |-----|----------------|----------------------------|-------------------------------|-----------------------------------------------------------------------------|-------------|------------------------------------------|-----------------------|
-|  |Upgrade cosmos-sdk in heimdall| Proposes an upgrade for heimdall by bumping cosmos-sdk dependency | [Marcello Ardizzone](https://github.com/marcello33) | | Draft | Core | 2024-06-27
+| 44 |Upgrade cosmos-sdk in heimdall| Proposes an upgrade for heimdall by bumping cosmos-sdk dependency | [Marcello Ardizzone](https://github.com/marcello33) | | Draft | Core | 2024-06-27
 
 ### Abstract
 

@@ -1,6 +1,6 @@
 | PIP | Title          | Description                | Author                        | Discussion                                                                  | Status      | Type                                     | Date                  |
 |-----|----------------|----------------------------|-------------------------------|-----------------------------------------------------------------------------|-------------|------------------------------------------|-----------------------|
-|  |Replace Tendermint with CometBFT in Heimdall| Proposes an upgrade for heimdall by replacing tendermint with cometBFT | [Marcello Ardizzone](https://github.com/marcello33) | Forum | Draft | Core | 2024-06-18
+|  |Replace Tendermint with CometBFT in Heimdall| Proposes an upgrade for heimdall by replacing tendermint with cometBFT | [Marcello Ardizzone](https://github.com/marcello33) | Forum | Draft | Core | 2024-06-27
 
 ### Abstract
 

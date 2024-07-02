@@ -5,7 +5,7 @@ Bor Release v1.3.4:
   *   https://github.com/maticnetwork/Polygon-Improvement-Proposals/pull/316
 
 Heimdall v2
-* [PIP-43: Replace Tendermint with CometBFT in Heimdall](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-comet.md)
+* [PIP-43: Replace Tendermint with CometBFT in Heimdall](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-43.md)
 * [PIP-44: Upgrade cosmos-sdk in heimdall](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-44.md)
 
 Polygon 2.0:

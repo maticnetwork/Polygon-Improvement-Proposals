@@ -28,7 +28,7 @@ This feature will help improve the UX and make it more uniform by eliminating cl
 -   `gpo.ignoreprice`: Gas price below which gpo will ignore transactions (default: `25000000000`).
 
 
-When a new backend is initialized at startup in he client, some utility functions will check for such values, and enforce them to be `25gwei`.
+When a new backend is initialized at startup in the client, some utility functions will check for such values, and enforce them to be `25gwei`.
 
 
 ### Backward Compatibility

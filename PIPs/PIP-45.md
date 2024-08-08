@@ -21,15 +21,13 @@ Changes to "[MRC20.sol](https://polygonscan.com/address/0x0000000000000000000000
 ```diff
 function name() public pure returns (string memory) {
 
-- return "Matic Token";
-+ return "Polygon Ecosystem Token";
+return "Polygon Ecosystem Token";
 
 }
 
 function symbol() public pure returns (string memory) {
 
-- return "MATIC";
-+ return "POL";
+return "POL";
 
 }
 ```
@@ -38,12 +36,10 @@ function symbol() public pure returns (string memory) {
 
 
 ```diff
-- string internal constant EIP712_DOMAIN_NAME = "Matic Network";
-+ string internal constant EIP712_DOMAIN_NAME = "Polygon Ecosystem Token";
+string internal constant EIP712_DOMAIN_NAME = "Polygon Ecosystem Token";
 
 
-- string internal constant EIP712_DOMAIN_VERSION = "1";
-+ string internal constant EIP712_DOMAIN_VERSION = "2";
+string internal constant EIP712_DOMAIN_VERSION = "2";
 
 ```
 
@@ -53,12 +49,10 @@ Changes to "[WMATIC.sol](https://polygonscan.com/address/0x0d500B1d8E8eF31E21C99
 
 
 ```diff
-- string public name = "Wrapped Matic";
-+ string public name = "Wrapped Polygon Ecosystem Token";
+string public name = "Wrapped Polygon Ecosystem Token";
 
 
-- string public symbol = "WMATIC";
-+ string public symbol = "WPOL";
+string public symbol = "WPOL";
 
 ```
 

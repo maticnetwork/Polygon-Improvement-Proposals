@@ -6,7 +6,7 @@
 
 ### Abstract
 
-This proposal calls for upgrading the native token of the Polygon PoS network from MATIC (`0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0`) to POL (address) in a method that ensures maximum backward compatibility. The authors recommend this by upgrading the PoS Plasma Bridge Contract (`0x401f6c983ea34274ec46f84d70b31c151321188b`) to a new implementation that:
+This proposal calls for upgrading the native token of the Polygon PoS network from MATIC (`0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0`) to POL (`0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6`) in a method that ensures maximum backward compatibility. The authors recommend this by upgrading the PoS Plasma Bridge Contract (`0x401f6c983ea34274ec46f84d70b31c151321188b`) to a new implementation that:
 
 -   Converts all the MATIC in the bridge to POL 
 -   Fulfills all withdrawal requests for the native asset of Polygon PoS Chain with POL 
@@ -20,7 +20,7 @@ MATIC will still be an operational ERC20 token on Ethereum throughout this phase
 
 ### Motivation
 
-The native token is the token used by users of the Polygon PoS network to pay gas fees in order to transact. The present native token is redeemable for MATIC which was set as the native token upon genesis of the Polygon PoS network. Now that POL (address), the updated successor of MATIC, has been proposed, the authors propose setting it as the native token of the network via an upgrade of the Plasma Bridge in a maximally backward compatible manner.
+The native token is the token used by users of the Polygon PoS network to pay gas fees in order to transact. The present native token is redeemable for MATIC which was set as the native token upon genesis of the Polygon PoS network. Now that POL (`0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6`), the updated successor of MATIC, has been proposed, the authors propose setting it as the native token of the network via an upgrade of the Plasma Bridge in a maximally backward compatible manner.
 
 ### Definitions
 

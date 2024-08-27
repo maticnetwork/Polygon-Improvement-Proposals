@@ -1,6 +1,6 @@
 | PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
 |-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 42 | Polygon 2.0 - Upgrade PoS Staking to Use POL | Upgrade to Emissions Manager contract for Direct POL Emissions | Simon Dosch, Zero Ekkusu, David Silverman, Paul Gebheim, Paul O'Leary | [Forum](https://forum.polygon.technology/t/pip-41-enable-direct-pol-emissions-to-stakemanager-sol/17642) | Peer Review | Contracts | 2024-06-25 |
+| 42 | Polygon 2.0 - Upgrade PoS Staking to Use POL | Upgrade to Emissions Manager contract for Direct POL Emissions | Simon Dosch, Zero Ekkusu, David Silverman, Paul Gebheim, Paul O'Leary | [Forum](https://forum.polygon.technology/t/pip-41-enable-direct-pol-emissions-to-stakemanager-sol/17642) | Last Call | Contracts | 2024-06-25 |
 
 ## Abstract
 

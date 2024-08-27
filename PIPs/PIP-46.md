@@ -1,6 +1,6 @@
 | PIP | Title          | Description                | Author                                                                    | Discussion                                                               | Status      | Type                                     | Date                  |
 |-----|----------------|----------------------------|---------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------|------------------------------------------|-----------------------|
-| 46 | MATIC to POL Migration | Proposes the MATIC to POL migration | Simon Dosch, Harry Rook | [Forum]() | Draft | Contracts | 2024-08-21
+| 46 | MATIC to POL Migration | Proposes the MATIC to POL migration | Simon Dosch, Harry Rook | [Forum]() | Last Call | Contracts | 2024-08-21
 ---
 
 ### Abstract

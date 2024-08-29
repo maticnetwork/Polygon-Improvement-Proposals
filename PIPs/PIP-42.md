@@ -8,7 +8,21 @@ This proposal calls for upgrading the staking contract for the Polygon PoS netwo
 
 * Converts all the MATIC in the Stake Manager to POL
 * Uses POL for all new staking and unstaking requests
-* Has legacy functions that allow for staking and unstaking using MATIC by leveraging the POL Migration Contract (0x29e7DF7b6A1B2b07b731457f499E1696c60E2C4e) to preserve maximum backward compatibility.
+* Will still allow for using existing functions when staking and unstaking MATIC by leveraging the POL Migration Contract (0x29e7DF7b6A1B2b07b731457f499E1696c60E2C4e) to preserve maximum backward compatibility.
+* Adds new ...POL functions wherever necessary. These can be used to stake using the new POL token
+
+As an example for the last point, `buyVoucher` still exists and we can now also use `buyVoucherPOL` which both call the same function internally, with the only differnce being that the first one will trigger a migrate call to exchange MATIC for POL before moving on:
+```
+function buyVoucher(uint256 _amount, uint256 _minSharesToMint) public returns (uint256 amountToDeposit) {
+    return _buyVoucher(_amount, _minSharesToMint, false);
+}
+
+function buyVoucherPOL(uint256 _amount, uint256 _minSharesToMint) public returns (uint256 amountToDeposit) {
+    return _buyVoucher(_amount, _minSharesToMint, true);
+}
+```
+
+Current implementations of the [StakeManager](https://github.com/0xPolygon/pos-contracts/blob/dev/contracts/staking/stakeManager/StakeManager.sol) and [ValidatorShare](https://github.com/0xPolygon/pos-contracts/blob/dev/contracts/staking/validatorShare/ValidatorShare.sol) contracts can be found here on Github.
 
 This proposed upgrade will not change any contracts on the Polygon PoS Network. Likewise, all other properties about staking (reward rate, unbonding period, slashing etc.) will remain unchanged.
 

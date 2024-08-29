@@ -14,6 +14,20 @@ This proposal calls for upgrading the native token of the Polygon PoS network fr
 
 This proposed upgrade will not change any contracts on the Polygon PoS Network. Likewise, the native token’s properties will remain unchanged. All contracts will function as designed. The native asset of the Polygon PoS chain will change from being a claim on the Plasma Bridge’s MATIC, to a claim on the Plasma Bridge’s POL.
 
+MATIC will still be an operational ERC20 token on Ethereum throughout this phase. Similarly, staking rewards for validators will remain denominated in MATIC until further technical upgrades are proposed and, if welcomed by the community, then implemented.
+
+### Motivation
+
+The native token is the token used by users of the Polygon PoS network to pay gas fees in order to transact. The present native token is redeemable for MATIC which was set as the native token upon genesis of the Polygon PoS network. Now that POL (`0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6`), the updated successor of MATIC, has been proposed, the authors propose setting it as the native token of the network via an upgrade of the Plasma Bridge in a maximally backward compatible manner.
+
+### Definitions
+
+Plasma Bridge: Polygon Plasma is the official bridge used to bridge MATIC tokens from Ethereum to Polygon chain. Withdrawals have a required 7-day delay. This delay is designed to allow users to challenge a malicious withdrawal.
+
+### Specification
+
+Upgrade the DepositManagerProxy contract to a new implementation at `0xb00aa68b87256E2F22058fB2Ba3246EEc54A44fc`.
+
 The address of the DepositManagerProxy will remain the same at: `0x401F6c983eA34274ec46f84D70b31C151321188b`
 
 This change in the DepositManager will make sure both POL and MATIC can be bridged for PoS gas tokens (172):
@@ -45,20 +59,6 @@ if (_token == registry.contractMap(keccak256("matic"))) {
 ```
 
 **INFO: when calling the `processExits` function of the WithdrawManager, we still need to use the MATIC token address as input for now!**
-
-MATIC will still be an operational ERC20 token on Ethereum throughout this phase. Similarly, staking rewards for validators will remain denominated in MATIC until further technical upgrades are proposed and, if welcomed by the community, then implemented.
-
-### Motivation
-
-The native token is the token used by users of the Polygon PoS network to pay gas fees in order to transact. The present native token is redeemable for MATIC which was set as the native token upon genesis of the Polygon PoS network. Now that POL (`0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6`), the updated successor of MATIC, has been proposed, the authors propose setting it as the native token of the network via an upgrade of the Plasma Bridge in a maximally backward compatible manner.
-
-### Definitions
-
-Plasma Bridge: Polygon Plasma is the official bridge used to bridge MATIC tokens from Ethereum to Polygon chain. Withdrawals have a required 7-day delay. This delay is designed to allow users to challenge a malicious withdrawal.
-
-### Specification
-
-Upgrade the Plasma Bridge contract to a new implementation at < address to be determined >.
 
 ### Backward Compatibility
 

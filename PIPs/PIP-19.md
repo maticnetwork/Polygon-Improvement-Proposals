@@ -46,8 +46,6 @@ if (_token == registry.contractMap(keccak256("matic"))) {
 
 **INFO: when calling the `processExits` function of the WithdrawManager, we still need to use the MATIC token address as input for now!**
 
-The current DepositManager sourcecode can be found here: https://github.com/0xPolygon/pos-contracts/blob/dev/contracts/root/depositManager/DepositManager.sol
-
 MATIC will still be an operational ERC20 token on Ethereum throughout this phase. Similarly, staking rewards for validators will remain denominated in MATIC until further technical upgrades are proposed and, if welcomed by the community, then implemented.
 
 ### Motivation

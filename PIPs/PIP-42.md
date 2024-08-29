@@ -22,8 +22,6 @@ function buyVoucherPOL(uint256 _amount, uint256 _minSharesToMint) public returns
 }
 ```
 
-Current implementations of the [StakeManager](https://github.com/0xPolygon/pos-contracts/blob/dev/contracts/staking/stakeManager/StakeManager.sol) and [ValidatorShare](https://github.com/0xPolygon/pos-contracts/blob/dev/contracts/staking/validatorShare/ValidatorShare.sol) contracts can be found here on Github.
-
 This proposed upgrade will not change any contracts on the Polygon PoS Network. Likewise, all other properties about staking (reward rate, unbonding period, slashing etc.) will remain unchanged.
 
 ## Motivation

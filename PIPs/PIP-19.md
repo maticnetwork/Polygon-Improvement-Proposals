@@ -14,7 +14,37 @@ This proposal calls for upgrading the native token of the Polygon PoS network fr
 
 This proposed upgrade will not change any contracts on the Polygon PoS Network. Likewise, the native token’s properties will remain unchanged. All contracts will function as designed. The native asset of the Polygon PoS chain will change from being a claim on the Plasma Bridge’s MATIC, to a claim on the Plasma Bridge’s POL.
 
-  
+The address of the DepositManagerProxy will remain the same at: `0x401F6c983eA34274ec46f84D70b31C151321188b`
+
+This change in the DepositManager will make sure both POL and MATIC can be bridged for PoS gas tokens (172):
+
+```diff 
+// new: auto-migrate MATIC to POL
+if (_token == matic) {
+    _migrateMatic(_amountOrToken);
+}
+// new: bridge POL as MATIC, child chain behaviour does not change
+else if (_token == registry.contractMap(keccak256("pol"))) {
+    _token = matic;
+}
+```
+
+Here we change the `transferAssets` function to only pay out POL, when MATIC is withdrawn from PoS (81):  
+
+
+```diff
+// new: pay out POL when MATIC is withdrawn
+if (_token == registry.contractMap(keccak256("matic"))) {
+    require(
+        IERC20(registry.contractMap(keccak256("pol"))).transfer(_user, _amountOrNFTId),
+        "TRANSFER_FAILED"
+    );
+} else {
+    require(IERC20(_token).transfer(_user, _amountOrNFTId), "TRANSFER_FAILED");
+}
+```
+
+**INFO: when calling the `processExits` function of the WithdrawManager, we still need to use the MATIC token address as input for now!**
 
 MATIC will still be an operational ERC20 token on Ethereum throughout this phase. Similarly, staking rewards for validators will remain denominated in MATIC until further technical upgrades are proposed and, if welcomed by the community, then implemented.
 

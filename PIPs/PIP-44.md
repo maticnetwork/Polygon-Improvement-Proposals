@@ -1,6 +1,13 @@
-| PIP | Title          | Description                | Author                        | Discussion | Status      | Type                                     | Date                  |
-|-----|----------------|----------------------------|-------------------------------|------------|-------------|------------------------------------------|-----------------------|
-| 44 |Upgrade cosmos-sdk in heimdall| Proposes an upgrade for heimdall by bumping cosmos-sdk dependency | [Marcello Ardizzone](https://github.com/marcello33) | [Forum](https://forum.polygon.technology/t/pip-upgrade-cosmos-sdk-in-heimdall/17732)  | Draft | Core | 2024-06-27
+---
+PIP: 44
+Title: Upgrade cosmos-sdk in heimdall
+Description: Proposes an upgrade for heimdall by bumping cosmos-sdk dependency
+Author: Marcello Ardizzone (@marcello33)
+Discussion: https://forum.polygon.technology/t/pip-upgrade-cosmos-sdk-in-heimdall/17732
+Status: Draft
+Type: Core
+Date: 2024-06-27
+---
 
 ### Abstract
 

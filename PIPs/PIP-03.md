@@ -1,12 +1,12 @@
 ---
-pip: 3
-title: Auction Mechansim - A Mechanism to replace bad and under-performing validator
-description: Proposes a mechanism to replace under-performing validators
-author: Delroy Bosco
-discussion: https://forum.polygon.technology/t/pip-3-auction-mechansim-a-mechanism-to-replace-bad-and-under-performing-validators/8270/6
-status: Stagnant
-type: Contracts
-date: 2021-06-01
+PIP: 3
+Title: Auction Mechansim - A Mechanism to replace bad and under-performing validator
+Description: Proposes a mechanism to replace under-performing validators
+Author: Delroy Bosco
+Discussion: https://forum.polygon.technology/t/pip-3-auction-mechansim-a-mechanism-to-replace-bad-and-under-performing-validators/8270/6
+Status: Stagnant
+Type: Contracts
+Date: 2021-06-01
 ---
 
 ### Abstract:

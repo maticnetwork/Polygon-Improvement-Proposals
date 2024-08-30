@@ -4,7 +4,7 @@ Title: Deterministic finality via Milestones
 Description: Proposal to introduce Milestones in Polygon PoS to have deterministic finality
 Author: Vaibhav Jindal (@VAIBHAVJINDAL3012), Arpit Temani (@temaniarpit27), Evgeniy Danilenko (@JekaMas), Manav Darji (@manav2401), Sandeep Sreenath (@ssandeep)
 Discussion: https://forum.polygon.technology/t/pip-11-deterministic-finality-via-milestones/11918/
-Status: Last Call
+Status: Final
 Type: Core
 Date: 2023-09-25
 ---

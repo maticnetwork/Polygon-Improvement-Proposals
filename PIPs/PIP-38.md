@@ -1,6 +1,13 @@
-| PIP | Title          | Description                | Author                        | Discussion                                                                  | Status      | Type                                     | Date                  |
-|-----|----------------|----------------------------|-------------------------------|-----------------------------------------------------------------------------|-------------|------------------------------------------|-----------------------|
-| 38 |Phased expansion of Validator Slots| Proposes increasing validator slots to 125| [Vasanti Rode](https://github.com/Vasanti01), [Parvez Shaikh](https://github.com/Maticparvez)| [Forum](https://forum.polygon.technology/t/pip-38-phased-expansion-of-validator-slots-on-polygon-pos/14200) | Draft | Contracts | 2024-5-5
+---
+PIP: 38
+Title: Phased expansion of Validator Slots
+Description: Proposes increasing validator slots to 125
+Author: Vasanti Rode (@Vasanti01), Parvez Shaikh (@Maticparvez)
+Discussion: https://forum.polygon.technology/t/pip-38-phased-expansion-of-validator-slots-on-polygon-pos/14200
+Status: Draft
+Type: Contracts
+Date: 2024-5-5
+---
 
 ### Abstract
 

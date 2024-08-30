@@ -1,6 +1,13 @@
-| PIP              | Title                          | Description         | Author                       | Discussion | Status | Type                                    | Date                 |  
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|  
-| 25 | Adjust POL Total Supply | Proposes burning POL tokens corresponding to previously burned MATIC | David Silverman, Paul Gebheim, Harry Rook, Mateusz Rzeszowski | [Forum](https://forum.polygon.technology/t/pip-25-adjust-pol-total-supply/13008) |  Last Call | Contracts |2023-10-04
+---
+PIP: 25
+Title: Adjust POL Total Supply
+Description: Proposes burning POL tokens corresponding to previously burned MATIC
+Author: David Silverman, Paul Gebheim, Harry Rook, Mateusz Rzeszowski (@matrzeszowski)
+Discussion: https://forum.polygon.technology/t/pip-25-adjust-pol-total-supply/13008
+Status: Draft
+Type: Contracts
+Date: 2023-10-04
+---
  
 ### Abstract
 

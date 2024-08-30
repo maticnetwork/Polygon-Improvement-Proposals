@@ -1,6 +1,13 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 21 | Aalborg Hard Fork | Specifies the changes included in the Polygon hard fork named Aalborg | [Sandeep Sreenath](https://github.com/ssandeep)  | [Forum Discussion](https://forum.polygon.technology/t/aalborg-upgrade-mainnet-timeline-update/12960)  | Final | Core |2023-09-21
+---
+PIP: 21
+Title: Aalborg Hard Fork
+Description: Specifies the changes included in the Polygon hard fork named Aalborg
+Author: Sandeep Sreenath (@ssandeep)
+Discussion: Draft
+Status: Last Call
+Type: Core
+Date: 2023-09-21
+---
 
 ### Abstract
 

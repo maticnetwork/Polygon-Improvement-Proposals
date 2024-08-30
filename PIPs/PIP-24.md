@@ -1,6 +1,13 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |  
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|  
-| 24 | Change EIP-1559 Policy | Changes the EIP-1559 implementation to facilitate changes as introduced in PIP-18 | David Silverman, Paul Gebheim, Harry Rook, Mateusz Rzeszowski  | [Forum](https://forum.polygon.technology/t/pip-24-change-eip-1559-policy/13007)  | Final | Core |2023-10-04
+---
+PIP: 24
+Title: Change EIP-1559 Policy
+Description: Changes the EIP-1559 implementation to facilitate changes as introduced in PIP-18
+Author: David Silverman, Paul Gebheim, Harry Rook, Mateusz Rzeszowski (@matrzeszowski)
+Discussion: https://forum.polygon.technology/t/pip-24-change-eip-1559-policy/13007
+Status: Draft
+Type: Core
+Date: 2023-10-04
+---
 
 ### Abstract
 

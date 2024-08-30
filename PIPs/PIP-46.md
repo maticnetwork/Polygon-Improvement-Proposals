@@ -1,6 +1,12 @@
-| PIP | Title          | Description                | Author                                                                    | Discussion                                                               | Status      | Type                                     | Date                  |
-|-----|----------------|----------------------------|---------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------|------------------------------------------|-----------------------|
-| 46 | MATIC to POL Migration | Proposes the MATIC to POL migration | Simon Dosch, Harry Rook | [Forum]() | Last Call | Contracts | 2024-08-21
+---
+PIP: 46
+Title: MATIC to POL Migration 
+Description: Proposes the MATIC to POL migration
+Author: Simon Dosch, Harry Rook
+Discussion: https://forum.polygon.technology/t/pip-46-matic-to-pol-migration/19672
+Status: Last Call
+Type: Contracts
+Date: 2024-08-21
 ---
 
 ### Abstract
@@ -22,5 +28,9 @@ The migration will include the following PIPs:
 ### Backwards Compatibility
 
 This PIP will be backward compatible with the current implementation of the existing layer 1 contracts.
+
+### Copyright
+
+All copyrights and related rights in this work are waived under CC0 1.0 Universal.
 
 

@@ -1,7 +1,13 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 8 | PIP Classification, Workflow and Implementation | Describes a proposed classification scheme for PIPs and their respective work flows. | Harry Rook , Mateusz Rzeszowski | [Forum](https://forum.polygon.technology/t/pip-8-pip-classification-workflow-and-implementation/11365/1) | Continuous | Informational | 2023-02-21 | 
-
+---
+PIP: 8
+Title: PIP Classification, Workflow and Implementation
+Description: Describes a proposed classification scheme for PIPs and their respective work flows.
+Author: Harry Rook (@hrook1), Mateusz Rzeszowski
+Discussion: https://forum.polygon.technology/t/pip-8-pip-classification-workflow-and-implementation/11365/1
+Status: Continuous
+Type: Informational
+Date: 2023-02-21
+---
 
 ## Abstract
 

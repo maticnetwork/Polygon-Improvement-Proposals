@@ -1,6 +1,13 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 45 | Token Symbol change | Proposes token symbol be changed from MATIC to POL | Simon Dosch, Dhairya Sethi  | [Forum]()  | Draft |Core | 2024-25-07
+---
+PIP: 45
+Title: Token Symbol change
+Description: Proposes token symbol be changed from MATIC to POL
+Author: Simon Dosch, Dhairya Sethi
+Discussion: https://forum.polygon.technology/t/pip-45-pos-mrc-20-token-symbol-change/19437
+Status: Peer Review
+Type: Core
+Date: 2024-25-07
+---
 
 ## Abstract
 

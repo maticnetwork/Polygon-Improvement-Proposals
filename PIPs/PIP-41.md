@@ -1,6 +1,13 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 41 | Enable Direct POL Emissions to StakeManager.sol | Upgrade to Emissions Manager contract for Direct POL Emissions | Simon Dosch, Harry Rook | [Forum](https://forum.polygon.technology/t/pip-41-enable-direct-pol-emissions-to-stakemanager-sol/17642) | Last Call | Contracts | 2024-06-24 |
+---
+PIP: 41
+Title: Enable Direct POL Emissions to StakeManager.sol
+Description: Upgrade to Emissions Manager contract for Direct POL Emissions
+Author: Simon Dosch, Harry Rook 
+Discussion: https://forum.polygon.technology/t/pip-41-enable-direct-pol-emissions-to-stakemanager-sol/17642
+Status: Last Call
+Type: Contracts
+Date: 2024-06-24 
+---
 
 ## Abstract
 

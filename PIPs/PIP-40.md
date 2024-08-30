@@ -1,6 +1,13 @@
-| PIP | Title          | Description                | Author                        | Discussion | Status | Type                                     | Date                  |
-|-----|----------------|----------------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 40  | Support for Community Treasury Contracts | Enables support for the new Community Treasury contracts | Simon Dosch, Mateusz Rzeszowski | [Forum](https://forum.polygon.technology/t/pip-40-support-for-community-treasury-contracts/17641) | Last Call | Contracts | 2024-06-24
+---
+PIP: 40
+Title: Support for Community Treasury Contracts
+Description: Enables support for the new Community Treasury contracts
+Author: Simon Dosch, Mateusz Rzeszowski 
+Discussion: https://forum.polygon.technology/t/pip-40-support-for-community-treasury-contracts/17641
+Status: Final
+Type: Contracts
+Date: 2024-06-24
+---
 
 ## Abstract
 

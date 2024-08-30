@@ -1,7 +1,13 @@
-| PIP | Title | Description | Author | Discussion | Status | Type | Date |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 32 | Ancient data pruning | Ability to prune ancient blockchain data for PoS | [Delweng](https://github.com/jsvisa), [Manav Darji](https://github.com/manav2401/) | [Forum](https://forum.polygon.technology/t/pip-32-ancient-data-pruning/13346) | Final | Core | 2023-12-18 |
-
+---
+PIP: 32
+Title: Ancient data pruning 
+Description: Ability to prune ancient blockchain data for PoS
+Author: Delweng (@jsvisa), Manav Darji (@manav2401)
+Discussion: https://forum.polygon.technology/t/pip-32-ancient-data-pruning/13346
+Status: Final
+Type: Core
+Date: 2023-12-18
+---
 ### Abstract
 
 A full node of the primary client of Polygon PoS, [bor](https://github.com/maticnetwork/bor) bifurcates data storage to the following areas:

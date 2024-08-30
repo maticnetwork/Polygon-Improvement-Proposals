@@ -1,6 +1,13 @@
-| PIP | Title          | Description                | Author                        | Discussion | Status      | Type                                     | Date                  |
-|-----|----------------|----------------------------|-------------------------------|------------|-------------|------------------------------------------|-----------------------|
-| 43 |Replace Tendermint with CometBFT in Heimdall| Proposes an upgrade for heimdall by replacing tendermint with cometBFT | [Marcello Ardizzone](https://github.com/marcello33) | [Forum](https://forum.polygon.technology/t/pip-43-replace-tendermint-with-cometbft-in-heimdall/17731)  | Draft | Core | 2024-06-27
+---
+PIP: 43
+Title: Replace Tendermint with CometBFT in Heimdall
+Description: Proposes an upgrade for heimdall by replacing tendermint with cometBFT
+Author: Marcello Ardizzone (@marcello33)
+Discussion: https://forum.polygon.technology/t/pip-43-replace-tendermint-with-cometbft-in-heimdall/17731
+Status: Draft
+Type: Core
+Date: 2023-10-17
+---
 
 ### Abstract
 

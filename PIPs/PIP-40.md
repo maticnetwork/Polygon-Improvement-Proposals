@@ -4,7 +4,7 @@ Title: Support for Community Treasury Contracts
 Description: Enables support for the new Community Treasury contracts
 Author: Simon Dosch, Mateusz Rzeszowski 
 Discussion: https://forum.polygon.technology/t/pip-40-support-for-community-treasury-contracts/17641
-Status: Last Call
+Status: Final
 Type: Contracts
 Date: 2024-06-24
 ---

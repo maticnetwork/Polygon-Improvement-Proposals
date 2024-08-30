@@ -1,7 +1,13 @@
-| PIP| Title| Description| Author| Discussion | Status | Type | Date|
-|-|-|-|-|-|-|-|-|
-|17| Polygon Ecosystem Token (POL) | Upgrade to MATIC in the form of the Polygon Ecosystem Token (POL) |Mihailo Bjelic, Mudit Gupta, Will Schwab, Daniel Gretzke, Dhairya Sethi, Ankit Maity, Harry Rook, Mateusz Rzeszowski|[Forum](https://forum.polygon.technology/t/pip-17-polygon-ecosystem-token-pol/12912) | Final | Contracts | 2023-09-14 |
- 
+---
+PIP: 17
+Title: Polygon Ecosystem Token (POL)
+Description: Upgrade to MATIC in the form of the Polygon Ecosystem Token (POL)
+Author: Mihailo Bjelic, Mudit Gupta, Will Schwab, Daniel Gretzke, Dhairya Sethi, Ankit Maity, Harry Rook (@hrook1), Mateusz Rzeszowski
+Discussion: https://forum.polygon.technology/t/pip-17-polygon-ecosystem-token-pol/12912
+Status: Peer Review
+Type: Contracts
+Date: 2023-09-14
+---
 ### Abstract
 
 This proposal describes an upgrade to MATIC (0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0) in the form of the Polygon Ecosystem Token (POL). POL is the upgraded native token of Polygon 2.0, along with its accompanying contracts and initial configurations to handle emission management and token migration. POL allows for a one-to-one migration with MATIC with an initial supply of 10 billion POL and yearly emission of 2% that will be equally distributed to stakers and a community treasury contract.

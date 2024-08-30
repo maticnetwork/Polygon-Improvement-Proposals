@@ -1,17 +1,24 @@
-| PIP               | Title                           | Description          | Author                        | Discussion | Status | Type                                     | Date                  |
-|-------------------|---------------------------------|----------------------|-------------------------------|------------|--------|------------------------------------------|-----------------------|
-| 16 | Transaction Dependency Data | Improving the efficiency of block validation by adding transaction dependency data to block header | [Jerry Chen](https://github.com/cffls), [Pratik Patil](https://github.com/pratikspatil024) | [Forum](https://forum.polygon.technology/t/proposal-transaction-dependency-data/12705)  | Final  | Core | 2023-08-04 |
+---
+PIP: 16
+Title: Transaction Dependency Data
+Description: Improving the efficiency of block validation by adding transaction dependency data to block header
+Author: Jerry Chen (@cffls), Pratik Patil (@pratikspatil024)
+Discussion: https://forum.polygon.technology/t/proposal-transaction-dependency-data/12705
+Status: Draft
+Type: Core
+Date: 2023-08-04
+---
 
-
-## Abstract
+### Abstract
 
 Version 0.4.0 of Bor introduced the capability to execute transactions in parallel during the block importing process, thereby reducing the time taken for block execution and propagation. The current mechanism for parallel execution identifies dependencies between transactions by optimistically executing them simultaneously, then re-executing those dependent on others. However, this trial-and-error method could lead to wasted time and computational resources. To address this problem, there is a solution that enables a validator to add transaction dependency data in the block header, which can then be used by the rest of the nodes in the network to execute transactions more efficiently during parallel block execution.
 
-## Motivation
+### Motivation
 
 This enhancement is intended to optimize the efficiency and performance of the Bor network. As the volume of transactions continues to grow, it's crucial to ensure that the system can handle this increase without compromising block execution and propagation time. The current parallel execution approach, while effective, can sometimes lead to unnecessary computational work. By incorporating transaction dependencies directly into the block header, validators can efficiently schedule the parallel execution without needing to re-execute transactions.
 
-## Definitions
+### Definitions
+
 **TxN**: A transaction whose position in a block is `N`, where `N ≥ 0`.
 Transaction dependency: `TxB` is claimed to have a dependency on transaction `TxA`, when `TxB` reads a value that has been written or modified by `TxA`, where `A < B`. For example, if `Tx0` increases the balance of address `0x0001`** by 1 MATIC, and `Tx1` reads the balance of `0x0001`, then `Tx1` depends on `Tx0`.
 **Key**: The identifier of a read/write operation. For example, if a transaction reads slot `0x1234`** from account address `0xabcd`, the key of this read operation will be `0xabcd1234`.
@@ -19,7 +26,7 @@ Transaction dependency: `TxB` is claimed to have a dependency on transaction `Tx
 ** Account address and slot key in the examples are shortened for readability.
 
 
-## Specification
+### Specification
 
 Dependency data of a transaction, `TxN`, is stored in an array, where each element in the array is an integer, representing the index of the transaction `TxN` depends on. When a transaction doesn’t have any dependency, the array will be empty.
 The dependency data of a block is simply a two-dimensional array, where each element in the first dimension corresponds to a transaction within the block, and the second dimension corresponds to the dependencies of the transaction. This two-dimension array is encoded along with the validator set by recursive length prefix (“RLP”) and added to the extra data field in the block header.
@@ -61,7 +68,7 @@ Consider a block with 6 transactions, where `Tx2` depends on `Tx0`, `Tx3` depend
 ]
 ```
 
-## Rationale
+### Rationale
 
 In the existing model of parallel execution, the dependencies between transactions are calculated during block execution. This is done by recording the keys that each transaction reads and writes during execution and finding the common keys between the read set of a transaction and the write set of another. When a dependency between two transactions is identified, it will be added to a dependency map, which is used by an execution scheduler that ensures a transaction doesn't get executed ahead of time. If validators were to calculate the dependency map, and the execution scheduler had access to this information, there would be a significant reduction in time and computational resources, as dependency wouldn't have to be discovered in real-time during block execution.
 This PIP proposes two major modifications:
@@ -154,7 +161,7 @@ However, there are trade-offs with this approach. By serializing transactions in
 
 This might lead to sub-optimal usage of resources if the number of paths is less than the number of available workers. For example, if there were three workers, one of them would remain idle during this computation because there are only two paths.
 
-### Storage of dependencies
+#### Storage of dependencies
 
 Dependencies of a transaction remain undefined at the time of the transaction's creation. Therefore, these dependencies should be calculated and subsequently recorded in the block headers by the miner who mines the block.
 
@@ -170,11 +177,11 @@ The **`extra`** field, currently existing within the block header, is a byte arr
 The incorporation of a third component, transaction dependency, within the byte array is feasible. The primary advantage of this approach lies in its avoidance of necessitating a new field, thereby ensuring forward compatibility with future modifications to the header. In comparison to the addition of a new field, modifying the **`extra`** data field may not be as straightforward, but it would require just a single implementation effort.
 
 
-## Backwards Compatibility
+### Backwards Compatibility
 
 Since this PIP will add dependency data to the block header, it will not be backward compatible with the current implementation of Bor and will therefore require a hard fork.
 
-## Security Considerations
+### Security Considerations
 
 There could be scenarios where a validator injects wrong dependencies in the block header, and this could make the validation slower, or in the worst case, cause the node to be stuck on a particular block.
 
@@ -188,6 +195,6 @@ In this case, the miner could say that `Tx3` is dependent on `Tx10`. But, the bl
 This is a case where the miner could say that `Tx1` is dependent on `Tx2`, and `Tx2` is dependent on `Tx1`. Hence the executor will not execute any of `Tx1` or `Tx2` as both of them are waiting for each other to finish the execution. To prevent this from happening, we can assert that for every transaction, `TxA`, in the dependencies of `TxB`, the condition `A < B` must hold true.
 
 
-## Copyright
+### Copyright
 
 All copyrights and related rights in this work are waived under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

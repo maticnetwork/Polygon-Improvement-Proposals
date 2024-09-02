@@ -11,7 +11,7 @@ Date: 2024-06-25
 
 ## Abstract
 
-This proposal calls for upgrading the staking contract for the Polygon PoS network to change from using MATIC (0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0) as the primary staking token to POL in a method that ensures maximum backward compatibility. The authors recommend this by upgrading the PoS Stake Manager Contract `0x5e3Ef299fDDf15eAa0432E6e66473ace8c13D908` to a new implementation at `0x97a3500083348A147F419b8a65717909762c389f` that:
+This proposal calls for upgrading the staking contract for the Polygon PoS network to change from using MATIC `0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0` as the primary staking token to POL in a method that ensures maximum backward compatibility. The authors recommend this by upgrading the PoS Stake Manager Contract `0x5e3Ef299fDDf15eAa0432E6e66473ace8c13D908` to a new implementation at `0x97a3500083348A147F419b8a65717909762c389f` that:
 
 * Converts all the MATIC in the Stake Manager to POL
 * Uses POL for all new staking and unstaking requests
@@ -29,7 +29,7 @@ The staking token is the token which stakers and validators of the Polygon PoS n
 Upgrade the StakeManagerProxy contract to a new implementation at `0x97a3500083348A147F419b8a65717909762c389f`.  
 Upgrade the ValidatorShareProxy beacon proxies by updating the `ValidatorShare` entry in the Registy to `0x053fa9b934b83e1e0ffc7e98a41aadc3640bb462`.
 
-As an example for the new ...POL functions, `buyVoucher` still exists and we can now also use `buyVoucherPOL` which both call the same function internally, the only difference being that the first one will trigger a migrate call to exchange MATIC for POL before moving on:
+As an example for the new POL functions, `buyVoucher` still exists and we can now also use `buyVoucherPOL` which both call the same function internally, the only difference being that the first one will trigger a migrate call to exchange MATIC for POL before moving on:
 ```
 function buyVoucher(uint256 _amount, uint256 _minSharesToMint) public returns (uint256 amountToDeposit) {
     return _buyVoucher(_amount, _minSharesToMint, false);

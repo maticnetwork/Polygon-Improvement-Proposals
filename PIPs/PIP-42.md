@@ -42,7 +42,7 @@ function buyVoucherPOL(uint256 _amount, uint256 _minSharesToMint) public returns
 
 ## Backward Compatibility
 
-Backward compatibility has been preserved by internally converting MATIC to POL in the existing functions.
+Backward compatibility has been preserved by internally converting MATIC to POL (and vice-versa) in the existing functions.
 
 ## Security Considerations
 

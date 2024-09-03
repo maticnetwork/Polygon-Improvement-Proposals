@@ -42,7 +42,7 @@ function buyVoucherPOL(uint256 _amount, uint256 _minSharesToMint) public returns
 
 ## Backward Compatibility
 
-Systems that expect to stake and unstake MATIC from the PoS Staking system will be affected unless they move to using the new legacy functions.
+Backward compatibility has been preserved by internally converting MATIC to POL (and vice-versa) in the existing functions.
 
 ## Security Considerations
 

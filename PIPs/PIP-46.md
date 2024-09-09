@@ -4,7 +4,7 @@ Title: MATIC to POL Migration
 Description: Proposes the MATIC to POL migration
 Author: Simon Dosch, Harry Rook
 Discussion: https://forum.polygon.technology/t/pip-46-matic-to-pol-migration/19672
-Status: Last Call
+Status: Final
 Type: Contracts
 Date: 2024-08-21
 ---

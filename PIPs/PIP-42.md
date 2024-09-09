@@ -4,7 +4,7 @@ Title: Polygon 2.0 - Upgrade PoS Staking to Use POL
 Description: Upgrade to Emissions Manager contract for Direct POL Emissions
 Author: Simon Dosch, Zero Ekkusu, David Silverman, Paul Gebheim, Paul O'Leary
 Discussion: https://forum.polygon.technology/t/pip-41-enable-direct-pol-emissions-to-stakemanager-sol/17642
-Status: Last Call
+Status: Final
 Type: Contracts
 Date: 2024-06-25
 ---

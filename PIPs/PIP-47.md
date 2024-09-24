@@ -1,6 +1,6 @@
 ---
 PIP: 47
-Title: Protocol Council Mutli-Threshold Smart Contract Upgrades
+Title: Protocol Council Multi-Threshold Smart Contract Upgrades
 Description: Proposes a multi-threshold upgradability mechanism for the Protocol Council
 Author: Carlos Gonzalez Juarez, Javier Gonzalez de Chaves Garcia, Fabrice François, Harry Rook, Tanisha Katara, Mateusz Rzeszowski
 Discussion: 

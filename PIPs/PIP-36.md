@@ -4,7 +4,7 @@ Title: Replay Failed State Syncs
 Description: Enable replay of failed state sync transactions
 Author: Dhairya Sethi @DhairyaSethi, Simon Dosch (@simonDos)
 Discussion: https://forum.polygon.technology/t/pip-36-replay-failed-state-syncs/13864
-Status: Peer Review
+Status: Last Call
 Type: Core
 Date: 2024-4-30 
 ---

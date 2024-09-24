@@ -4,7 +4,7 @@ Title: Token Symbol change
 Description: Proposes token symbol be changed from MATIC to POL
 Author: Simon Dosch, Dhairya Sethi
 Discussion: https://forum.polygon.technology/t/pip-45-pos-mrc-20-token-symbol-change/19437
-Status: Peer Review
+Status: Last Call
 Type: Core
 Date: 2024-25-07
 ---

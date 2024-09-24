@@ -4,7 +4,7 @@ Title: Ahmedabad Hardfork
 Description: Proposes the Ahmedabad Hardfork 
 Author: Marcello Ardizzone (@marcello33), Manav Darji (@manav2401)
 Discussion: https://forum.polygon.technology/t/pip-37-ahmedabad-hardfork/13885
-Status: Peer Review
+Status: Last Call
 Type: Core
 Date: 2024-30-4
 ---

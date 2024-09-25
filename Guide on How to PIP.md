@@ -30,7 +30,7 @@ A Polygon Improvement Proposal (PIP) is a design document that proposes new feat
 
    3. **Write the PIP**: Write the PIP using a template provided by the Polygon community. The template includes sections for introduction, motivation, specification, and rationale.
 
-   4. Gather feedback: Share your PIP with the Polygon community and get feedback from experts, developers, and users. You can do this by sharing the PIP on forums, social media, or by reaching out to relevant individuals.
+   4. **Gather feedback:** Share your PIP with the Polygon community and get feedback from experts, developers, and users. You can do this by sharing the PIP on forums, social media, or by reaching out to relevant individuals.
 
    5. **Revise and finalize**: Revise your PIP based on the feedback you receive and finalize it.
 
@@ -48,7 +48,7 @@ PIPs are broader in scope and can encompass proposals for improvements to the Po
 
 PRC, on the other hand, is focused specifically on proposals for standardizing smart contracts on the Polygon products. PRCs outline proposed standards fro smart contracts development and deployment, such as token standards, and provide a common framework for developers to build upon. 
 
-In summary, PIPs are for proposals that aim to improve the Polygon products as a whole, while PRCs are for proposals that aim sto standardize smart contract development on Polygon products. 
+In summary, PIPs are for proposals that aim to improve the Polygon products as a whole, while PRCs are for proposals that aim to standardize smart contract development on Polygon products. 
 
 #### !Remember! The PIP Editors will work with you to make sure that your proposal meets the PIP standard and that is formatted correctly.
 
@@ -59,5 +59,5 @@ Note: The Polygon community has a rigorous review process for PIPs and not all p
 * Use the Polygon Forum to engage with the Community. 
 * Reach out to projects that are relevant to your proposal and ask them for feedback and ideas! 
 * Tip: Under the Verified Group in the Polygon Forum you will find a wide range of Ecosystem Partners and Dapps. 
-* White an article about the relevance of the PIP, explain your rational, inspiration and how it can be used to improve the protocol/community. 
+* Write an article about the relevance of the PIP, explain your rational, inspiration and how it can be used to improve the protocol/community. 
 * Engage in the discussion taking place in the Forum- Great minds work better together! 

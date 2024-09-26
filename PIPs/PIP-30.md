@@ -4,7 +4,7 @@ Title: Increase Max Code Size Limit to 32KB
 Description: Proposal to increase Max Code Size Limit from 24KB to 32KB
 Author: Mudit Gupta, David Silverman (@oneski22)
 Discussion: https://forum.polygon.technology/t/pip-30-increase-max-code-size-limit-to-32kb/13266
-Status: Last Call
+Status: Final
 Type: Core
 Date: 2023-11-29
 ---

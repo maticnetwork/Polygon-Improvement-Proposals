@@ -5,4 +5,4 @@ Bor v1.5.0:
 * [EIP-1459: Node Discovery via DNS](https://eips.ethereum.org/EIPS/eip-1459)
 
 Updates to the Protocol Council:
-* [Protocol Council Mutli-Threshold Smart Contract Upgrades](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-47.md)
+* [PIP-47: Protocol Council Multi-Threshold Smart Contract Upgrades](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-47.md)

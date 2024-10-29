@@ -6,7 +6,7 @@ Author: Simon Dosch, Dhairya Sethi
 Discussion: https://forum.polygon.technology/t/pip-45-pos-mrc-20-token-symbol-change/19437
 Status: Final
 Type: Core
-Date: 2024-25-07
+Date: 2024-07-25
 ---
 
 ## Abstract

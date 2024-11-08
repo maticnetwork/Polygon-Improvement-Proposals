@@ -3,7 +3,7 @@ PIP: 50
 Title: Staked Tokenholder Signalling
 Description: Tokenholder signalling for system smart contracts governance
 Author: Carlos Gonzalez Juarez, Tanisha Katara, Mateusz Rzeszowski
-Discussion: 
+Discussion: https://forum.polygon.technology/t/pip-50-staked-tokenholder-signalling/19974
 Status: Draft
 Type:  Informational
 Date: 2024-11-8

@@ -255,6 +255,4 @@ A related issue is that an EOA's nonce maybe incremented more than once per tran
 
 ## Copyright
 
-Copyright and related rights waived via [CC0](../LICENSE.md).
-
 All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

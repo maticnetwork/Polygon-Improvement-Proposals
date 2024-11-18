@@ -138,8 +138,8 @@ CheckpointProofCommit {
 # Commit the values
 return {
   bor_block_number, # bor block number
-	bor_block_hash, # bor block hash
-  l1_block_hash, # l1 block hash
+  bor_block_hash,   # bor block hash
+  l1_block_hash,    # l1 block hash
 }
 ```
 

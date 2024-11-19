@@ -1,12 +1,11 @@
 ---
 PIP: 51
 Title: Set EOA account code
-Author: lightclient (@lightclient)
+Author: Jerry Chen (@cffls), Manav Darji (@manav2401), lightclient (@lightclient)
 Description: Add a new tx type that permanently sets the code for an EOA
 Discussion: TODO
 status: Review
 Type: Core
-Date: 
 Date: 2024-11-18
 ---
 

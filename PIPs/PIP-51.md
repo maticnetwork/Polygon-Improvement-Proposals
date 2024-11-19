@@ -9,7 +9,7 @@ Type: Core
 Date: 2024-11-18
 ---
 
-**_Note_:** This PIP leans heavily on, or is outright copied from, [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702), written by Vitalik Buterin (@vbuterin), Sam Wilson (@SamWilsn), Ansgar Dietrichs (@adietrichs), lightclient (@lightclient). The authors have been contacted and have given their permission, and the work is also copyright-waived via [CC0](https://eips.ethereum.org/LICENSE).
+**_Note_:**  The Specification and other sections of the PIP lean heavily on, or are outright copied from, [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702), written by Vitalik Buterin (@vbuterin), Sam Wilson (@SamWilsn), Ansgar Dietrichs (@adietrichs), lightclient (@lightclient), which is available via [CC0](https://eips.ethereum.org/LICENSE)
 
 ## Abstract
 

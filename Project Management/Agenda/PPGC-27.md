@@ -2,7 +2,7 @@
 
 ### Heimdall
 * [PIP-49: ZK Checkpointing](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-49.md)
-* [PIP-52:Execution Derived Randomness for Producer Selection]()
+* [PIP-52: Execution Derived Randomness for Producer Selection](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-51.md)
 
 ### Bor
 * [PIP-51: Set EOA account code](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-51.md)

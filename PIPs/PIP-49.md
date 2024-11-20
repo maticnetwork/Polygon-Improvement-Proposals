@@ -2,7 +2,7 @@
 PIP: 49
 Title: ZK Checkpointing
 Description: Proposes usage of zero knowledge proofs for checkpointing for the Polygon PoS chain
-Author: Manav Darji (@manav2401)
+Author: Manav Darji (@manav2401), Leland (@lsquaredleland)
 Discussion: <TODO>
 Status: Draft
 Type: Core

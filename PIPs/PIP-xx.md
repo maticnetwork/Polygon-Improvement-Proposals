@@ -1,5 +1,5 @@
 ---
-PIP: TODO
+PIP: 52
 Title: Execution Derived Randomness for Producer Selection
 Author: Marcello Ardizzone (@marcello33), Raneet Debnath (@Raneet10), Angel Valkov (@avalkov)
 Description: Proposes an upgrade for Heimdall by improving the bor blocks producers’ selection algorithm

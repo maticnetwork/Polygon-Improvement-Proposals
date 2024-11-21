@@ -3,7 +3,7 @@ PIP: 49
 Title: ZK Checkpointing
 Description: Proposes usage of zero knowledge proofs for checkpointing for the Polygon PoS chain
 Author: Manav Darji (@manav2401), Leland (@lsquaredleland)
-Discussion: <TODO>
+Discussion: https://forum.polygon.technology/t/pip-49-zk-checkpointing/20172
 Status: Draft
 Type: Core
 Date: 2024-11-04
@@ -116,15 +116,15 @@ message.append(encode(checkpoint))
 # Verify precommits
 majority_power = 0
 for i in range len(precommits):
-		# Ensure that the signer is part of active validator set
-		assert(signers[i] in validator_stakes.keys())
+	# Ensure that the signer is part of active validator set
+	assert(signers[i] in validator_stakes.keys())
 
-		# Verify if the signer address matches
-		signer = extract_signer(keccak256(message, sigs[i]))
-		assert(signer == signers[i])
+	# Verify if the signer address matches
+	signer = extract_signer(keccak256(message, sigs[i]))
+	assert(signer == signers[i])
 		
-		# Increment majority vote
-		majority_power += power[i]
+	# Increment majority vote
+	majority_power += power[i]
 		
 # Validate if we have reached 2/3+1 consensus
 assert(majority_power > total_power / 3 * 2)
@@ -179,10 +179,6 @@ This approach/design will be implemented in parallel to the existing checkpoint 
 ## Test Cases
 
 As it’s still in the design and ideation phase, only manual tests have been carried out. In the future, the testing process will be automated to test the approach on different cases. This section will be updated once the design is concrete.
-
-## Reference Implementation
-
-Here's the [link to the PoC](https://github.com/manav2401/zk-checkpoint) which was used to derive these results
 
 ## Security Considerations
 

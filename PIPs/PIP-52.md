@@ -122,11 +122,9 @@ A deterministic selection algorithm, driven by a seed, is used to choose block p
 
 ## Backwards Compatibility
 The upgrade is not backward compatible, hence will require a hard fork of the Heimdall network.
-Security Considerations
 
+## Security Considerations
 In order to prevent liveness failures in Bor due to the seed not being received in Hiemdall in sufficient time, the seed from span N-2 is used instead of span N-1. This is because we start looking for the seed from the end block of the span, which would be too late when we want to commit span N. Similarly, retrospectively looking at 100 spans to uniquely decide upon the next seed author was meant to impartially choose a seed for the algorithm.
 
 ## Copyright
 All copyrights and related rights in this work are waived under CC0 1.0 Universal.
-
-

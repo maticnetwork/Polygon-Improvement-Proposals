@@ -4,7 +4,7 @@ Title: Upgrade cosmos-sdk in heimdall
 Description: Proposes an upgrade for heimdall by bumping cosmos-sdk dependency
 Author: Marcello Ardizzone (@marcello33), Sergio Mena (@sergio-mena), Greg Szabo (@greg-szabo)
 Discussion: https://forum.polygon.technology/t/pip-upgrade-cosmos-sdk-in-heimdall/17732
-Status: Draft
+Status: Peer Review
 Type: Core
 Date: 2024-06-27
 ---

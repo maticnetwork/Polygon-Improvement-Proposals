@@ -1,12 +1,17 @@
-| PIP| Title| Description| Author| Discussion | Status | Type | Date|
-|-|-|-|-|-|-|-|-|
-| 19 | Update Polygon PoS Native Token to POL| Upgrades the native token of the Polygon PoS network from MATIC to POL |Will Schwab, Daniel Gretzke, Dhairya Sethi, Zero Ekkusu, Simon Dosch | [Forum](https://forum.polygon.technology/t/pip-19-update-polygon-pos-native-token-to-pol/12914)| Peer Review | Contracts | 2023-09-14 |**
-
-    
+---
+PIP: 19
+Title: Update Polygon PoS Native Token to POL
+Description: Upgrades the native token of the Polygon PoS network from MATIC to POL
+Author: Will Schwab (@wschwab), Daniel Gretzke, Dhairya Sethi, Zero Ekkusu
+Discussion: https://forum.polygon.technology/t/pip-19-update-polygon-pos-native-token-to-pol/12914
+Status: Final
+Type: Contracts
+Date: 2023-09-14
+--- 
 
 ### Abstract
 
-This proposal calls for upgrading the native token of the Polygon PoS network from MATIC (`0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0`) to POL (address) in a method that ensures maximum backward compatibility. The authors recommend this by upgrading the PoS Plasma Bridge Contract (`0x401f6c983ea34274ec46f84d70b31c151321188b`) to a new implementation that:
+This proposal calls for upgrading the native token of the Polygon PoS network from MATIC (`0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0`) to POL (`0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6`) in a method that ensures maximum backward compatibility. The authors recommend this by upgrading the PoS Plasma Bridge Contract (`0x401f6c983ea34274ec46f84d70b31c151321188b`) to a new implementation that:
 
 -   Converts all the MATIC in the bridge to POL 
 -   Fulfills all withdrawal requests for the native asset of Polygon PoS Chain with POL 
@@ -14,13 +19,11 @@ This proposal calls for upgrading the native token of the Polygon PoS network fr
 
 This proposed upgrade will not change any contracts on the Polygon PoS Network. Likewise, the native token’s properties will remain unchanged. All contracts will function as designed. The native asset of the Polygon PoS chain will change from being a claim on the Plasma Bridge’s MATIC, to a claim on the Plasma Bridge’s POL.
 
-  
-
 MATIC will still be an operational ERC20 token on Ethereum throughout this phase. Similarly, staking rewards for validators will remain denominated in MATIC until further technical upgrades are proposed and, if welcomed by the community, then implemented.
 
 ### Motivation
 
-The native token is the token used by users of the Polygon PoS network to pay gas fees in order to transact. The present native token is redeemable for MATIC which was set as the native token upon genesis of the Polygon PoS network. Now that POL (address), the updated successor of MATIC, has been proposed, the authors propose setting it as the native token of the network via an upgrade of the Plasma Bridge in a maximally backward compatible manner.
+The native token is the token used by users of the Polygon PoS network to pay gas fees in order to transact. The present native token is redeemable for MATIC which was set as the native token upon genesis of the Polygon PoS network. Now that POL (`0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6`), the updated successor of MATIC, has been proposed, the authors propose setting it as the native token of the network via an upgrade of the Plasma Bridge in a maximally backward compatible manner.
 
 ### Definitions
 
@@ -28,7 +31,39 @@ Plasma Bridge: Polygon Plasma is the official bridge used to bridge MATIC tokens
 
 ### Specification
 
-Upgrade the Plasma Bridge contract to a new implementation at < address to be determined >.
+Upgrade the DepositManagerProxy contract to a new implementation at `0xb00aa68b87256E2F22058fB2Ba3246EEc54A44fc`.
+
+The address of the DepositManagerProxy will remain the same at: `0x401F6c983eA34274ec46f84D70b31C151321188b`
+
+This change in the DepositManager will make sure both POL and MATIC can be bridged for PoS gas tokens (172):
+
+```diff 
+// new: auto-migrate MATIC to POL
+if (_token == matic) {
+    _migrateMatic(_amountOrToken);
+}
+// new: bridge POL as MATIC, child chain behaviour does not change
+else if (_token == registry.contractMap(keccak256("pol"))) {
+    _token = matic;
+}
+```
+
+Here we change the `transferAssets` function to only pay out POL, when MATIC is withdrawn from PoS (81):  
+
+
+```diff
+// new: pay out POL when MATIC is withdrawn
+if (_token == registry.contractMap(keccak256("matic"))) {
+    require(
+        IERC20(registry.contractMap(keccak256("pol"))).transfer(_user, _amountOrNFTId),
+        "TRANSFER_FAILED"
+    );
+} else {
+    require(IERC20(_token).transfer(_user, _amountOrNFTId), "TRANSFER_FAILED");
+}
+```
+
+**INFO: when calling the `processExits` function of the WithdrawManager, we still need to use the MATIC token address as input for now!**
 
 ### Backward Compatibility
 

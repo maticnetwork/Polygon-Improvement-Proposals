@@ -1,6 +1,12 @@
-| PIP | Title          | Description                | Author                                                                    | Discussion                                                               | Status      | Type                                     | Date                  |
-|-----|----------------|----------------------------|---------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------|------------------------------------------|-----------------------|
-| 33 | Napoli | Proposes the Napoli Hardfork | [Arpit Temani](https://github.com/temaniarpit27) [Marcello Ardizzone](https://github.com/marcello33)      | [Forum]() | Final | Core | 2024-01-11
+---
+PIP: 33
+Title: Proposes the Napoli Hardfork
+Description: Proposes the Agra Hardfork
+Author: Marcello Ardizzone (@marcello33), Arpit Temani (@temaniarpit27)
+Discussion: https://forum.polygon.technology/t/pip-33-napoli-upgrade/13405
+Status: Final
+Type: Core
+Date: 2024-01-11
 ---
 
 ### Abstract

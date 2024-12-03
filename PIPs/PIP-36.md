@@ -1,6 +1,13 @@
-| PIP | Title                     | Description                                     | Author                                                                                       | Discussion | Status | Type | Date      |
-| --- | ------------------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------- | ---------- | ------ | ---- | --------- |
-| 36  | Replay Failed State Syncs | Enable replay of failed state sync transactions | [Dhairya Sethi](https://github.com/DhairyaSethi), [Simon Dosch](https://github.com/simonDos) | [Forum](https://forum.polygon.technology/t/pip-36-replay-failed-state-syncs/13864) | Peer Review | Core | 2024-4-30 |
+---
+PIP: 36
+Title: Replay Failed State Syncs
+Description: Enable replay of failed state sync transactions
+Author: Dhairya Sethi @DhairyaSethi, Simon Dosch (@simonDos)
+Discussion: https://forum.polygon.technology/t/pip-36-replay-failed-state-syncs/13864
+Status: Final
+Type: Core
+Date: 2024-4-30 
+---
 
 ### Abstract
 
@@ -86,7 +93,7 @@ We propose the StateReceiver also stores the failed state syncs.
 
 mapping failedStateSyncs (uint stateId ⇒ bytes encodedData (abi.encode(receiver, data)).
 
-which can be re-executed once by anyone through an external method `retryStateSync(uint stateId)`
+which can be re-executed once by anyone through an external method `replayFailedStateSync(uint stateId)`
 
 This would delete the entry in failedStateSyncs mapping only on a successful call.
 
@@ -103,9 +110,9 @@ The State Receiver currently emits `StateCommitted(uint stateId, bool success)`.
 
 A merkle tree of previous failed state syncs from the Shanghai Hardfork (50563600) until the present (an ever-expanding list) is created.
 
-A package to fetch and filter historic events will be made public such that this tree can be built, and root cross-checked by anyone. This will be a very small merkle tree of depth 5, where the leaf’s will be the keccak(abi.encode(stateId, receiver, calldata)) \[stateId provides sufficient collision resistance].
+A package to fetch and filter historic events will be made public such that this tree can be built, and root cross-checked by anyone. This will be a merkle tree of depth 16, where the leaf’s will be the keccak(abi.encode(stateId, receiver, calldata)) \[stateId provides sufficient collision resistance].
 
-An external method on StateReceiver will be exposed: `retryStateSync(uint stateId, bytes calldata stateSyncData, bytes32[5] calldata merkeProof)` which nullifies the leaf on successful state syncs.
+An external method on StateReceiver will be exposed: `replayHistoricFailedStateSync(bytes32[16] calldata proof, uint256 leafIndex, uint256 stateId, address receiver, bytes calldata data)` which nullifies the leaf on successful state syncs.
 
 ### Observability
 

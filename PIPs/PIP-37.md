@@ -1,7 +1,13 @@
-| PIP | Title          | Description                | Author                        | Discussion                                                                  | Status      | Type                                     | Date                  |
-|-----|----------------|----------------------------|-------------------------------|-----------------------------------------------------------------------------|-------------|------------------------------------------|-----------------------|
-| 37  |Ahmedabad Hardfork| Proposes the Ahmedabad Hardfork | [Marcello Ardizzone](https://github.com/marcello33), [Manav Darji](https://github.com/manav2401)| [Forum](https://forum.polygon.technology/t/pip-37-ahmedabad-hardfork/13885) | Peer Review | Core | 2024-30-4
-
+---
+PIP: 37
+Title: Ahmedabad Hardfork
+Description: Proposes the Ahmedabad Hardfork 
+Author: Marcello Ardizzone (@marcello33), Manav Darji (@manav2401)
+Discussion: https://forum.polygon.technology/t/pip-37-ahmedabad-hardfork/13885
+Status: Final
+Type: Core
+Date: 2024-30-4
+---
 ### Abstract
 
 This PIP specifies the changes included in the Polygon PoS hard fork named Ahmedabad.
@@ -12,14 +18,13 @@ This PIP specifies the changes included in the Polygon PoS hard fork named Ahmed
 
 ### Activation
 
-- Activation block to be added when consensus for the change acheived.
+- Activation block to be added when consensus for the change achieved.
 
 ### Included PIPs
 
   *   [PIP-30: Increase Max Code Size Limit to 32KB](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-30.md)
-  *   [PIP-22: EIP-3074-style Account Abstraction](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-22.md)
   *   [PIP-36: Replay Failed State Syncs](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-36.md)
-  *   [PIP-35: MinGas Increase](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-35.md)
+  *   [PIP-45: Token Symbol change](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-45.md)
 
 ### Copyright
 

@@ -2,7 +2,7 @@
 PIP: 9
 Title: Performance Benchmark Adjustment
 Description: Maintaining the current level of Performance Benchmark at 95%
-Author: Delroy Bosco, Jackson Lewis, Harry Rook (@hrook1), Mateusz Rzeszowsk
+Author: Delroy Bosco, Jackson Lewis, Harry Rook (@hrook1), Mateusz Rzeszowski
 Discussion: https://forum.polygon.technology/t/pip-9-performance-benchmark-adjustment/11387
 Status: Final
 Type: Contracts

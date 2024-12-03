@@ -17,7 +17,7 @@ This PIP follows the [RIP-7212](https://github.com/ethereum/RIPs/blob/master/RIP
 
 ## Motivation
 
-Polygon as one of the pioneer blockchains in the account abstraction ecosystem, so it's important to enhance chains capabilities and provide the best security, development experience, and user experience by following latest improvements.
+Polygon is one of the pioneer blockchains in the account abstraction ecosystem, so it's important to enhance chains capabilities and provide the best security, development experience, and user experience by following latest improvements.
 
 > “secp256r1” elliptic curve is a standardized curve by NIST which has the same calculations by different input parameters with “secp256k1” elliptic curve used by the “ecrecover” precompiled contract. The cost of combined attacks and the security conditions are almost the same for both curves. Adding a precompiled contract which is similar to "ecrecover" can provide signature verifications using the “secp256r1” elliptic curve in the smart contracts and multi-faceted benefits can occur. One important factor is that this curve is widely used and supported in many modern devices such as Apple’s Secure Enclave, Webauthn, Android Keychain which proves the user adoption. Additionally, the introduction of this precompiled contract could enable valuable features in the account abstraction which allows more efficient and flexible management of accounts by transaction signs in mobile devices.
 > Most of the modern devices and applications rely on the “secp256r1” elliptic curve. The addition of this precompiled contract enables the verification of device native transaction signing mechanisms. For example:

@@ -1,7 +1,7 @@
 ---
 PIP: 2
 Title: Proposal to distribute and decentralize staking power across the Polygon chain
-Description: Proposal to increase the minimun commission.
+Description: Proposal to increase the minimum commission.
 Author: Delroy Bosco
 Discussion: https://forum.polygon.technology/t/pip-2-proposal-to-distribute-and-decentralize-staking-power-across-the-polygon-chain/219/11
 Status: Stagnant

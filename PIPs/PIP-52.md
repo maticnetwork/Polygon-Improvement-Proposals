@@ -28,7 +28,7 @@ Here, the Seed is the Ethereum block hash used as the pseudo-random number gener
 
 ## Specification
 To make the algorithm more secure and fair, when selecting block producers for span N, the voting power of the validators is rolled back from span N-2. If a new validator joins in the interval of spans [N-2, N], they won’t participate in this run. The same goes for validators exiting during that timeframe, as they won’t be considered. We don’t consider span N-1 in such a scenario, because when proposing span N, the previous span is not yet completed.
-This proposal seeks to amend the source of randomness used in Seed from an Ethereum hash to a bor block hash. The selection process includes identifying the authors of the last 100 span seeds. Then, it iterates across the blocks from the end block to start within the span N-2 and finds a block that was not produced by an identified author. If such a block is not found, the algorithm returns the last block that presents authors who are different from the last one.
+This proposal seeks to amend the source of randomness used in Seed from an Ethereum hash to a bor block hash. The selection process includes identifying the authors of the last 50 span seeds. Then, it iterates across the blocks from the end block to start within the span N-2 and finds a block that was not produced by an identified author. If such a block is not found, the algorithm returns the last block that presents authors who are different from the last one.
 The selection algorithm can be shown as follows:
 
 ```pseudo
@@ -124,7 +124,7 @@ A deterministic selection algorithm, driven by a seed, is used to choose block p
 The upgrade is not backward compatible, hence will require a hard fork of the Heimdall network.
 
 ## Security Considerations
-In order to prevent liveness failures in Bor due to the seed not being received in Hiemdall in sufficient time, the seed from span N-2 is used instead of span N-1. This is because we start looking for the seed from the end block of the span, which would be too late when we want to commit span N. Similarly, retrospectively looking at 100 spans to uniquely decide upon the next seed author was meant to impartially choose a seed for the algorithm.
+In order to prevent liveness failures in Bor due to the seed not being received in Hiemdall in sufficient time, the seed from span N-2 is used instead of span N-1. This is because we start looking for the seed from the end block of the span, which would be too late when we want to commit span N. Similarly, retrospectively looking at 50 spans to uniquely decide upon the next seed author was meant to impartially choose a seed for the algorithm.
 
 ## Copyright
 All copyrights and related rights in this work are waived under CC0 1.0 Universal.

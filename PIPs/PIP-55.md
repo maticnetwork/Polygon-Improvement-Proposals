@@ -41,7 +41,7 @@ SeedAuthor common.Address          `json:"seed_author"`
 where `SeedAuthor` is the producer of the bor block whose hash corresponds to `Seed`.
 
 ## Specification
-For context, refer to [PIP-52]() and [PIP-53]().
+For context, refer to [PIP-52](https://github.com/Raneet10/Polygon-Improvement-Proposals/blob/raneet10/pip-55/PIPs/PIP-52.md) and [PIP-53](https://github.com/Raneet10/Polygon-Improvement-Proposals/blob/raneet10/pip-55/PIPs/PIP-53.md).
 After the Jorvik hardfork went live on Amoy, we saw several instances of heimdall nodes crashing. Upon investigation, it was revealed this happened due to a non-deterministic change introduced when a span is being committed in the database:
 
 ```go

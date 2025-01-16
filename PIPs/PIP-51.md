@@ -3,7 +3,7 @@ PIP: 51
 Title: Set EOA account code
 Author: Jerry Chen (@cffls), Manav Darji (@manav2401), lightclient (@lightclient)
 Description: Add a new tx type that permanently sets the code for an EOA
-Discussion: TODO
+Discussion: https://forum.polygon.technology/t/pip-51-set-eoa-account-code/20513
 status: Review
 Type: Core
 Date: 2024-11-18
@@ -52,7 +52,7 @@ The transaction is also considered invalid when any field in an authorization
 tuple cannot fit within the following bounds:
 
 ```python
-assert auth.chain_id < 2**64
+assert auth.chain_id < 2**256
 assert auth.nonce < 2**64
 assert len(auth.address) == 20
 assert auth.y_parity < 2**8
@@ -86,7 +86,7 @@ If transaction execution results in failure (any exceptional condition or code r
 
 ##### Delegation Designation
 
-The delegation designation uses the banned opcode `0xef` from [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) to designate the code has a special purpose. This designator requires all code executing operations to follow the address pointer to get the account's executable code, and requires all other code reading operations to act only on the first 2 bytes of the designator (`0xef01`). The following instructions are impacted: `EXTCODESIZE`, `EXTCODECOPY`, `EXTCODEHASH`, `CALL`, `CALLCODE`, `STATICCALL`, `DELEGATECALL`, as well as transactions with `destination` targeting the code with delegation designation.
+The delegation designation uses the banned opcode `0xef` from [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) to designate the code has a special purpose. This designator requires all code executing operations to follow the address pointer to get the account's executable code, and requires all other code reading operations to act only on the first 2 bytes of the designator (`0xef01`). The following reading instructions are impacted: `EXTCODESIZE`, `EXTCODECOPY`, `EXTCODEHASH`, and the following executing instructions are impacted: `CALL`, `CALLCODE`, `STATICCALL`, `DELEGATECALL`, as well as transactions with `destination` targeting the code with delegation designation.
 
 For example, `EXTCODESIZE` would return `2` (the size of `0xef01`) instead of `23` which would represent the delegation designation, `EXTCODEHASH` would return `0xeadcdba66a79ab5dce91622d1d75c8cff5cff0b96944c3bf1072cd08ce018329` (`keccak256(0xef01)`), and `CALL` would load the code from `address` and execute it in the context of `authority`.
 
@@ -251,6 +251,14 @@ With this EIP, it becomes possible to cause transactions from other accounts to 
 While there are a few mitigations for this, the authors recommend that clients do not accept more than one pending transaction for any EOA with a non-zero delegation designator. This minimizes the number of transactions that can be invalidated by a single transaction. Another alternative would be to expand the EIP-7702 transaction with a list of accounts the caller wishes to "hydrate" during the transaction. Those accounts behave as the delegated code *only* for EIP-7702 transactions which include them in such a list, thus returning to clients the ability to statically analyze and reason about pending transactions.
 
 A related issue is that an EOA's nonce maybe incremented more than once per transaction. Because clients already need to be robust in a worse scenario (described above), it isn't a major security concern. However, clients should be aware this behavior is possible and design their transaction propagation accordingly.
+
+### Storage management
+
+Changing an account's delegation is a security-critical operation that should not be done lightly, especially if the newly delegated code is not purposely designed and tested as an upgrade to the old one.
+
+In particular, in order to ensure a safe migration of an account from one delegate contract to another, it's important for these contracts to use storage in a way that avoids accidental collisions among them. For example, using [ERC-7201](./eip-7201.md) a contract may root its storage layout at a slot dependent on a unique identifier. To simplify this, smart contract languages may provide a way of re-rooting the entire storage layout of existing contract source code.
+
+If all contracts previously delegated to by the account used the approach described above, a migration should not cause any issues. However, if there is any doubt, it is recommended to first clear all account storage, an operation that is not natively offered by the protocol but that a special-purpose delegate contract can be designed to implement.
 
 ## Copyright
 

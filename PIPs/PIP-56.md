@@ -3,7 +3,7 @@ PIP: 56
 Title: Danelaw Hardfork
 Description: Proposes the Danelaw Hardfork 
 Author: Harry Rook (@hrook1) Raneet Debnath (@Raneet10)
-Discussion: 
+Discussion: https://forum.polygon.technology/t/pip-56-danelaw-hardfork/20511
 Status: Draft
 Type: Core
 Date: 2025-01-15

@@ -40,13 +40,13 @@ A Polygon Improvement Proposal (PIP) is a design document that proposes new feat
 
    8. **Approval**: If the PIP is approved, it will be included in the Polygon protocol.
 
-## Polygon Improvent Proposal (PIP) vs Polygon Request for Comments (PRC)
+## Polygon Improvement Proposal (PIP) vs Polygon Request for Comments (PRC)
 
-Polygon Improvent Proposal (PIP) and Polygon Request for Comments (PRC) are similar in that they both serve as a standard for proposing improvements and additions to the Polygon products. However, there is a subtle difference in the scope of the proposals they represent.
+Polygon Improvement Proposal (PIP) and Polygon Request for Comments (PRC) are similar in that they both serve as a standard for proposing improvements and additions to the Polygon products. However, there is a subtle difference in the scope of the proposals they represent.
 
 PIPs are broader in scope and can encompass proposals for improvements to the Polygon products, such as changes to the protocol, upgrades to the blockchain, and new features.
 
-PRC, on the other hand, is focused specifically on proposals for standardizing smart contracts on the Polygon products. PRCs outline proposed standards fro smart contracts development and deployment, such as token standards, and provide a common framework for developers to build upon. 
+PRC, on the other hand, is focused specifically on proposals for standardizing smart contracts on the Polygon products. PRCs outline proposed standards for smart contracts development and deployment, such as token standards, and provide a common framework for developers to build upon. 
 
 In summary, PIPs are for proposals that aim to improve the Polygon products as a whole, while PRCs are for proposals that aim to standardize smart contract development on Polygon products. 
 

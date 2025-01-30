@@ -20,7 +20,7 @@ This PIP specifies the changes included in the Polygon PoS hard fork named Jorvi
 
 - Activation block:
   * For Amoy - `5768528`
-  * For Mainnet - TBD
+  * For Mainnet - `22393043`
 
 ### Included PIPs
 

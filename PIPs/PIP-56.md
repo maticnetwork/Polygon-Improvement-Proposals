@@ -19,7 +19,7 @@ This PIP specifies the changes included in the Polygon PoS hard fork named Danel
 ### Activation
 
 - Activation block:
-  * For Amoy - TBD
+  * For Amoy - `6490424`
   * For Mainnet - `22393043`
 
 ### Included PIPs

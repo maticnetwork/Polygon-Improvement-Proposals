@@ -4,7 +4,7 @@ Title: Danelaw Hardfork
 Description: Proposes the Danelaw Hardfork 
 Author: Harry Rook (@hrook1) Raneet Debnath (@Raneet10)
 Discussion: https://forum.polygon.technology/t/pip-56-danelaw-hardfork/20511
-Status: Draft
+Status: Last Call
 Type: Core
 Date: 2025-01-15
 ---
@@ -19,8 +19,8 @@ This PIP specifies the changes included in the Polygon PoS hard fork named Danel
 ### Activation
 
 - Activation block:
-  * For Amoy - TBD
-  * For Mainnet - TBD
+  * For Amoy - `6490424`
+  * For Mainnet - `22393043`
 
 ### Included PIPs
 

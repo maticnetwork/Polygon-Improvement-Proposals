@@ -3,7 +3,7 @@ PIP: 59
 Title: Moving the Floor Gas Price of 25 Gwei from Priority Fee to Base Fee
 Author: Manav Darji, Sandeep Sreenath
 Description: Proposes transitioning the minimum gas price of 25 Gwei from the priority fee to the base fee in the Polygon PoS network.
-Discussion: [Community Forum](https://forum.polygon.technology)
+Discussion: https://forum.polygon.technology/t/pip-59-moving-the-floor-gas-price-of-25-gwei-from-priority-fee-to-base-fee/20609
 status: Draft
 Type: Core
 Date: 2025-02-11

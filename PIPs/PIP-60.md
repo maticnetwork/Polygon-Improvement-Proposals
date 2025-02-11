@@ -3,7 +3,7 @@ PIP: 60
 Author: Manav Darji, Sandeep Sreenath
 Title: Increase gas limit to 36M
 Description: Proposes increasing block gas limit from 30M to 36M in the Polygon PoS network.
-Discussion: [Community Forum](https://forum.polygon.technology)
+Discussion: https://forum.polygon.technology/t/pip-60-increase-block-gas-limit-to-36m/20610
 status: Draft
 Type: Core
 Date: 2025-02-11

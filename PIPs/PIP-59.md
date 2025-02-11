@@ -1,5 +1,5 @@
 ---
-PIP: 58
+PIP: 59
 Title: Moving the Floor Gas Price of 25 Gwei from Priority Fee to Base Fee
 Author: Manav Darji, Sandeep Sreenath
 Description: Proposes transitioning the minimum gas price of 25 Gwei from the priority fee to the base fee in the Polygon PoS network.

@@ -10,4 +10,4 @@
 * [PIP-53: Jorvik Hardfork](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-53.md)
 
 System Smart Contract 
-* [PIP-47: Protocol Council Multi-Threshold Smart Contract Upgrades](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-47.md)
+* [PIP-54: Reassign Upgradeability Rights of Polygon PoS Contracts to Protocol Council](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-54.md)

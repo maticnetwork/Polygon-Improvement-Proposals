@@ -4,7 +4,7 @@ Title: Jorvik Hardfork
 Description: Proposes the Jorvik Hardfork 
 Author: Marcello Ardizzone (@marcello33), Raneet Debnath (@Raneet10), Angel Valkov (@avalkov) 
 Discussion: https://forum.polygon.technology/t/pip-53-jorvik-hardfork/20357
-Status: Last Call
+Status: Final
 Type: Core
 Date: 2024-12-3
 ---

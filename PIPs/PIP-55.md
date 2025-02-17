@@ -4,7 +4,7 @@ Title: Addition of a new span message type in heimdall
 Author: Raneet Debnath (@Raneet10), Angel Valkov (@avalkov)
 Description: Proposes a new span message transaction type in heimdall
 Discussion: https://forum.polygon.technology/t/pip-55-new-span-message-type-in-heimdall/20510
-Status: Last Call
+Status: Final
 Type: Core
 Date: 2025-01-08
 ---

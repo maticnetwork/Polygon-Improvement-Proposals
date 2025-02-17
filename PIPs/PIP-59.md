@@ -47,7 +47,7 @@ MinBaseFee = 25000000000 // Minimum enforced base fee for EIP-1559 blocks (Polyg
 ### Backwards Compatibility
 This change will not be backward compatible on the protocol consensus layer and will therefore require a hardfork. On the infrastructure layer, this change is backward compatible with existing wallets and apps that rely on querying the base fee.
 
-Adequate notice should be provided on the depreciation of the minGas priority fee to RPCs, dapps, and wallets. Validators can still choose a higher minimum priority fee, which is configurable at the client level. 
+Adequate notice should be provided on the deprecation of the minGas priority fee to RPCs, dapps, and wallets. Validators can still choose a higher minimum priority fee, which is configurable at the client level. 
 
 ### Security Considerations
 Currently, the base fee is burned via the protocol, and the priority fee goes directly to the block producer as a reward. Moving the 25 Gwei enforcement from the priority fee to the base fee will mean transactions no longer require the minimum priority fee.

@@ -19,7 +19,8 @@ This PIP specifies the changes included in the Polygon hard fork named Napoli.
 
 ### Activation
 
-- Activation block to be added when consensus for the change achieved.
+For Amoy - 5423600
+For Mainnet - 54876000
 
 ### Included PIPs
 

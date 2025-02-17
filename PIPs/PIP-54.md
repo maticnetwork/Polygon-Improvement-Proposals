@@ -1,7 +1,7 @@
 ---
 PIP: 54   
 Title: Reassign Upgradeability Rights of Polygon PoS Contracts to Protocol Council  
-Authors: Mateusz Rzeszowski, Devashish Tomar, Harry Rook, Christopher von Hessert
+Author: Mateusz Rzeszowski, Devashish Tomar, Harry Rook, Christopher von Hessert
 Description: Protocol Council granted ownership of PoS L1 contracts. 
 Discussion: https://forum.polygon.technology/t/pip-54-reassign-upgradeability-rights-of-polygon-pos-contracts-to-protocol-council/20350 
 Status: Draft  

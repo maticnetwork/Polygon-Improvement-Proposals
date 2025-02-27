@@ -4,7 +4,7 @@ Title: Increase BaseFeeChangeDenominator to 64
 Author: Jerry Chen
 Description: Proposes a change in the BaseFeeChangeDenominator from 16 to 64
 Discussion: https://forum.polygon.technology/t/pip-58-increase-basefeechangedenominator-to-64/20596
-status: Draft
+status: Peer Review
 Type: Core
 Date: 2025-02-08
 ---

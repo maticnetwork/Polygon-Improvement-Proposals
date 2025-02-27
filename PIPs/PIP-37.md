@@ -18,7 +18,9 @@ This PIP specifies the changes included in the Polygon PoS hard fork named Ahmed
 
 ### Activation
 
-- Activation block to be added when consensus for the change achieved.
+- Activation block:
+  * For Amoy - `11865856`
+  * For Mainnet - `62278656`
 
 ### Included PIPs
 

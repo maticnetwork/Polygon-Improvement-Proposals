@@ -3,7 +3,7 @@ PIP: 61
 Author: Harry Rook
 Title: Pectra EIPs
 Description: Proposes compatible Pectra EIPs
-Discussion: 
+Discussion: https://forum.polygon.technology/t/pip-61-pectra-eips/20783
 status: Draft
 Type: Core
 Date: 2025-03-19

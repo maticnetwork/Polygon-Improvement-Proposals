@@ -19,11 +19,13 @@ Based on the above, we propose a decrease in the sprint length from 64 to 16 blo
 
 ### Specification
 
-Calculating what’s the sprint length to use
+#### Calculating what’s the sprint length to use
 
+```go
 func (c *BorConfig) CalculateSprint(number uint64) uint64 {
 	return c.calculateSprintSizeHelper(c.Sprint, number)
 }
+
 func (c *BorConfig) calculateSprintSizeHelper(field map[string]uint64, number uint64) uint64 {
 	keys := make([]string, 0, len(field))
 	for k := range field {
@@ -43,27 +45,36 @@ func (c *BorConfig) calculateSprintSizeHelper(field map[string]uint64, number ui
 
 	return field[keys[len(keys)-1]]
 }
-Calculating sprint end block
+```
 
+#### Calculating sprint end block
+
+```go
 isSprintEnd := IsSprintStart(number+1, c.config.Sprint)
-New sprint length, producer delay types
+```
 
-// BorConfig is the consensus engine configs for Matic bor based sealing.
+#### New sprint length, producer delay types
+
+```go
+// BorConfig is the consensus engine config for Matic Bor based sealing.
 type BorConfig struct {
 	Period                   map[string]uint64      `json:"period"`                   // Number of seconds between blocks to enforce
-	ProducerDelay            map[string]uint64      `json:"producerDelay"`            // Number of seconds delay between two producer interval
+	ProducerDelay            map[string]uint64      `json:"producerDelay"`            // Number of seconds delay between two producer intervals
 	Sprint                   map[string]uint64      `json:"sprint"`                   // Epoch length to proposer
 	BackupMultiplier         map[string]uint64      `json:"backupMultiplier"`         // Backup multiplier to determine the wiggle time
 	ValidatorContract        string                 `json:"validatorContract"`        // Validator set contract
 	StateReceiverContract    string                 `json:"stateReceiverContract"`    // State receiver contract
-	OverrideStateSyncRecords map[string]int         `json:"overrideStateSyncRecords"` // override state records count
+	OverrideStateSyncRecords map[string]int         `json:"overrideStateSyncRecords"` // Override state records count
 	BlockAlloc               map[string]interface{} `json:"blockAlloc"`
-	BurntContract            map[string]string      `json:"burntContract"` // governance contract where the token will be sent to and burnt in london fork
-	JaipurBlock              *big.Int               `json:"jaipurBlock"`   // Jaipur switch block (nil = no fork, 0 = already on jaipur)
-	DelhiBlock               *big.Int               `json:"delhiBlock"`    // Delhi switch block (nil = no fork, 0 = already on delhi)
+	BurntContract            map[string]string      `json:"burntContract"` // Governance contract where the token will be sent to and burnt in London fork
+	JaipurBlock              *big.Int               `json:"jaipurBlock"`   // Jaipur switch block (nil = no fork, 0 = already on Jaipur)
+	DelhiBlock               *big.Int               `json:"delhiBlock"`    // Delhi switch block (nil = no fork, 0 = already on Delhi)
 }
-Test Cases
+```
 
+### Test Cases
+
+```go
 func TestSprintLengths(t *testing.T) {
 	t.Parallel()
 
@@ -72,10 +83,14 @@ func TestSprintLengths(t *testing.T) {
 		"0": 16,
 		"8": 4,
 	}
+
 	assert.Equal(t, testBorConfig.CalculateSprint(0), uint64(16))
 	assert.Equal(t, testBorConfig.CalculateSprint(8), uint64(4))
 	assert.Equal(t, testBorConfig.CalculateSprint(9), uint64(4))
 }
+```
+
+```go
 func TestSprintLengthReorg(t *testing.T) {
 	t.Parallel()
 
@@ -84,7 +99,6 @@ func TestSprintLengthReorg(t *testing.T) {
 
 	defer func() {
 		err = f.Close()
-
 		if err != nil {
 			panic(err)
 		}
@@ -110,10 +124,10 @@ func TestSprintLengthReorg(t *testing.T) {
 		}
 
 		wg.Add(1)
-
 		go SprintLengthReorgIndividualHelper(t, index, tt, w, &wg)
 	}
 }
+```
 
 ### References
 

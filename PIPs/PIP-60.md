@@ -1,7 +1,7 @@
 ---
 PIP: 60
-Author: Manav Darji, Sandeep Sreenath
 Title: Increase gas limit to 45M
+Author: Manav Darji, Sandeep Sreenath
 Description: Proposes increasing block gas limit from 30M to 45M in the Polygon PoS network.
 Discussion: https://forum.polygon.technology/t/pip-60-increase-block-gas-limit-to-36m/20610
 status: Peer Review

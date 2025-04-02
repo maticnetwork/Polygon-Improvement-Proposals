@@ -1,6 +1,6 @@
 ---
 PIP: 61
-Author: Harry Rook
+Author: Jerry Chen (@cffls), Harry Rook (@hrook1)
 Title: Pectra EIPs
 Description: Proposes compatible Pectra EIPs
 Discussion: https://forum.polygon.technology/t/pip-61-pectra-eips/20783
@@ -28,7 +28,7 @@ The Pectra PIP will enable the following upgrades:
 * [EIP-7623: Increase calldata cost](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7623.md)
 * [EIP-7702: Set EOA account code](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7702.md) [(PIP-51)](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-51.md)
 
-The following EIPs have been included, however, they will not be active or supported within the working client implementation. 
+The following EIPs have been included, however, they will not be active or supported within the working client implementation: 
 
 * [EIP-7549: Move committee index outside Attestation](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7549.md)
 * [EIP-7840: Add blob schedule to EL config files](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7840.md)

@@ -1,6 +1,6 @@
 ---
 PIP: 63
-Title: Bhilai Harfrok
+Title: Bhilai Hardfork
 Author: Sandeep Sreenath (@ssandeep), Harry Rook (@hrook1)
 Description: Proposes Bhilai Hardfork 
 Discussion: 

@@ -1,9 +1,9 @@
 ---
 PIP: 62
-Title: Heimdall v2 Migration
+Title: Heimdall v.2 Migration
 Author: Marcello Ardizzone (@marcello33), Harry Rook (@hrook1)
-Description: Proposes Heimdall v.1--> v.2 Migration
-Discussion: 
+Description: Proposes Migration to Heimdall v.2 
+Discussion: https://forum.polygon.technology/t/pip-62-heimdall-v2-migration/20873
 Status: Draft
 Type: Core
 Date: 2025-04-02
@@ -41,5 +41,3 @@ Downtime is expected while migrating from v1 to v2. Execution clients will be ma
 ### Copyright
 
 All copyrights and related rights in this work are waived under CC0 1.0 Universal.
-
-

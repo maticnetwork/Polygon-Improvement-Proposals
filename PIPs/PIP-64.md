@@ -7,8 +7,10 @@ Discussion: https://forum.polygon.technology/t/pip-64-validator-elected-block-pr
 Status: Draft
 Type: Core
 Date: 2025-04-29
-Disclaimer: This document presents a high-level design for Validator-Elected Block Producers. While the architecture and motivations are well-scoped, certain implementation details, parameters, and operational procedures remain under active discussion and subject to refinement.
 ---
+
+
+_Disclaimer: This document presents a high-level design for Validator-Elected Block Producers. While the architecture and motivations are well-scoped, certain implementation details, parameters, and operational procedures remain under active discussion and subject to refinement._
 
 ## Abstract
 

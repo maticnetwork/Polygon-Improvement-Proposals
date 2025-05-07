@@ -25,7 +25,14 @@ Validators can implement this change at the client level without requiring conse
 - Current Block Gas Limit: 30,000,000 gas
 - Proposed Block Gas Limit: 45,000,000 gas
 
-Validators can set their block gas limit via the `--miner.gaslimit 45000000` flag on their execution layer client.
+To ensure uniformity, the newly proposed gas limit will be part of the execution layer client binary itself (instead of validators trying to explicitly set it via flag).
+
+The default value in [miner config](https://github.com/maticnetwork/bor/blob/v2.0.1/miner/miner.go#L61) will be updated.
+
+```diff
+- GasCeil:  30_000_000,
++ GasCeil:  45_000_000,
+```
 
 ### Backwards Compatibility
 This change is non-breaking and backward-compatible.

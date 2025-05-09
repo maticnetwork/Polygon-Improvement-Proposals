@@ -2,8 +2,8 @@
 PIP: 65
 Title: Economic Model for VEBloP Architecture
 Author: Jerry Chen (fchen@polygon.technology)
-Description: Proposes an economic model and fee redistribution mechanism for the Validator-Elected Block Producer (VEBloP) architecture to ensure validator economic viability and maintain network security.
-Discussion: 
+Description: Proposes an economic model and fee redistribution mechanism for the Validator-Elected Block Producer (VEBloP) architecture.
+Discussion: https://forum.polygon.technology/t/pip-65-economic-model-for-veblop-architecture/20933
 Status: Draft
 Type: Core
 Date: 2025-05-08
@@ -14,7 +14,7 @@ _Disclaimer: This document outlines a proposed economic model to complement the 
 
 ## Abstract
 
-This proposal defines an economic model designed to function alongside the Validator-Elected Block Producer (VEBloP) architecture proposed in PIP-64. Recognizing that VEBloP alters how transaction fees accrue, this PIP introduces a fee redistribution mechanism. The goal is to ensure continued economic viability for validators who perform crucial verification duties but no longer directly produce blocks, thereby maintaining the security and decentralization of the Polygon PoS network. The core proposal involves pooling network fees and distributing them between the active block producer and the validator set.
+This proposal defines an economic model designed to function alongside the Validator-Elected Block Producer (VEBloP) architecture proposed in PIP-64. Recognizing that VEBloP alters how transaction fees accrue, this PIP introduces a fee redistribution mechanism. The goal is to ensure continued economic viability for validators who perform crucial verification duties but no longer directly produce blocks, thereby maintaining the security and decentralization of the Polygon PoS network. The core proposal involves distributing network fees between the active block producer and the validator set.
 
 ## Motivation
 
@@ -24,7 +24,7 @@ While VEBloP lowers hardware costs for non-producing validators through stateles
 
 Therefore, a revised economic model is necessary to:
 
-1. **Compensate Validators:** Ensure validators are fairly rewarded for their essential role in block verification, consensus participation, and data availability, even without producing blocks.
+1. **Compensate Validators:** Provide validators with fair rewards for their essential role in block verification, consensus participation, and data availability, even without producing blocks.
 2. **Reward Block Producers:** Provide a specific incentive for the entity undertaking the specialized, potentially higher-cost role of block production.
 3. **Maintain Network Security:** Align economic incentives with network health and security contributions (i.e., stake).
 4. **Align Validator Incentives With Network Growth:** Ensure that all validators are economically aligned with increasing the number of transactions (and associated fees) on the Polygon chain.
@@ -36,7 +36,7 @@ This proposal addresses these needs by explicitly defining how network fees shou
 The proposed economic model introduces a mechanism for collecting and redistributing network fees generated on the Polygon PoS chain under the VEBloP architecture, while also incentivizing active validator participation.
 
 1. **Fee Pooling:** All relevant network fees (primarily transaction fees and potentially MEV fees) generated within a given period (e.g., per checkpoint) will be directed to a dedicated smart contract system.
-2. **Distribution Mechanism:** The pooled fees within the smart contract will be programmatically divided:
+2. **Distribution Mechanism:** The pooled fees within the smart contract will be programmatically divided based on protocol parameters:
     - **Total Fee:** Total fee (`T`) collected in a checkpoint (Transaction Fees + MEV Fees)
     - **Block Producer Commission Pool Calculation:** An overall commission rate (`C`) determines the total pool allocated to block producers. (`CommissionPool = T * C`)
     - **Producer Commission Distribution:** This `CommissionPool` is further divided to reward individual producers (`p`) based on two factors:

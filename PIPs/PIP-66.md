@@ -10,18 +10,21 @@ Date: 2025-05-21
 ---
 
 ### Abstract
-This proposal seeks to update the consensus rules to allow the primary block producers in the network to announce their block early (as soon as it's built) for better block propagation and reducing the chance of reorgs. As the change modifies consensus rules, it is proposed to be added with 
-Bhilai Hardfork ([PIP-63](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-63.md)) scheduled next.
+This proposal seeks to implement an optimisation to the consensus rules to allow the primary block producers in the network to announce their block early (as soon as it's built) for better block propagation and reducing the chance of reorgs.
 
 ### Motivation
-Currently, all the block producers follows a fixed block time through consensus (2s for primary block producers) during which it exeutes the transactions and assemble the next block. Metrics suggest that validators are able to create a full block in roughly 500ms (average case scenario) but have to wait for full 2s 
-before announcing the block to rest of the network due to the way consensus works currently.
+Currently, all block producers follow a fixed block time enforced by the consensus rules (2s for primary block producers), during which transactions are executed and the next block is assembled. With current hardware validators are able to create a full block in roughly 500ms (average case scenario) but have to wait for full 2s 
+before announcing the block to rest of the network, as shown below: 
+
+```
+delay = time.Until(time.Unix(int64(header.Time), 0)) // Wait until we reach header time
+```
 
 This introduces unnecessary idle time in the network. Moreover, it leads to delayed block propagation affecting critical applications and also increases the chance of reorgs as a backup block is announced by the secondary validator if the block from primary isn't seen on time. Allowing early announcement 
 (if the block is ready) before it's expected time improves the propagation by a great factor.
 
 ### Specification
-This proposal requires changes in the bor consensus mechanism to allow primary validators to announce blocks as soon as it's ready instead of waiting. This proposal also introduces changes in header verification logic in consensus allowing the rest of the network to import and process early blocks and reject maliciously sent headers.
+This proposal requires changes in the bor consensus rules to allow primary validators to announce blocks as soon as it's ready instead of waiting. This proposal also introduces changes in header verification logic in consensus allowing the rest of the network to import and process early blocks and reject maliciously sent headers.
 
 The proposal won't change the announcement timings for non-primary validators as malicious actors could cause 1 block reorgs if allowed the same.
 

@@ -3,7 +3,7 @@ PIP: 66
 Title: Allow early block announcements
 Author: Jerry Chen, Manav Darji
 Description: Allow primary block producers to announce block early for better block propagation.
-Discussion: TODO
+Discussion: https://forum.polygon.technology/t/pip-66-allow-early-block-announcements-on-pos/20976
 status: Draft
 Type: Core
 Date: 2025-05-21
@@ -87,7 +87,7 @@ Note that the validators still get the same time to build the block and can util
 -}
 ```
 
-The above check leavs a slight window for non-primary validators to act maliciously so we also need to handle it later once we know the succession of the validator in `verifySeal`
+The above check leaves a slight window for non-primary validators to act maliciously so we also need to handle it later once we know the succession of the validator in `verifySeal`
 ```diff
 +if succession != 0 {
 +  if header.Time > uint64(time.Now().Unix()) {

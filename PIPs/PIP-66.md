@@ -77,7 +77,7 @@ Note that the validators still get the same time to build the block and can util
 -delay = time.Until(time.Unix(int64(header.Time), 0)) // Wait until we reach header time
 ```
 
-2. In `verifyHeader` function which is responsible for block validation (including validating the header time and the time at which we received a block).
+2. `verifyHeader` function is then responsible for block validation (including validating the header time and the time at which we received a block).
 ```diff
 +if header.Time-c.config.CalculatePeriod(number) > uint64(time.Now().Unix()) {
 +  return consensus.ErrFutureBlock

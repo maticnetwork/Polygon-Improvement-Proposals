@@ -16,7 +16,8 @@ This proposal seeks to implement an optimisation to the consensus rules to allow
 Currently, all block producers follow a fixed block time enforced by the consensus rules (2s for primary block producers), during which transactions are executed and the next block is assembled. With current hardware validators are able to create a full block in roughly 500ms (average case scenario) but have to wait for full 2s 
 before announcing the block to rest of the network, as shown below: 
 
-```
+The field `header.Time` for primary validators is `parent.Time + 2s`. The line below in `consensus.Seal` function uses the header time to wait.
+```go
 delay = time.Until(time.Unix(int64(header.Time), 0)) // Wait until we reach header time
 ```
 
@@ -28,9 +29,7 @@ This proposal requires changes in the bor consensus rules to allow primary valid
 
 The proposal won't change the announcement timings for non-primary validators as malicious actors could cause 1 block reorgs if allowed the same.
 
-Workflows of current logic v/s proposed logic are shown below:
-
-Current workflow:
+The current workflow is as below:
 ```mermaid
 sequenceDiagram
     participant Primary as Primary Proposer
@@ -43,6 +42,13 @@ sequenceDiagram
     Primary->>Network: Broadcast block to network
 ```
 
+To expand a bit more on it, the `miner` module triggers a new block production and sends the block to be signed to the consensus engine under certain conditions mentioned below:
+1. The block is full (i.e. the transactions included in the block fully occupy the gas limit of that block).
+2. The block building time (2s for primary) has been completed. During the block building loop (when it tries to execute as many transactions as possible), if the window is completed, it interrupts the execution and sends the partially built block to consensus for sealing and signing.
+3. There are no more valid transactions to execute.
+
+All the transactions which arrive after the block has been submitted to consensus will be picked up in the next block. 
+
 Proposed workflow:
 ```mermaid
 sequenceDiagram
@@ -54,9 +60,13 @@ sequenceDiagram
     Primary->>Network: Immediately broadcast block to network
 ```
 
+Note that the validators still get the same time to build the block and can utilise it fully before announcing the block. The fact that transactions arriving after block has been signed will be included in next block stays the same with the proposed change as well.
+
+#### Timings of block propagation
+
 #### Consensus changes
 
-1. In `Seal` function which is responsible for timing the release of a block
+1. Once the block is built, it's sent to `consensus.Seal` function for signing. Moreover, that function waits until the header time is reached and is responsible for timing the release of the block.
 ```diff
 +delay = time.Until(time.Unix(int64(header.Time), 0)) // Wait until we reach header time for non-primary validators
 +if successionNumber == 0 {
@@ -67,7 +77,7 @@ sequenceDiagram
 -delay = time.Until(time.Unix(int64(header.Time), 0)) // Wait until we reach header time
 ```
 
-2. In `verifyHeader` function which is responsible for block validation (including the header time and the time at which we received a block).
+2. In `verifyHeader` function which is responsible for block validation (including validating the header time and the time at which we received a block).
 ```diff
 +if header.Time-c.config.CalculatePeriod(number) > uint64(time.Now().Unix()) {
 +  return consensus.ErrFutureBlock

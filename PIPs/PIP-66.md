@@ -42,7 +42,7 @@ sequenceDiagram
     Primary->>Network: Broadcast block to network
 ```
 
-To expand a bit more on it, the `miner` module triggers a new block production and sends the block to be signed to the consensus engine under certain conditions mentioned below:
+The `miner` module triggers a new block production and sends the block to be signed to the consensus engine under certain conditions mentioned below:
 1. The block is full (i.e. the transactions included in the block fully occupy the gas limit of that block).
 2. The block building time (2s for primary) has been completed. During the block building loop (when it tries to execute as many transactions as possible), if the window is completed, it interrupts the execution and sends the partially built block to consensus for sealing and signing.
 3. There are no more valid transactions to execute.
@@ -60,13 +60,13 @@ sequenceDiagram
     Primary->>Network: Immediately broadcast block to network
 ```
 
-Note that the validators still get the same time to build the block and can utilise it fully before announcing the block. The fact that transactions arriving after block has been signed will be included in next block stays the same with the proposed change as well.
+Note that the validators still get the same time to build the block and can utilise it fully before announcing the block. Transactions arriving after block has been signed will be continue to be included in next block.
 
 #### Timings of block propagation
 
 #### Consensus changes
 
-1. Once the block is built, it's sent to `consensus.Seal` function for signing. Moreover, that function waits until the header time is reached and is responsible for timing the release of the block.
+1. Once the block is built, it's sent to `consensus.Seal` function for signing. This function waits until the header time is reached and is responsible for timing the release of the block.
 ```diff
 +delay = time.Until(time.Unix(int64(header.Time), 0)) // Wait until we reach header time for non-primary validators
 +if successionNumber == 0 {

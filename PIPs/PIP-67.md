@@ -10,7 +10,7 @@ Date: 2025-04-15
 ---
 
 ### Abstract  
-This proposal seeks to update the membership of the Protocol Council established by \[PIP-29\](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-29.md) to ensure continued operational efficiency and governance transparency. This proposal supersedes and should be read in conjunction with PIP-29.
+This proposal seeks to update the membership of the Protocol Council established by [PIP-29](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-29.md) to ensure continued operational efficiency and governance transparency. This proposal supersedes and should be read in conjunction with PIP-29.
 
 ### Motivation  
 Refreshing the Protocol Council membership ensures alignment with evolving community representation, and maintains operational transparency and efficiency. 

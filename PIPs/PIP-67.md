@@ -3,7 +3,7 @@ PIP: 67
 Title: Update Membership of the Protocol Council  
 Authors: Kaitlin Beegle, Harry Rook 
 Description: Proposal to update the membership of the Polygon Protocol Council  
-Discussion: TODO 
+Discussion: https://forum.polygon.technology/t/pip-67-update-membership-of-the-protocol-council/21007 
 Status: Draft  
 Type: Contracts  
 Date: 2025-04-15

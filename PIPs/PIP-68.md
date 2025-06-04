@@ -12,9 +12,9 @@ Date: 2025-06-03
 
 This proposal updates the signer composition and signature policy of the existing multisig wallets at:
 
-`0xFa7D2a996aC6350f4b56C043112Da0366a59b74c` (Ethereum)
+* `0xFa7D2a996aC6350f4b56C043112Da0366a59b74c` (Ethereum)
 
-`0x355b8e02e7f5301e6fac9b7cac1d6d9c86c0343f` (Polygon PoS)
+* `0x355b8e02e7f5301e6fac9b7cac1d6d9c86c0343f` (Polygon PoS)
 
 This change will establish control by the [Protocol Council]() with the existing multisig structure remaining unchanged, preserving its address, configuration, and established contract structure. Additionally, the signature policy will be modified to a 7-of-13 threshold.
 

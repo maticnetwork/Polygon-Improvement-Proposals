@@ -19,7 +19,7 @@ This PIP specifies the changes included in the Polygon PoS hard fork named Bhila
 ### Activation
 
 - Activation block:
-  * For Amoy - `TBC`
+  * For Amoy - `22,765,056`
   * For Mainnet - `TBC`
 
 ### Included PIPs

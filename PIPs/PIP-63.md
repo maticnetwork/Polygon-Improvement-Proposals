@@ -20,7 +20,7 @@ This PIP specifies the changes included in the Polygon PoS hard fork named Bhila
 
 - Activation block:
   * For Amoy - `22,765,056`
-  * For Mainnet - `TBC`
+  * For Mainnet - `73,440,256`
 
 ### Included PIPs
 * [PIP-60: Increase gas limit to 45M](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-60.md)

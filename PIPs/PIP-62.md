@@ -27,8 +27,8 @@ The migration will enable the following upgrades:
 ### Activation
 
 - Activation block (`halt_height`):
-  * For Amoy - `TBC`
-  * For Mainnet - `TBC`
+  * For Amoy - `8788500`
+  * For Mainnet - `24404500`
 
 ### Backward Compatibility
 

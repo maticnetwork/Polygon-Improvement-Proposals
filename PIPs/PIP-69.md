@@ -1,7 +1,7 @@
 ---
 PIP: 69
 Title: Full ERC-20 Functionality for Validator Share Tokens
-Description: Enable full ERC-20 functionality for Polygon validator share tokens (including `approve` and `permit`), to simplify creation of POL liquid staking tokens (LSTs) and expand the utility of staked POL.
+Description: Enable full ERC-20 functionality to simplify creation of POL liquid staking tokens (LSTs) and expand the utility of staked POL.
 Author: Pete Kim
 Discussion: https://forum.polygon.technology/t/pip-full-erc-20-functionality-for-validator-share-tokens/21101
 Status: Draft

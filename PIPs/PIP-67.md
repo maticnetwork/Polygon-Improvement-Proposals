@@ -63,4 +63,4 @@ This change is fully backward compatible, changing only the council membership.
 Key security parameters remain unchanged. Considerations need to be made to ensure new signers are selected to maximize jurisdictional diversity, availability, and responsiveness.
 
 ## Copyright  
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

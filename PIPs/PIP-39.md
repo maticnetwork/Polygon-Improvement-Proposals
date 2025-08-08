@@ -4,8 +4,8 @@ Title: Validator Admissions into PoS Network
 Description: Proposes Validator Admission Framework
 Author: Jackson Lewis, Tanisha Katara, Parvez Shaikh, Vasanti Rode
 Discussion: https://forum.polygon.technology/t/pip-39-validator-admissions-into-pos-network/14251
-Status: Draft
-Type: Contracts
+Status: Continuous 
+Type: Informational
 Date: 2023-12-05
 ---
 

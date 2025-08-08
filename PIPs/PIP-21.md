@@ -9,24 +9,27 @@ Type: Core
 Date: 2023-09-21
 ---
 
-### Abstract
+## Abstract
 
 This PIP specifies the changes included in the Polygon hard fork named Aalborg.
 
-### Specification
+## Specification
 
 -   Codename: Aalborg
     
-###  Activation
+##  Activation
 
 -   Block >=  15,950,759 on Polygon Mainnet (Heimdall)   
 
-### Included PIPs
+## Included PIPs
 
 -   [PIP-11: Deterministic Finality via Milestones](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-11.md) 
     
-### References
+## References
 
 1.  Included PIPs were finalized in Polygon Protocol Governance Call Sessions 08.  
-2.  [Forum Discussion](https://forum.polygon.technology/t/pip-11-deterministic-finality-via-milestones/11918) 
+2.  [Forum Discussion](https://forum.polygon.technology/t/pip-11-deterministic-finality-via-milestones/11918)
+
+## Copyright
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 

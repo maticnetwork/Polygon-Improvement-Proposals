@@ -9,13 +9,13 @@ Type: Core
 Date: 2024-04-30
 ---
 
-### Abstract
+## Abstract
 
 A minimum fee for transaction gas price is required in both the p2p and execution layers of the network. The miner gas price is the minimum tip given to miners to validate transactions, while the transaction pool price limit is the lower bound to accept a tx in the pool. 
 
 These parameters also prevent spam transactions from overburdening the mempool, which could create DDOS attack vectors. Moreover, a third parameter allows the network to define a gas price threshold, below which the gas price oracle will ignore transactions.
 
-###  Motivation
+##  Motivation
 
 Currently, heterogeneous implementations for such parameters mean that when a validator with a lower gas price is the primary block producer, the required priority fee starts decreasing, as reflected in gas trackers.
 
@@ -24,7 +24,7 @@ Users can submit txs with a lower gas price and such txs could get stuck in the 
 This feature will help improve the UX and make it more uniform by eliminating client-level config for such parameters and instead adding them as part of the protocol hardcoded params, with a default value of `25gwei`.
 
 
-### Specification
+## Specification
 
 `txpool`, `eth` and `miner` modules are affected:
 
@@ -36,10 +36,10 @@ This feature will help improve the UX and make it more uniform by eliminating cl
 
 When a new backend is initialized at startup in the client, some utility functions will check for such values, and enforce them to be `25gwei`.
 
-### Backward Compatibility
+## Backward Compatibility
 
 This change causes no backward incompatibilities.
 
-### Copyright
+## Copyright
 
 All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

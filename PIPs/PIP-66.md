@@ -9,10 +9,10 @@ Type: Core
 Date: 2025-05-21
 ---
 
-### Abstract
+## Abstract
 This proposal seeks to implement an optimisation to the consensus rules to allow the primary block producers in the network to announce their block early (as soon as it's built) for better block propagation and reducing the chance of reorgs.
 
-### Motivation
+## Motivation
 Currently, all block producers follow a fixed block time enforced by the consensus rules (2s for primary block producers), during which transactions are executed and the next block is assembled. With current hardware validators are able to create a full block in roughly 500ms (average case scenario) but have to wait for full 2s 
 before announcing the block to rest of the network, as shown below: 
 
@@ -24,7 +24,7 @@ delay = time.Until(time.Unix(int64(header.Time), 0)) // Wait until we reach head
 This introduces unnecessary idle time in the network. Moreover, it leads to delayed block propagation affecting critical applications and also increases the chance of reorgs as a backup block is announced by the secondary validator if the block from primary isn't seen on time. Allowing early announcement 
 (if the block is ready) before it's expected time improves the propagation by a great factor.
 
-### Specification
+## Specification
 This proposal requires changes in the bor consensus rules to allow primary validators to announce blocks as soon as it's ready instead of waiting. This proposal also introduces changes in header verification logic in consensus allowing the rest of the network to import and process early blocks and reject maliciously sent headers.
 
 The proposal won't change the announcement timings for non-primary validators as malicious actors could cause 1 block reorgs if allowed the same.
@@ -62,9 +62,9 @@ sequenceDiagram
 
 Note that the validators still get the same time to build the block and can utilise it fully before announcing the block. Transactions arriving after block has been signed will be continue to be included in next block.
 
-#### Timings of block propagation
+### Timings of block propagation
 
-#### Consensus changes
+### Consensus changes
 
 1. Once the block is built, it's sent to `consensus.Seal` function for signing. This function waits until the header time is reached and is responsible for timing the release of the block.
 ```diff
@@ -96,12 +96,12 @@ The above check leaves a slight window for non-primary validators to act malicio
 +}
 ```
 
-### Backwards Compatibility
+## Backwards Compatibility
 This change modifies the consensus rules and hence will require a hardfork. 
 
-### Security Considerations
+## Security Considerations
 This change does not introduce new security risks. The adjustment while altering consensus rules stays fair for all validators and doesn't allow anyone to act maliciously affecting the network badly. 
 
-### Copyright
+## Copyright
 
 All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

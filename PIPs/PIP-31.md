@@ -9,15 +9,15 @@ Type: Core
 Date: 2024-01-11
 ---
 
-### Abstract
+## Abstract
 
 This proposal specifies the activation of Cancun features (introduced by Ethereum - L1) on Polygon PoS network (L2). This will enable a set of functionalities which are scheduled to go live in Q1 '24 on Ethereum.
 
-### Motivation
+## Motivation
 As [bor](https://github.com/maticnetwork/bor) is a fork of [geth](https://github.com/ethereum/go-ethereum), the practice of merging upstream changes gives Polygon the opportunity to enable new features defined in the L1.
 With this PIP, we plan to upgrade our network with a subset of EIPs included in Ethereum.
 
-### Specification
+## Specification
 
 The Cancun PIP will include the following EIPs:
 1. [EIP-1153: Transient Storage Opcodes](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1153.md)
@@ -31,6 +31,10 @@ Compared to Ethereum Cancun upgrade, the following EIPs will not be included in 
 
 The aforementioned EIPs have been specifically excluded because Polygon PoS has no concept of beacon chain and blobs.
 
-### Backwards Compatibility
+## Backwards Compatibility
 
 This PIP will not be backward compatible with the current implementation of bor and will therefore require a hard fork.
+
+## Copyright
+
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

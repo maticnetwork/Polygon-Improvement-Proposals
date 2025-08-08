@@ -47,4 +47,4 @@ The change in code is not complex, however, due to the importance of the POL con
 
 ## Copyright
 
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

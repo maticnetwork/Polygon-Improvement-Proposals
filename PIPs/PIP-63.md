@@ -4,7 +4,7 @@ Title: Bhilai Hardfork
 Author: Sandeep Sreenath (@ssandeep), Harry Rook (@hrook1)
 Description: Proposes Bhilai Hardfork 
 Discussion: https://forum.polygon.technology/t/pip-63-bhilai-hardfork/20872
-Status: Draft
+Status: Final
 Type: Core
 Date: 2025-04-02
 ---

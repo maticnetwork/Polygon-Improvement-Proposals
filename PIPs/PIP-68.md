@@ -8,7 +8,7 @@ Status: Peer Review
 Type: Contracts
 Date: 2025-06-03
 ---
-### Abstract
+## Abstract
 
 This proposal updates the signer composition and signature policy of the existing multisig wallets at:
 
@@ -18,11 +18,11 @@ This proposal updates the signer composition and signature policy of the existin
 
 This change will establish control by the [Protocol Council]() with the existing multisig structure remaining unchanged, preserving its address, configuration, and established contract structure. Additionally, the signature policy will be modified to a 7-of-13 threshold.
 
-### Motivation
+## Motivation
 
 This reform ensures operational continuity, transparency, and resilience by retaining familiar multisig infrastructure while adopting a more decentralized signer composition.
 
-### Specification
+## Specification
 
 The signer set and policy for the following multisigs will be updated:
 
@@ -46,15 +46,15 @@ This multisig retains control over critical administrative functions for Polygon
 
 This multisig controls upgradeability of contracts, `ChildChainManagerProxy` and `EIP1559Burn`, and inherits administrative ownership of roles across additional PoS-side components, including `ChildChain`, `RootSetter`, and other essential infrastructure contracts. Role transfers from the legacy multisig signers ensure that this route has full authority to manage both upgradability and privileged roles across the system.
 
-### Backward Compatibility
+## Backward Compatibility
 
 The proposal is fully backward compatible with the existing security structure as it retains the existing multisig contract, changing only the signer composition and signature policy.
 
-### Security Considerations
+## Security Considerations
 
 Using the existing multisig and updating the signer composition preserves established security practices, ensuring stability and minimal disruption during the transition. The updated signature policy of 7-of-13 maintains robust security and transparent governance.
 
-### Copyright
+## Copyright
 
 All copyrights and related rights in this work are waived under CC0 1.0 Universal.
 

@@ -4,7 +4,7 @@ Title: Polygon 2.0 Phase 0 - Frontier
 Description: Specification of Polygon 2.0 - Phase 0
 Author: David Schwartz, Mihailo Bjelic, Mudit Gupta, Grace Torrellas, Mateusz Rzeszowski (@matrzeszowski), Daniel Gretzke, David Silverman, Paul Gebheim
 Discussion: https://forum.polygon.technology/t/pip-18-polygon-2-0-phase-0-frontier/12913
-Status: Peer Review
+Status: Continuous
 Type: Informational
 Date: 2023-09-14
 ---

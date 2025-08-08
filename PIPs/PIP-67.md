@@ -9,10 +9,10 @@ Type: Contracts
 Date: 2025-04-15
 ---
 
-### Abstract  
+## Abstract  
 This proposal seeks to update the membership of the Protocol Council established by [PIP-29](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-29.md) to ensure continued operational efficiency and governance transparency. This proposal supersedes and should be read in conjunction with PIP-29.
 
-### Motivation  
+## Motivation  
 Refreshing the Protocol Council membership ensures alignment with evolving community representation, and maintains operational transparency and efficiency. 
 
 Updates to Protocol Council membership at this time were motivated by [PIP-54](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-54.md) and [PIP-68](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-68.md), which jointly seek to improve the  efficiency and decentralization of Polygon PoS by granting more efficient control over contract upgradeability to the Protocol Council.  In preparing for this transition, all current members of the Council were asked to reconfirm their interest, alignment, and availability to serve on the Council. 
@@ -35,7 +35,7 @@ The updated membership list also proposes replacing two (2) individual represent
     
 * Polygon Labs Security will ensure operational integrity throughout the upgrade process by verifying payloads through to execution.
 
-### Specification  
+## Specification  
 This PIP proposes the reform of the signer composition of the Protocol Council, to be updated to the the list below. The existing multisig contract specification, including signature policies and timelock delays, will remain unchanged. 
 
 **Updated Protocol Council Members**
@@ -56,11 +56,11 @@ This PIP proposes the reform of the signer composition of the Protocol Council, 
 | Pablo Sabbatella    | Independent                | 0xAB4045C93e4eFFa9b325F706C9a690Ed00d08958   |
 | Jack Sanford        | Sherlock                   | 0x342EBaca3ACC54d6f5Ee78073FeC4af07f42B94e   |
 
-### Backward Compatibility  
+## Backward Compatibility  
 This change is fully backward compatible, changing only the council membership. 
 
-### Security Considerations  
+## Security Considerations  
 Key security parameters remain unchanged. Considerations need to be made to ensure new signers are selected to maximize jurisdictional diversity, availability, and responsiveness.
 
-### Copyright  
+## Copyright  
 All copyrights and related rights in this work are waived under CC0 1.0 Universal.

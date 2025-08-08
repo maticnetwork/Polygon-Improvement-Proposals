@@ -9,11 +9,13 @@ Type: Contracts
 Date: 2023-10-18
 ---
 
-## Abstract
+**_Note_:**  The composition of current signers has been ammended in accordance with [PIP-67: Update Membership of the Protocol Council](https://github.com/0xPolygon/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-67.md).
+
+### Abstract
 
 This proposal introduces the Protocol Council governance body responsible for performing regular and emergency upgrades to system smart contracts, i.e. components of Polygon protocols implemented in the form of smart contracts on Ethereum.
 
-## Motivation
+### Motivation
 
 A need for security, as well as for the ability to seamlessly move to an improved version under specific circumstances, dictates the requirement for upgradeability as it relates to core pieces of Polygon 2.0 architecture implemented as L1 smart contracts. 
 
@@ -23,9 +25,9 @@ As representatives of the community, the Protocol Council's main objective is to
 
 The Protocol Council is an initial step towards the final result of Polygon 2.0 governance – an on-chain, trust-minimized, and community-based framework for efficient and decentralized decision-making, which will be formalized in future proposals. 
 
-## Specification
+### Specification
 
-### Protocol Council Contracts
+#### Protocol Council Contracts
 It is proposed that the Protocol Council be composed of four separate [Gnosis Safe](https://github.com/safe-global/safe-contracts) contracts.
 
 - an Ethereum mainnet contract with 7/13 consensus requirement (0x9A53B1651C8Dd587c30392f8931e61daBBB50899)
@@ -35,7 +37,7 @@ It is proposed that the Protocol Council be composed of four separate [Gnosis Sa
 
 Timelocks are configured relative to the consensus requirements and are described in detail below.
 
-### Ownership
+#### Ownership
 
 It is proposed that the Protocol Council will represent the community in governing all future Polygon 2.0 system smart contracts.
 
@@ -45,14 +47,14 @@ Initially, the Council will have the ability to make emergency and regular track
 - [POL Migration Contract](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md#migration-contract)
 - [Emission Manager Contract](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md#emission-manager-contract)
 
-### Timelock 
+#### Timelock 
 
 The above contracts will be changeable by use of one of the two routes:  
   
 -   a regular change route requiring 7/13 consensus of the Protocol Council with a 10-day timelock (0x29A6f32f36EDeD399763524018F17F03B1435b18), which will be used for all configuration changes in the contract;
 -   an emergency change route requiring 10/13 consensus of the Protocol Council with no timelock, which will be used to upgrade contract implementations in the proxy contracts.
 
-### Proposed Signers: 
+#### Proposed Signers: 
 
 -   Jordi Baylina (Polygon Labs)
 -   Viktor Bunin (Coinbase)
@@ -68,31 +70,31 @@ The above contracts will be changeable by use of one of the two routes:
 -   Mehdi Zerouali (Sigma Prime)
 -   ZachXBT (independent)
 
-## Rationale
+### Rationale
 
-### Principles for Member Selection
+#### Principles for Member Selection
 
 The proposed Protocol Council list of members comprises thirteen community representatives of which the selection process has been guided by factors listed below. 
 
-#### Ecosystem Reputation
+##### Ecosystem Reputation
 
 Members of the Protocol Council should be value-aligned with Ethereum, the L2 ecosystem, and the wider Web3 ethos, having historically proven themselves as engaged and committed members of the relevant communities. 
   
-#### Resilient Nature of the Protocol Council 
+##### Resilient Nature of the Protocol Council 
 
 The composition of the Protocol Council should ensure (operational) resilience, including by means of jurisdictional diversity, organizational diversity, and identification diversity, e.g., including public persons, anonymous individuals, and companies.
 
-#### Self-limitation of Influence by Polygon Labs 
+##### Self-limitation of Influence by Polygon Labs 
 
 No entity should hold wide sway over the decision-making of the Protocol Council, and this is mainly expressed in the list of proposed decision-makers, including limiting Polygon Labs’ representation on the Council.
 
-#### Technical and Governance Ability
+##### Technical and Governance Ability
 
 Protocol Council members should demonstrate a level of technical, security, and governance competence, necessary for performing their duties and relevant to ensuring they’re acting in the community's best interest. This competence can be quantified by looking at member’s past participation in Web3 governance frameworks, security Councils, and technical involvement in the L2 space, among other experiences.
 
 The Protocol Council will be able to add or remove members and otherwise determine its affairs among the members, governed by the PIP framework.
 
-### Principles for Protocol Council Architecture
+#### Principles for Protocol Council Architecture
 
 In order to optimize for both security and efficiency, a dual-route approach is introduced.
 
@@ -107,16 +109,16 @@ As a result, any immediately-executable malicious change would require a large n
 
 While in the initial implementation POL contract changes will be governed by either one of the execution routes (regular or emergency), a future PIP will introduce dual route execution allowing the regular change route to be the main execution route, with the emergency route being enabled for a select number of system contract changes. 
 
-## Backward Compatibility
+### Backward Compatibility
 
 This change causes no identifiable backward incompatibilities. 
 
-## Security Considerations
+### Security Considerations
 
 Polygon 2.0 is a significant technical upgrade of the Polygon system with broadscale changes to the PoS network, as well as the introduction of several novel systems. There are inherent risks in this migration, however, each component will undergo extensive testing, auditing, and public scrutiny prior to activation. The staging of the PIPs and the methodical, piecemeal upgrade of the system are intended to ensure there is sufficient time for testing, auditing, and scrutiny. 
 
 During the setup of the `TIMELOCK`, and as part of the default parameters, the address `0x0000000000000000000000000000000000000001` is assigned to the `TIMELOCK_ADMIN_ROLE`. This address does not introduce any security risks, however for system hygiene reasons it is proposed to be removed.
 
-## Copyright
+### Copyright
 
 All copyrights and related rights in this work are waived under CC0 1.0 Universal.

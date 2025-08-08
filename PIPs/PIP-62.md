@@ -4,7 +4,7 @@ Title: Heimdall v.2 Migration
 Author: Marcello Ardizzone (@marcello33), Harry Rook (@hrook1)
 Description: Proposes Migration to Heimdall v.2 
 Discussion: https://forum.polygon.technology/t/pip-62-heimdall-v2-migration/20873
-Status: Draft
+Status: Final
 Type: Core
 Date: 2025-04-02
 ---

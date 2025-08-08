@@ -9,15 +9,15 @@ Type: Core
 Date: 2024-06-27
 ---
 
-### Abstract
+## Abstract
 
 Currently, Heimdall uses a fork of `cosmos-sdk`, which has been modified to support the specific needs of Polygon PoS, and is based on version `v0.37.4`. We propose a refactoring that will upgrade such dependency to target version `v0.50.x`.
 
-### Motivation
+## Motivation
 
 The primary motivation for such an upgrade is to remove tech debt currently anchoring Heimdall to an outdated `cosmos-sdk` version released around four years ago. `v0.37.4` is also no longer supported by the team that stewards the Cosmos SDK (EOL version).
 
-### Specification
+## Specification
 
 This proposal integrates ABCI v2.0 (a.k.a. ABCI++) into Heimdall, enhancing the interaction between the consensus layer (CometBFT) and the application layer. ABCI v2.0 introduces a more granular interface that allows the application to interact with the consensus process during block proposal, voting, and finalization phases, providing significant improvements in flexibility, performance, and security.  
 
@@ -44,15 +44,15 @@ After consensus is reached, the finalized block is committed to the chain, and t
 
 ![ABCI++ functions](./../assets/PIP-44/comet.png)
 
-### Backwards Compatibility
+## Backwards Compatibility
 
 The upgrade is incompatible with the current Heimdall chain. This means that launching a newer version of cosmos-sdk within Polygon PoS will only be possible by migrating Heimdall to a brand new chain. We will be able to export the current state of Heimdall into the genesis for the new Heimdall chain. History at the CometBFT level (transactions, blocks, validator sets, etc) cannot persist via the upgrade workflow. To mitigate this, archive nodes can be made available so that the community can access CometBFT (actually, Peppermint) history before the migration point. Those archive nodes are simply non-validating full nodes running the current version of Heimdall.
 
-### Security considerations
+## Security considerations
 
 The upgrade involves a complete refactoring of the Heimdall codebase. Hence, Heimdall will undergo a meticulous phase of tests, audits, and performance reviews. Despite the many new functionalities offered by the new library, this migration will be—at first—a 1:1 migration, keeping intact the Heimdall capabilities and utilities.
 
 
-### Copyright
+## Copyright
 
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

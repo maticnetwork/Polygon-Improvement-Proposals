@@ -9,15 +9,15 @@ Type: Contracts
 Date: 2021-06-01
 ---
 
-### Abstract:
+## Abstract
 
 The Polygon chain has a soft limit of 100 validators securing the network. Once 100 validators have been onboarded to secure the network, there should be a way to add newer and highly proficient validators to the network to replace under-performing and bad validators. This particular mechanism of adding new validators is called the Auction Mechanism.
 
-### Motivation:
+## Motivation:
 
 A Polygon (Matic) started the Mainnet a year ago, we have always wanted to onboard highly proficient validators to secure the network. Over the period of 1 year, we have managed to onboard proficient and ethical validators to the network, however, there are a few under-performing validators that have been observed during this period. The Auction Mechanism is a way to replace under-performing and bad validators with proficient and technical ones. Polygon aims to have all validators with high uptime and high performing and engaging validators to secure the Polygon chain.
 
-### Specification:
+## Specification:
 
 The Auction functionality is currently disabled through Polygon's Smart Contracts. Through the Auction Mechanism, a Validator will go through a bidding Mechanism where the newer validator has to bid higher than the current validator that is occupying the slot. Once the Auction period is over, whoever has the highest bid at the end of it becomes the validator.
 
@@ -61,24 +61,21 @@ For more details on the Auction Code you can check it out here:
 
 **Auction Smart Contract**: [https://github.com/maticnetwork/contracts/blob/v0.3.0-backport/contracts/staking/stakeManager/StakeManagerExtension.sol](https://github.com/maticnetwork/contracts/blob/v0.3.0-backport/contracts/staking/stakeManager/StakeManagerExtension.sol)
 
-### Rationale:
+## Rationale:
 
 The rationale behind this proposal is very simple. We at Polygon strive to build the best products and infrastructure to ensure Dapps and users get the best experience. In order of that, we also need to ensure that the Polygon chain is secured by high-performing and efficient validators too.
 
 If the chain is only secured by a few highly performing validators then it isn't secure enough. The Auction mechanism is a way to remediate this problem, where new and highly performing validators can replace underperforming and bad validators through a secure and just process.
 
-### Backwards Compatibility:
+## Backwards Compatibility:
 
 To enable Auction, it is merely a config change in the Smart Contracts deployed by Polygon on Ethereum. If this proposal is met with a consensus, then the owner of the Smart Contracts will only need to make a small transaction on Ethereum to enable Auctions. Similarly, if the auction mechanism is disrupting the network in any way, we can also go ahead and disable the auction through the contracts.
 
 In the future, this would ideally be a governance vote for enabling or disabling auctions.
 
-### Security Considerations:
+## Security Considerations:
 
 As far as we think, we don't see any security considerations involving enabling Auctions on the Chain. This would induce a lot of engagement and pro-activeness on the validator front to ensure that they are always updated about everything.
 
----
-
-### References 
-
-[Polygon Forum Discussion](https://forum.polygon.technology/t/pip-3-auction-mechansim-a-mechanism-to-replace-bad-and-under-performing-validators/8270)
+## Copyright
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

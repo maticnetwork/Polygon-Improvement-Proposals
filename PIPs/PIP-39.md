@@ -9,11 +9,11 @@ Type: Informational
 Date: 2023-12-05
 ---
 
-### Abstract
+## Abstract
 
 [PIP-4](https://forum.polygon.technology/t/pip-4-validator-performance-management/9956) Part C, outlines the path of Validator Admissions into the network. This proposal outlines an admissions framework that includes a set of objective parameters to determine a prospective validator's eligibility to validate the PoS network.
 
-### Motivation
+## Motivation
 
 A healthy network requires healthy validators/operators. The aim of a validator admission process is to:
 1) ensure a competent set of validators on PoS with greater transparency and community input on validator admissions, and
@@ -25,7 +25,7 @@ A large, mature and widely used network like the PoS chain, requires quality val
 
 The proposed admissions process assists in providing the network with a framework to evaluate potential validators who request to join the PoS network. This process scores and ranks applicants based on the evaluation criteria described in the specification.
 
-### Rationale
+## Rationale
 
 In accordance with PIP-4, a scoring system that will rank validator applicants is proposed, allowing only the highest-scoring candidates to be selected for onboarding to the network.
 
@@ -65,7 +65,7 @@ The Pearson correlation coefficient was used to quantify the relationship betwee
 
 The further away the correlation coefficient is from zero, the stronger the relationship between the two variables.
 
-#### Results:
+### Results:
 
 Thus far, 12 entities have been recently onboarded to the network through the new admissions process, with zero breakages or bugs in the test phase.
 
@@ -97,13 +97,13 @@ Notes:
 
 [2. PoS Admissions Update](https://forum.polygon.technology/t/pos-admissions-update/11348)
 
-#### Impact:
+### Impact:
 
 All of these validators have performed very well since joining. Those that have left the active set have left for reasons other than performance. A direct correlation has been shown between these validators' scores and their ability to perform validation services in the network.
 
-### Specification
+## Specification
 
-#### Scoring Logic
+### Scoring Logic
 
 The final scoring logic is outlined below:
 
@@ -125,21 +125,21 @@ To avoid foul play, the following measures have been introduced:
 
 Highly scored validators across these 3 areas can be considered eligible. An eligible score does not guarantee admission. Admission is subject to verification.
 
-### Backwards compatibility
+## Backwards compatibility
 
 This proposal does not introduce any breaking changes and is therefore backwards compatible.
 
-### Security Considerations
+## Security Considerations
 
 The admissions process takes into account an applicant's hosting region, on-chain activity in other protocols and general security practices around their hardware (i.e., how they operate their own internal systems).
 
 The implementation of this PIP proves no direct security risk to the protocol.
 
-### Copyright
+## Copyright
 
 All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
-### Appendix
+## Appendix
 
 The scoring logic and weights were an extensive exercise in decision-making, impactfully combining data and observation.
 

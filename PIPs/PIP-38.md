@@ -9,11 +9,11 @@ Type: Contracts
 Date: 2024-5-5
 ---
 
-### Abstract
+## Abstract
 
 Expanding the number of validators within the Polygon PoS network is a crucial step toward enhancing decentralization. By increasing the number of validators, validation responsibilities are distributed more widely, which reduces the risk of centralization and strengthens the network's security and resilience. This proposal outlines the considerations for expanding the number of validator slots to ensure robust network performance.
 
-### Motivation
+## Motivation
 
 The primary motivation for increasing the number of validator slots within the Polygon PoS network is to improve decentralization which can be observed via the following metrics:
 
@@ -21,7 +21,7 @@ The primary motivation for increasing the number of validator slots within the P
 - **Decrease Stake Centralisation**: More validator slots means that voting power and block production can be more evenly distributed across a larger number of validators.
 - **Improve Nakamoto Coefficient**: The Nakamoto Coefficient, which measures the minimum number of validators required to compromise a network, should improve with an increase in validator nodes. A higher coefficient indicates a more secure and decentralized network, as it becomes harder for any group to disrupt the network's consensus.
 
-### Specification
+## Specification
 
 The proposed expansion involves a phased increase in the number of validator slots, starting from the current 105 slots to 110, then to 115, further to 120 and finally to 125. This incremental approach, with ongoing community review and feedback, allows for careful monitoring and management of each expansion stage. The specific steps include:
 
@@ -31,7 +31,7 @@ The proposed expansion involves a phased increase in the number of validator slo
 4. Conducting thorough monitoring at each stage to ensure seamless integration and functionality.
 5. In the event that the expansion from 105 to 110 validators negatively impacts the network's health, the community may consider taking corrective action to offboard the last 5 validators who were onboarded.
 
-### Rationale
+## Rationale
 
 Increasing the number of validator slots in phases offers several advantages:
 
@@ -39,24 +39,24 @@ Increasing the number of validator slots in phases offers several advantages:
 - Each phase can be evaluated for performance, ensuring that any issues are identified and addressed promptly.
 - It ensures that the network infrastructure and support mechanisms are adequately scaled to handle the increased load, thereby maintaining overall network health and performance.
 
-### Backwards Compatibility
+## Backwards Compatibility
 
 The expansion of validator slots is designed to be fully backwards compatible. Existing validators and network operations should not be affected by the increase in slots. The system architecture should ensure that the integration of new validators occurs smoothly, without disrupting ongoing operations or diminishing the performance of current validators.
 
-### Test Cases
+## Test Cases
 
 To ensure the success of the validator slot expansion, the following test cases will be conducted:
 
 - _Performance Testing_: Evaluate the network's ability to handle the increased number of validators, focusing on transaction processing times, block generation, and overall output.
 - _Stability Testing_: Monitor the network for any signs of instability or degradation in performance following the addition of new validators.
 
-### Security Considerations
+## Security Considerations
 
 Security remains a top priority during the expansion process. Security measures will include:
 
 - Enhanced monitoring and alerting systems to detect and respond to any abnormal activity.
 - Suggested implementation of best practices for validator operations.
 
-### Copyright
+## Copyright
 
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

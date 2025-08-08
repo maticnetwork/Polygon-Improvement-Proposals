@@ -18,8 +18,9 @@ This PIP specifies the changes included in the Polygon hard fork named Agra.
 
 ## Activation
 
-- Mainnet Block >= 50,523,000
-- Mumbai Block >= 41,874,000
+* Activation Block:
+  * Mumbai Block - `41,874,000`
+  * Mainnet Block - `50,523,000`
 
 ## Included PIPs
 

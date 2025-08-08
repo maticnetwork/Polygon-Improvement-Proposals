@@ -9,13 +9,13 @@ Type: Core
 Date: 2025-01-16
 ---
 
-### Abstract 
+## Abstract 
 This proposal introduces a new ```migrateTo``` function in the POL Migration contract. This function allows users to migrate MATIC to POL while specifying a recipient address different from their own, enhancing functionality and improving flexibility and usability. The contract version will be incremented to ```1.2.0```.
 
-### Motivation 
+## Motivation 
 The POL Migration contract only supports migrating MATIC to POL for the sender’s address. The current implementation creates a pain point for users or platforms who require the ability to migrate tokens to other designated recipients.
 
-### Specification
+## Specification
 The following changes will be made to the ```PolygonMigration.sol``` contract:
 New ```migrateTo``` Function:
 ```solidity
@@ -33,10 +33,10 @@ The ```Migrated``` event will now include a separate ```recipient``` address.
 ```solidity
 event Migrated(address indexed account, address recipient, uint256 amount);
 ```
-### Security Considerations 
+## Security Considerations 
 The migrateTo function relies on safe transfer methods to mitigate risks associated with token transfers. Only users with sufficient MATIC balances and valid approvals can call migrateTo and the Migrated event ensures traceability for all migrations.
 
-### Copyright
+## Copyright
 All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
 

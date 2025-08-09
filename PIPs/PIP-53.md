@@ -8,24 +8,24 @@ Status: Final
 Type: Core
 Date: 2024-12-3
 ---
-### Abstract
+## Abstract
 
 This PIP specifies the changes included in the Polygon PoS hard fork named Jorvik.
 
-### Specification
+## Specification
 
 - Codename: Jorvik
 
-### Activation
+## Activation
 
 - Activation block:
   * For Amoy - `5768528`
   * For Mainnet - `22393043`
 
-### Included PIPs
+## Included PIPs
 
   *   [PIP-52: Execution Derived Randomness for Producer Selection](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-52.md)
 
-### Copyright
+## Copyright
 
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

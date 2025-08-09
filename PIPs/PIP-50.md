@@ -71,4 +71,4 @@ Iteration is one of the key characteristics of this project, taking into account
 
 ## Copyright
 
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

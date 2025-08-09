@@ -9,24 +9,23 @@ Type: Core
 Date: 2023-01-12
 ---
 
-### Abstract
+## Abstract
 
 This PIP specifies the changes included in the Polygon hardfork named Delhi.
 
-### Specification 
+## Specification 
 
 * Codename: Delhi
 
-### Activation
+## Activation
 
-* Block >= 38,189,056 on Polygon Mainnet (Bor)
+* Activation block:
+  *   Mainnet - `38,189,056` 
 
-### Included PIPs
+## Included PIPs
 
 * [PIP-5: Change in SprintLength](https://forum.polygon.technology/t/pip-5-change-in-sprintlength/10874)
 * [PIP-6: Change in BaseFeeChangeDenominator](https://forum.polygon.technology/t/pip-6-change-in-basefeechangedenominator/10875)
 
-### References
-
-- [Included PIPs were finalized in Polygon Protocol Governance Call #1](https://www.youtube.com/watch?v=CuYIL7uJomQ&list=PLslsfan1R_z3QPf8-UrcNhCKY8XaTHZE6)
-- [Polygon Forum Discussions](https://forum.polygon.technology/t/pre-pip-discussion-addressing-reorgs-and-gas-spikes/10623)
+## Copyright
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

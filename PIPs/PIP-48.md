@@ -71,4 +71,4 @@ Fundamentally, the path-based model is simply a better implementation of persist
 
 ## Copyright
 
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+All copyrights and related rights in this work are waived under [CC0 1.0 Universal.](https://github.com/0xPolygon/Polygon-Improvement-Proposals/blob/pip-updates/PIPs/PIP-49.md)

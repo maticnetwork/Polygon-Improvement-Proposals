@@ -9,15 +9,15 @@ Type: Contracts
 Date: 2023-10-04
 ---
  
-### Abstract
+## Abstract
 
 In response to community feedback, this PIP proposes that the `burn()` function be called on the migrator contract, introduced in [PIP-17](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md), in order to burn an amount of POL equivalent to MATIC in the addresses currently used to permanently remove MATIC tokens from supply (ex: 0x000..dEaD) as well as other permanently inaccessible tokens, thus bringing the POL circulating supply inline with the MATIC supply.
 
-### Motivation
+## Motivation
 
 [PIP-17](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md), which initiates the POL upgrade, proposes the minting of 10B POL to the migrator contract which corresponds to the entire original supply of MATIC. In order to accurately reflect the amount of previously burned MATIC in the POL supply, the authors propose the burning of corresponding POL.
 
-### Specification
+## Specification
 
 Call `burn()` on the migrator contract with an amount reflective of the MATIC balances of the following addresses:
 
@@ -26,10 +26,9 @@ Call `burn()` on the migrator contract with an amount reflective of the MATIC ba
 
 *Exact values determined by the [Agra Hardfork](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-28.md)*
 
-### Backward Compatibility
+## Backward Compatibility
 
 This change causes no identifiable backward incompatibilities. 
 
-### Copyright
-
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+## Copyright
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

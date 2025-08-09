@@ -9,7 +9,7 @@ Type: Core
 Date: 2023-01-10
 ---
 
-### Motivation
+## Motivation
 
 Polygon PoS chain saw a major update in the beginning of 2022 when EIP-1559 was rolled out on Mainnet as part of the London Hardfork [(EIP1559 (London Fork) on Mainnet](https://forum.polygon.technology/t/eip1559-london-fork-on-mainnet/549)) which changed the on-chain gas price dynamics. Although it works well majority of the time, during high demand, we have seen huge gas spikes due to rapid increase in the base fee. We propose to smoothen the change in base fee by changing the BaseFeeChangeDenominator.
 
@@ -21,7 +21,7 @@ Exponential Gas pricing due to EIP-1559 and the current basefee: On Ethereum, a 
 
 Bad contracts: Occasionally poor design choices by dapp developers will unintentionally create a DDoS type effect on the network and litter the transaction mempool with tons of transactions driving up demand for blockspace resulting in higher gas prices for everyone.
 
-### Specification
+## Specification
 
 We propose increasing the BaseFeeChangeDenominator from the current value of 8 to 16. This will smoothen the increase(/decrease) in baseFee when the gas used in blocks is higher(/lower) than the target gas limit. After this change, the rate of change will decrease to 6.25% (100/16) as compared to the current 12.5% (100/8).
 
@@ -40,7 +40,7 @@ func BaseFeeChangeDenominator(borConfig *BorConfig, number *big.Int) uint64 {
 	}
 }
 ```
-### Test Cases
+## Test Cases
 
 Example 1: (when network utilisation is full):
 
@@ -118,7 +118,10 @@ For block50 :
 
 ---
 
-### References
+## References
 
 - [Pre-PIP Discussion: Addressing Reorgs and Gas Spikes 2](https://forum.polygon.technology/t/pre-pip-discussion-addressing-reorgs-and-gas-spikes/10623/25) 
-- [Polygon Forum Discussion](https://forum.polygon.technology/t/pip-6-change-in-basefeechangedenominator/10875/4) 
+- [Polygon Forum Discussion](https://forum.polygon.technology/t/pip-6-change-in-basefeechangedenominator/10875/4)
+
+## Copyright
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

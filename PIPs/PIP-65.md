@@ -4,7 +4,7 @@ Title: Economic Model for VEBloP Architecture
 Author: Jerry Chen (fchen@polygon.technology)
 Description: Proposes an economic model and fee redistribution mechanism for the Validator-Elected Block Producer (VEBloP) architecture.
 Discussion: https://forum.polygon.technology/t/pip-65-economic-model-for-veblop-architecture/20933
-Status: Draft
+Status: Peer Review
 Type: Core
 Date: 2025-05-08
 ---
@@ -157,3 +157,7 @@ This fee redistribution model is proposed because:
 ## References
 
 - [PIP-64](https://forum.polygon.technology/t/pip-64-validator-elected-block-producer/20918/1): Validator-Elected Block Producer for Enhanced Throughput
+
+## Copyright
+
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

@@ -9,6 +9,8 @@ Type: Contracts
 Date: 2023-10-18
 ---
 
+**_Note_:**  The composition of current signers has been ammended in accordance with [PIP-67: Update Membership of the Protocol Council](https://github.com/0xPolygon/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-67.md).
+
 ## Abstract
 
 This proposal introduces the Protocol Council governance body responsible for performing regular and emergency upgrades to system smart contracts, i.e. components of Polygon protocols implemented in the form of smart contracts on Ethereum.
@@ -119,4 +121,4 @@ During the setup of the `TIMELOCK`, and as part of the default parameters, the a
 
 ## Copyright
 
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

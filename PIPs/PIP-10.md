@@ -9,7 +9,7 @@ Type: Core
 Date: 2023-04-18
 ---
 
-### Abstract 
+## Abstract 
 
 At block #39599624, The Polygon PoS chain experienced a reorg with a depth of 157 blocks. It was observed that the cause of this was due to two forks running with more than 16 blocks of depth, which is greater than one sprint length. As a result of this, the value of to (which is used to fetch the state sync events and calculated based on sprint length) was different on both forks, causing a bad block error to occur.
 
@@ -17,7 +17,7 @@ Following the bad block error, reorgs were occurring at a greater frequency than
 
 This caused issues with the user experience and chain stability which we seek to address with this proposed solution.
 
-### Rationale
+## Rationale
 
 At the start of each sprint, when Bor commits the state (which includes state sync transactions), it fetches state sync events from Heimdall using the two arguments below:
 
@@ -39,7 +39,7 @@ The issue can occur during network partitions when two forks are running in para
 
 The Delhi Hardfork reduced the sprint length from 64 to 16 blocks. As a result of this, Bor now fetches state sync events from Heimdall more frequently as it occurs at the start of each new sprint. The result of this is that Bor nodes running different forks could receive a different number of state sync events (due to the calculation ‘to’) from Heimdall during shallower partitions that tend to occur more frequently.
 
-#### Example 1. 
+### Example 1. 
 
 Assuming that we have two different forks, “A” and “B”, with a different number of state sync transactions at the start of a particular sprint:
 
@@ -49,11 +49,11 @@ When nodes on fork B import the state from fork A, Heimdall will attempt to fetc
 
 When nodes from fork B fetch block `n` from the local database, the calculation will be based on the state of fork B and not the one from the incoming chain. This causes the value of `to` to differentiate between the two forks and Heimdall will return 3 state syncs instead of 2. This will result in a `BAD BLOCK` error (invalid merkle root). 
 
-### Specification
+## Specification
 
 This PIP proposes to Introduce a new genesis parameter called `stateSyncConfirmationMultiplyer`. This will be used in conjunction with the current calculation to increase the block range used to calculate the `to` timestamp while fetching the state-sync events from Heimdall. 
 
-#### Genesis File
+### Genesis File
 We will introduce a new genesis parameter `stateSyncConfirmationMultiplyer` which  will be stored as a `map[string]unit64` and used to calculate the block interval for state-sync confirmations.
 ```
 "stateSyncConfirmationMultiplyer": { 
@@ -62,7 +62,7 @@ We will introduce a new genesis parameter `stateSyncConfirmationMultiplyer` whic
 },
 ```
 
-#### Bor Consensus Rules
+### Bor Consensus Rules
 
 Current Implementation:
 ```
@@ -83,20 +83,20 @@ Summary:<br>
 - ***State sync confirmation multiple = 8 (Proposed)***
 - The block range to calculate the to value will increase from 16 to 128 (16*8)
 
-### Security Considerations
+## Security Considerations
 
 The proposed state sync confirmation multiple would lead to state sync transactions being delayed by ((128-16) * 2.25) ~ 252 seconds as the interval would be increased from 16 to 128 blocks.
 
-### Backward Compatibility
+## Backward Compatibility
 
 This PIP will not be backward compatible with the current implementation of Bor and will therefore require a ***Hard Fork***.
 
 It should be considered that due to the use of sprint length within the `stateSyncConfirmationMultiplyer`, any future changes to the sprint length will require a revisit to the calculation logic.
 
-### Appendix
+## Appendix
 
 * [PIP-7: Delhi Hardfork](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-07.md)
 
-### Copyright 
+## Copyright 
 All copyrights and related rights in this work are waived under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 

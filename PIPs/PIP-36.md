@@ -9,13 +9,13 @@ Type: Core
 Date: 2024-4-30 
 ---
 
-### Abstract
+## Abstract
 
 Since the gas repricing of the [Berlin Hardfork](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2070.md), a bug exists on the [PoS Matic Contract](https://github.com/maticnetwork/contracts/blob/main/contracts/child/MRC20.sol#L44) which reverts the deposit state sync txn on L2 and irreversibly locks MATIC on the L1 Plasma bridge if the receiver on L2 is not an EOA, but a contract with a receive fallback containing any amount of code.
 
 It is important to note that this issue solely affects the MATIC token. To address this issue, we propose patching the bug & introducing the ability to replay failed state syncs.
 
-### Rationale
+## Rationale
 
 > TLDR: Plasma MATIC deposits revert with out of gas when the receiver is a GnosisSafe contract because it uses [transfer instead of call](https://github.com/maticnetwork/contracts/blob/main/contracts/child/MRC20.sol#L44) when sending MATIC (native on child) and the fallback required more than 2300 gas (and more recently [2600](https://help.safe.global/en/articles/40813-why-can-t-i-transfer-eth-from-a-contract-into-a-safe)).
 
@@ -58,7 +58,7 @@ This issue also exists in Ethereum, leading to the inclusion of [EIP-2930](https
 
 **Note** that this is a special case for the MATIC token only and not any other [ERC-20](https://github.com/ethereum/ercs/blob/master/ERCS/erc-20.md) token as this token has the unique property of being a native token on L2.
 
-### Specification
+## Specification
 
 This PIP proposes to patch the transfer vs send bug mentioned above by updating the bytecode of MRC-20 MATIC token on L2 through a hardfork. We specify a **`txGasLimit`** while doing the call such that the receiver doesn’t consume all available gas in the state sync block limit to prevent DoS (state sync’s are batched together in one txn).
 
@@ -114,12 +114,12 @@ A package to fetch and filter historic events will be made public such that this
 
 An external method on StateReceiver will be exposed: `replayHistoricFailedStateSync(bytes32[16] calldata proof, uint256 leafIndex, uint256 stateId, address receiver, bytes calldata data)` which nullifies the leaf on successful state syncs.
 
-### Observability
+## Observability
 
 The overall observability of the plasma bridge would increase with this update.
 The main improvement is that failed state syncs would be recorded.
 
-### Backward Compatibility
+## Backward Compatibility
 
 As the contract impacted by this PIP is not upgradeable, the changes would require a hardfork.
 
@@ -128,10 +128,10 @@ The L2 contracts being upgraded would be the following:
 - StateReceiver: 0x0000000000000000000000000000000000001001
 - MRC-20(Matic Token): 0x0000000000000000000000000000000000001010
 
-### Security Considerations
+## Security Considerations
 
 Internal as well as external security reviews will have to be done to ensure maximum safety. Limited gas will be provided during the MATIC token internal call while depositing native tokens, and `Check Effects` pattern must be followed during on `replayStateSync`.
 
-### Copyright
+## Copyright
 
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

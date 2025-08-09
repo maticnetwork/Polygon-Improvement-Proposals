@@ -4,7 +4,7 @@ Title: Set EOA account code
 Author: Jerry Chen (@cffls), Manav Darji (@manav2401), lightclient (@lightclient)
 Description: Add a new tx type that permanently sets the code for an EOA
 Discussion: https://forum.polygon.technology/t/pip-51-set-eoa-account-code/20513
-status: Review
+status: Final
 Type: Core
 Date: 2024-11-18
 ---

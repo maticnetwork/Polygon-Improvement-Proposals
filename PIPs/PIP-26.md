@@ -9,17 +9,17 @@ Type: Contracts
 Date: 2023-10-12
 ---
 
-### Abstract
+## Abstract
 
 This PIP proposes aligning the initial POL Validator Rewards with the original MATIC Validator Rewards Schedule, introduced during the launch of MATIC in 2020, and ending in June 2025. The proposal is to continue, i.e. adhere to the current MATIC reward schedule, and, once it ends (in June 2025), switch to the proposed Polygon 2.0 reward schedule. This would honor the social contract, i.e. public commitment, with regards to Polygon validator rewards, and enable a smooth transition to Polygon 2.0.
   
-### Motivation
+## Motivation
 
 [PIP-17](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md), which initiates the POL upgrade, introduces a 1% annual POL emission for validator rewards.  The authors propose to complete the original commitments of the genesis MATIC Validator Rewards Schedule, before commencing the aforementioned Polygon 2.0 validator reward schedule.
 
 
 
-### Specification
+## Specification
 
 Adjust the implementation of DefaultEmissionManager.sol to follow the current MATIC validator reward schedule, gradually reducing the reward emission until June 2025. In July 2025,  commence the Polygon 2.0 schedule of 1% annual POL emission for validator rewards.
   
@@ -38,15 +38,14 @@ The original and proposed outline for emissions can be seen in the table below.
 
 *estimated using 4 months of original schedule, 8 months of the newly proposed schedule.*
 
-### Backward Compatibility
+## Backward Compatibility
 
 This change causes no identifiable backward incompatibilities.
   
-### References 
+## References 
 
 -   [Original Distribution of Staking Token Rewards](https:forum.polygon.technology/t/an-update-on-distribution-of-staking-token-rewards/9654/)
     
-### Copyright
-
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+## Copyright
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 

@@ -9,7 +9,7 @@ Type: Informational
 Date: 2023-02-22
 ---
 
-### Abstract 
+## Abstract 
 
 Polygon Improvement Proposals (PIPs) describe community standards for the Polygon ecosystem, including core protocol specifications such as Heimdall and Bor, client APIs, and contract standards, etc.
 
@@ -19,7 +19,7 @@ PIP stands for Polygon Improvement Proposal. A PIP is a design document providin
 
 PIPs are used by authors to measure, document, and build community consensus, while providing technical specifications and motivation behind a specific feature proposal. 
 
-### PIP Rationale
+## PIP Rationale
 
 In a decentralized and self-governed system, a framework is necessary for the developer community to inform, propose, and gather technical feedback on new features or changes to existing features. 
 
@@ -136,13 +136,9 @@ The current PIP editors are comprised of:
 - [Kaitlin Beegle](https://github.com/kaitlin-beegle)
 - [Harry Rook](https://github.com/hrook1/)
 
-### References
+## References
 
 The PIP framework, and in particular PIP-1, was heavily derived from the [Ethereum EIP-1](https://eips.ethereum.org/EIPS/eip-1) document [Martin Becze, Hudson Jameson, et al., "EIP-1: EIP Purpose and Guidelines," Ethereum Improvement Proposals, no. 1, October 2015. [Online serial] Available: https://eips.ethereum.org/EIPS/eip-1.], which was derived from [Bitcoin’s BIP-0001](https://github.com/bitcoin/bips) (written by Amir Taaki) which in turn was derived from [Python’s PEP-0001](https://peps.python.org/) (written by Barry Warsaw, Jeremy Hylton, David Goodger, and Nick Coghlan)
 
-
-
-### Copyright 
-All copyrights and related rights in this work are waived under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
-
-
+## Copyright
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

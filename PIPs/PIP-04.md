@@ -9,19 +9,19 @@ Type: Contracts
 Date: 2022-08-22
 ---
 
-### Abstract
+## Abstract
 
 In its current state, the PoS validator network is not entirely permissionless in that the previously-selected set of validators has largely persisted since testnet. 
 
 Following the spirit of gradual decentralization, certain steps need to be taken with the end state being the community assuming care for the network.
 
-### Motivation 
+## Motivation 
 
 To arrive at a state of absolute decentralized self-governance, as was mentioned back in the [mainnet announcement](https://blog.polygon.technology/mainnet-is-going-live-announcing-the-launch-sequence-matic-network/), the validators will have to self-regulate network participation to an agreed set of parameters.
 
 Following on from the considerations and feedback of validators on the forum and elsewhere, the Polygon Governance Team wants to now put forward the following proposal for validators to accept or reject.
 
-### Rationale
+## Rationale
 
 Self-regulation in this context refers to setting and administering conditions for the admission, participation, and if necessary, forced exit of validators from the active set - with the last part formalizing previously-achieved consensus on the subject.
 
@@ -42,13 +42,13 @@ As a result of the increased amount of validator churn that may occur as a resul
 
 In addition to the above, Part D proposes to increase the validator set from 100 to 105. This would increase the economic security and decentralization of the network. 
 
-### Specification
+## Specification
 
 ### **Part A**
 
 Here we propose a potential framework to manage validator performance through a self-enforced performance standard across the network.
 
-#### **1. Proposed Potential Parameters**
+### **1. Proposed Potential Parameters**
 
 Measure individual validator performance based upon checkpoints signed over a specified time period, performed on a rolling basis at each new checkpoint. Then measure this against a benchmark of the total network performance in that same time period, as detailed below:
 
@@ -57,14 +57,14 @@ Measure individual validator performance based upon checkpoints signed over a sp
 > * Multiply median average by an agreed multiple = Performance Benchmark (PB).
 > * At each checkpoint, calculate the % of checkpoints signed in the MP by individual validators and measure against the PB.
 
-#### **2. Performance Benchmark**
+### **2. Performance Benchmark**
 
 In order to transition validators into the process requiring satisfaction of the proposed potential parameters, there will be a slightly lower benchmark for the first ~2 months, while validators become accustomed to the parameters. 
 
 > * PB1 → 95% of median average of last 700 checkpoints signed by validator set (first 2,800 checkpoints)
 > * PB2 → 98% of median average of last checkpoints signed by validator set (continues thereafter)
 
-#### **3. Validator Performance Dashboard**
+### **3. Validator Performance Dashboard**
 
 If validators adopt this proposal, then a public dashboard would be developed to provide live monitoring of individual and overall validator performance. 
 
@@ -95,7 +95,7 @@ Deficient Validator Process:
 > * If validator in GP <PB after 700 checkpoints → Notice of Deficiency (“NOD”), enters into Grace Period 2 (“GP2”).
 > * If validator in GP2 <PB after 700 checkpoints → Final Notice (“FN”), validator will be unstaked with no further resource. 
 
-Definitions:
+**Definitions:**
 
 The GP is 700 checkpoints long and allows a validator time to bring its performance back above the PB. If the deficiency is corrected within the GP, then there would be no further action.
 
@@ -103,13 +103,11 @@ Failure to become compliant in the GP would result in issuance of a public NOD f
 
 Failure to become compliant in the GP2 would result in issuance of a FN of the intent of the community to implement a forced exit procedure by offboarding the validator from the network by unbonding their stake.
 
-#### **2. Forced Unstaking**
+### **2. Forced Unstaking**
 
 The unstaking of the deficient validator would be done as follows:
 
-Call `ForceUnstake` function in Polygon Commitchain Contract: 
-
-* 0xFa7D2a996aC6350f4b56C043112Da0366a59b74c 
+Call `ForceUnstake` function in the `stakeManager` contract via the 0xFa7D2a996aC6350f4b56C043112Da0366a59b74c multisignature wallet.
 
 ### **Part C**
 
@@ -145,8 +143,9 @@ In order to maintain network integrity and guarantee an active set of 100 effici
 
 As the network has matured and seen wide adoption, it seems warranted to provide new validator slots for added decentralization and security. A conservative increase of 5 slots seems like it would serve as a good starting point.
 
----
+## Backward Compatibility 
 
-### References
+This proposal creates no backward compatibility issues.
 
-[Polygon Forum Discussion](https://forum.polygon.technology/t/pip-4-validator-performance-management/9956/24)
+## Copyright
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

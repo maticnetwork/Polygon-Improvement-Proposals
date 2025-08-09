@@ -63,4 +63,4 @@ The upgrade is not backward compatible, hence will require a hard fork of the He
 Since this hardfork essentially proposes a new transaction type for a span, it must be ensured that the protocol is able to correctly handle old and new span tx types in the network before and after the hardfork.
 
 ## Copyright
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

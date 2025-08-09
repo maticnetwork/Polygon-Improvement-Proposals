@@ -127,4 +127,5 @@ The upgrade is not backward compatible, hence will require a hard fork of the He
 In order to prevent liveness failures in Bor due to the seed not being received in Heimdall in sufficient time, the seed from span N-2 is used instead of span N-1. This is because we start looking for the seed from the end block of the span, which would be too late when we want to commit span N. Similarly, retrospectively looking at 50 spans to uniquely decide upon the next seed author was meant to impartially choose a seed for the algorithm.
 
 ## Copyright
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

@@ -9,11 +9,11 @@ Type: Interface
 Date: 2023-08-02
 ---
 
-### Abstract 
+## Abstract 
 
 The Ethereum researchers have put forth a proposal for a new RPC endpoint called `eth_sendRawTransactionConditional` (implemented as `bor_sendRawTransactionConditional`), which is designed to facilitate the bundled transactions introduced in [EIP-4337](https://eips.ethereum.org/EIPS/eip-4337). This proposal has been successfully implemented in [PR#945](https://github.com/maticnetwork/bor/pull/945) within the Bor client in the `bor` namespace. The plan is to incorporate this endpoint into Bor's Mumbai and Mainnet versions to provide support for bundled transactions.
 
-### Motivation
+## Motivation
 
 EIP-4337 aims to enable account abstraction while maintaining decentralization and censorship resistance. It strives to uphold a level of decentralization comparable to the underlying chain's block production process. The proposal achieves this by dividing validation and execution into separate steps when bundling transactions for submission to an alternative mempool. However, this separation introduces a potential challenge for bundlers working on their L2 transactions.
 
@@ -25,11 +25,11 @@ In this context, knownAccounts refers to a map of accounts with expected storage
 
 The `bor_sendRawTransactionConditional` API is privileged and can only be used if the bundler is connected to the validator (block producer). The conditional transactions will not be broadcasted to the peers, so if the bundler sends the conditional transaction to the sentry node, it will not be executed. There is a bidirectional trust involved between the validator and the bundler. The validator trusts that the bundler is not going to spam him, and the bundler trusts that the validator will not front-run the transaction.
 
-### Specification
+## Specification
 
 The reference implementation in Bor adds support for the `bor_sendRawTransactionConditional` API. It also adds checks to validate the ranges for block height, timestamps, and knownAccounts. These checks are performed at two locations, one at the API level (when the transaction is sent to the Bor client), and other in the worker module (when the transaction gets picked up from the transaction pool for inclusion in the block). The number of the slots/accounts in the knownAccounts structure is expected to be below 1000 entries, else the transaction will be rejected.
 
-#### Sample Requests
+### Sample Requests
 
 ```
 {
@@ -55,7 +55,7 @@ The reference implementation in Bor adds support for the `bor_sendRawTransaction
 curl localhost:8545 -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0", "id": 1, "method":"bor_sendRawTransactionConditional", "params": ["0x2815c17b00...", {"knownAccounts": {"0xadd1": "0xfedc...", "0xadd2": {"0x1111": "0x1234...", "0x2222": "0x4567..."}}, "blockNumberMax": 12345, "blockNumberMin": 12300, "timestampMax": 1700000000, "timestampMin": 1600000000}]}'
 ```
 
-#### Sample Responses
+### Sample Responses
 
 ```
 // A successful response will contain the transaction hash
@@ -80,12 +80,12 @@ curl localhost:8545 -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"
 {"jsonrpc":"2.0","id":1,"error":{"code":-32000,"message":"transaction type not supported"}}
 ```
 
-### Backward Compatibility
+## Backward Compatibility
 
 This PIP has no effect on the consensus rules of the network and aims to add one additional API only which is backward compatible.
 
 
-### Security Considerations
+## Security Considerations
 
 - Requiring validators to check this knownAccounts list before execution could exacerbate the resource usage issue caused by reading large amounts of state. Effectively, a submitter to this endpoint could cause high CPU usage for a validator without ever paying gas, also resulting in denial of service.
     - This is mitigated by adding a condition (which is also mentioned in the spec) that the number of slots/addresses in known accounts should be less than 1000.
@@ -93,15 +93,14 @@ This PIP has no effect on the consensus rules of the network and aims to add one
     - This technical issue already exists without this endpoint, and, in any event, the relayer could just stop using that validator.
 
 
-### References
+## References
 
 - [ERC-4337: Account Abstraction Using Alt Mempool](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4337.md)
 - [Integration API for EIP-4337 bundler with an L2 validator/sequencer](https://notes.ethereum.org/@yoav/SkaX2lS9j)
 
-### Reference Implementation
+## Reference Implementation
 
 - [New RPC endpoint (bor_sendRawTransactionConditional) to support EIP-4337 Bundled Transactions](https://github.com/maticnetwork/bor/pull/945)
 
-### Copyright 
-
-All copyrights and related rights in this work are waived under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
+## Copyright
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

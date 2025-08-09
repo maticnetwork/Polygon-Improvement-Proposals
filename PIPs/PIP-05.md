@@ -9,7 +9,7 @@ Type: Core
 Date: 2023-01-10
 ---
 
-### Motivation
+## Motivation
 
 Block reorgs are possible on the Polygon POS chain as the consensus mechanism bor uses is probabilistic - meaning that finality is eventual and typically based on the number of confirmations layered on top of the block holding your transaction. Although there has been a reduction in the frequency of reorgs with the introduction of the BDN, it is still prevalent and a cause for concern among DApp developers.
 
@@ -17,9 +17,9 @@ We have observed that reorg length is a function of sprint length. If a primary 
 
 Based on the above, we propose a decrease in the sprint length from 64 to 16 blocks. This means that a block producer produces blocks continuously for much lower time as compared with the current 128 sec. This will help a great deal in reducing the frequency and depth of reorgs. This doesn’t affect the total time/no of blocks a validator is producing over a span and hence there would be no change in the rewards overall.
 
-### Specification
+## Specification
 
-#### Calculating what’s the sprint length to use
+### Calculating what’s the sprint length to use
 
 ```go
 func (c *BorConfig) CalculateSprint(number uint64) uint64 {
@@ -47,13 +47,13 @@ func (c *BorConfig) calculateSprintSizeHelper(field map[string]uint64, number ui
 }
 ```
 
-#### Calculating sprint end block
+### Calculating sprint end block
 
 ```go
 isSprintEnd := IsSprintStart(number+1, c.config.Sprint)
 ```
 
-#### New sprint length, producer delay types
+### New sprint length, producer delay types
 
 ```go
 // BorConfig is the consensus engine config for Matic Bor based sealing.
@@ -72,7 +72,7 @@ type BorConfig struct {
 }
 ```
 
-### Test Cases
+## Test Cases
 
 ```go
 func TestSprintLengths(t *testing.T) {
@@ -129,14 +129,10 @@ func TestSprintLengthReorg(t *testing.T) {
 }
 ```
 
-### References
+## References
 
-bor/config.go at 4aa56c543acdea6e441990220efb87f0ff723d98 · maticnetwork/bor · GitHub
-bor/config.go at 4aa56c543acdea6e441990220efb87f0ff723d98 · maticnetwork/bor · GitHub
+* bor/config.go at 4aa56c543acdea6e441990220efb87f0ff723d98 · maticnetwork/bor · GitHub
+* bor/config.go at 4aa56c543acdea6e441990220efb87f0ff723d98 · maticnetwork/bor · GitHub
 
---- 
-
-### Forum discussions:
-
-- [Pre-PIP Discussion: Addressing Reorgs and Gas Spikes 7](https://forum.polygon.technology/t/pre-pip-discussion-addressing-reorgs-and-gas-spikes/10623/25)
-- [Polygon Forum Discussion](https://forum.polygon.technology/t/pip-5-change-in-sprintlength/10874/4)
+## Copyright
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

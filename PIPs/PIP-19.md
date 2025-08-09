@@ -9,7 +9,7 @@ Type: Contracts
 Date: 2023-09-14
 --- 
 
-### Abstract
+## Abstract
 
 This proposal calls for upgrading the native token of the Polygon PoS network from MATIC (`0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0`) to POL (`0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6`) in a method that ensures maximum backward compatibility. The authors recommend this by upgrading the PoS Plasma Bridge Contract (`0x401f6c983ea34274ec46f84d70b31c151321188b`) to a new implementation that:
 
@@ -21,15 +21,15 @@ This proposed upgrade will not change any contracts on the Polygon PoS Network. 
 
 MATIC will still be an operational ERC20 token on Ethereum throughout this phase. Similarly, staking rewards for validators will remain denominated in MATIC until further technical upgrades are proposed and, if welcomed by the community, then implemented.
 
-### Motivation
+## Motivation
 
 The native token is the token used by users of the Polygon PoS network to pay gas fees in order to transact. The present native token is redeemable for MATIC which was set as the native token upon genesis of the Polygon PoS network. Now that POL (`0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6`), the updated successor of MATIC, has been proposed, the authors propose setting it as the native token of the network via an upgrade of the Plasma Bridge in a maximally backward compatible manner.
 
-### Definitions
+## Definitions
 
 Plasma Bridge: Polygon Plasma is the official bridge used to bridge MATIC tokens from Ethereum to Polygon chain. Withdrawals have a required 7-day delay. This delay is designed to allow users to challenge a malicious withdrawal.
 
-### Specification
+## Specification
 
 Upgrade the DepositManagerProxy contract to a new implementation at `0xb00aa68b87256E2F22058fB2Ba3246EEc54A44fc`.
 
@@ -65,19 +65,18 @@ if (_token == registry.contractMap(keccak256("matic"))) {
 
 **INFO: when calling the `processExits` function of the WithdrawManager, we still need to use the MATIC token address as input for now!**
 
-### Backward Compatibility
+## Backward Compatibility
 
 Contracts that expect to receive MATIC from the Plasma bridge on Ethereum may be affected. 
 
-### Security Considerations
+## Security Considerations
 
 This upgrade adjusts a core contract of the Polygon Ecosystem, all proper security procedures including necessary audits will be taken, and should be carefully reviewed prior to activation.
  
-### References
+## References
 
 -   [PIP-17: Polygon Ecosystem Token (POL)](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-17.md)
 -   [PIP-18: Polygon 2.0 Phase 0 - Frontier](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-18.md)
     
-### Copyright
-
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+## Copyright
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

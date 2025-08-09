@@ -9,12 +9,12 @@ Type: Contracts
 Date: 2023-09-14
 ---
  
-### Abstract
+## Abstract
 
 This proposal describes an upgrade to MATIC (0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0) in the form of the Polygon Ecosystem Token (POL). POL is the upgraded native token of Polygon 2.0, along with its accompanying contracts and initial configurations to handle emission management and token migration. POL allows for a one-to-one migration with MATIC with an initial supply of 10 billion POL and yearly emission of 2% that will be equally distributed to stakers and a community treasury contract.
 
 
-### Motivation
+## Motivation
 
 The token of the Polygon PoS chain, MATIC, powered this single chain that allowed Ethereum to scale during times of high network congestion. Polygon 2.0 is the next iteration in the Ethereum scaling journey, with zero-knowledge proofs (“zk”) facilitating the expansion of Ethereum block-space across a multitude of L2 chains whilst also inheriting its security.  
 
@@ -24,9 +24,9 @@ POL represents a next-generation token able to accommodate an ecosystem of zk-ba
 * Community ownership, and
 * Governance.
 
-### Specification
+## Specification
 
-#### POL Token Contract
+### POL Token Contract
 
 A token contract, POL, is proposed, broadly based on the MIT-licensed OpenZeppelin ERC20 implementations which provide support for the default ERC20 standard, along with some non-standard functions for allowance modifications. The implementation also provides support for EIP-2612: Signature-Based Permit Approvals.
 
@@ -118,7 +118,7 @@ contract PolygonEcosystemToken is ERC20Permit, AccessControlEnumerable, IPolygon
 }
 ```
 
-#### Migration Contract
+### Migration Contract
 
 The migration contract will accept two addresses, one for the MATIC token and one for the POL token respectively.
 
@@ -233,11 +233,11 @@ contract PolygonMigration is Ownable2StepUpgradeable, IPolygonMigration {
 }
 ```
 
-#### Emission Manager Contract
+### Emission Manager Contract
 
 The emission manager contract has the exclusive ability to mint new POL tokens and is implemented to distribute the tokens as follows:
 
-#### Validator Rewards 
+### Validator Rewards 
 
 Emissions are minted to the PoS staking contract (0x5e3ef299fddf15eaa0432e6e66473ace8c13d908) for staking rewards. After minting the appropriate amount of POL, the migration contract will be used to ensure that staking rewards continue to be paid out in MATIC, maximizing backward compatibility.
 
@@ -348,26 +348,25 @@ contract DefaultEmissionManager is Ownable2StepUpgradeable, IDefaultEmissionMana
     uint256[48] private __gap;
 }
 ```
-### Backward Compatibility
+## Backward Compatibility
 
 This proposal does not change any active systems on either the Polygon PoS or Polygon zkEVM networks. All existing contracts will function as previously designed.
 
-### Security Considerations
+## Security Considerations
 
 In the event of an exploit, to prevent arbitrary amounts of POL being minted, there is a variable hard cap on the maximum amount of tokens allowed to be minted per second. It is initialized at a maximum allowed number of 10 POL to be minted per second.
 
 Due to the size, complexity, and importance of the proposed POL contracts, there will be several internal and external code audits to ensure the security of the implementation detailed above.
 
-### References
+## References
 
 * [POL Whitepaper](https://polygon.technology/papers/pol-whitepaper/)
 * [ERC-20: Token Standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md/)
 * [EIP-2612: Permit Extension for EIP-20 Signed Approvals](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2612.md)
 
-### Implementation 
+## Implementation 
 
 * [https://github.com/0xPolygon/pol-token](https://github.com/0xPolygon/pol-token) 
 
-### Copyright
-
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+## Copyright
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).

@@ -9,14 +9,14 @@ Type: Contracts
 Date: 2024-12-17 
 ---
 
-### Abstract
+## Abstract
 
 This proposal seeks to replace all rights of the legacy multisigs, amongst those the ability to upgrade staking and bridge smart contracts of the Polygon PoS chain, with the Protocol Council multisig contracts introduced in [PIP-29](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-29.md), which consist of a set of 2 Safe multisig smart contracts:
 
 * Protocol Council Standard route, requiring 7 of 13 consensus of the Protocol Council with a 10-day timelock.
 * Protocol Council Emergency route, requiring 10 of 13 consensus of the Protocol Council without a timelock.
 
-### Motivation
+## Motivation
 
 This proposal aims to improve the security and efficiency of Polygon PoS’ Ethereum mainnet contracts’ upgradeability and operational administrative rights by facilitating a more secure, transparent, and open governance process.
 
@@ -29,7 +29,7 @@ By transferring ownership to the Protocol Council, the community can ensure that
 * Two pathways for upgrades, i.e., emergency and regular, enhance efficiency and bolster security.
 * The transition from legacy multisigs to the Protocol Council will enable more transparent community participation in regular changes by using the staked token holder signaling framework, as defined in [PIP-50](https://github.com/maticnetwork/Polygon-Improvement-Proposals/blob/main/PIPs/PIP-50.md).
 
-### Definitions:
+## Definitions:
 
 **Operational Responsibilities:**
 
@@ -58,11 +58,11 @@ Specific privileges are assigned to addresses within a contract to enable restri
 
 A mechanism that delays the execution of proposed changes to allow for community review and the ability to exit the system if needed. A timelock is applied to the Standard Route changes managed by the Protocol Council.
 
-### Specification
+## Specification
 
 Below, we set out how the existing Polygon PoS L1 contracts are managed between the Protocol Council Standard and Emergency upgrade paths managed by two separate multisig contracts.
 
-#### Multisig details
+### Multisig details
 
 |Name|Signature Policy|Timelock (days)|Address|Network|
 | --- | --- | --- | --- | --- |
@@ -73,7 +73,7 @@ Below, we set out how the existing Polygon PoS L1 contracts are managed between 
 |Protocol Council Standard|7 of 13|10|TBD|Polygon PoS|
 |Protocol Council Emergency|10 of 13|-|TBD|Polygon PoS|
 
-#### Role-based Contract Segmentation
+### Role-based Contract Segmentation
 
 Due to their differing security profiles, administrative rights and operational responsibilities are clearly distinguished. Administrative rights, which involve upgradeability, are critical for ensuring the system's security, and they are managed by a 10 of 13 signature policy.
 
@@ -81,7 +81,7 @@ Operational responsibilities, such as real-time processes and executing essentia
 
 Below, we show how each contract of the Polygon PoS chain will be managed, explicitly referring to its operational and administrative functions.
 
-#### Contract Upgradeability Ownership [Ethereum]
+### Contract Upgradeability Ownership [Ethereum]
 
 The following smart contracts are currently owned by the Legacy Timelock, whose proposer and executor roles are assigned to the Legacy Multisig `(0xFa…b74c)`.
 
@@ -115,7 +115,7 @@ Protocol Council 10 of 13 Multisig multisig will also assume control over the ad
 | `WithdrawManager`   | `updateExitPeriod` - Update `_exit period_`  |
 | `StakeManager`      | `migrateValidatorsData` <br> `insertSigners` |
 
-#### Contract Upgradeability Ownership [Polygon PoS]
+### Contract Upgradeability Ownership [Polygon PoS]
 
 The following smart contracts are currently owned by the Legacy Multisig on the Polygon PoS Network.
 
@@ -126,7 +126,7 @@ The Protocol Council 10 of 13 Multisig will become the sole owner of the followi
 | `ChildChainManagerProxy`   | `0xA6FA4fB5f76172d178d61B04b0ecd319C5d1C0aa`    | Proxy \| ProxyAdmin          | Responsible for managing child contracts on PoS Chain. |
 | `EIP1559Burn`              | `0x7A8ed27F4C30512326878652d20fC85727401854`    | Proxy \| ProxyAdmin          | Related to EIP1559Burn.                             |
 
-#### Contract Roles [Ethereum]
+### Contract Roles [Ethereum]
 
 In addition to the upgradeability rights, some of these contracts, which have Roles library enabled and ownerships, do have different assigned roles to the Legacy Multisig.
 
@@ -158,11 +158,11 @@ These roles will be transferred to the Protocol Council 7 of 13 Multisig with a 
 |`ChildChain`|`Ownership`|`0xD9c7C4ED4B66858301D0cb28Cc88bf655Fe34861`|
 |`RootSetter`|`Ownership`|`0xEb1CD9e44aB6BfE5a55EE96c468086e51B1B873a`|
 
-### Backward Compatibility
+## Backward Compatibility
 
 This proposal is backward compatible in so far as the upgradeability of specified contracts is transferred to the Protocol Council.
 
-### Security Considerations
+## Security Considerations
 
 The dual-pathway and contract segmentation based on function ensures non-overlapping execution paths for routine and critical actions, preserving operational integrity and security.
 
@@ -174,7 +174,7 @@ An example of this can be seen with the upgradeability rights of the GovernanceP
 
 In contrast, the Emergency Multisig increases the quorum to 10 out of 13 signers (77%). This increases resistance to collusion for critical actions, ensuring that high-impact decisions require broader agreement among signers. The proposal balances governance agility with enhanced security and key redundancy by maintaining a familiar quorum quotient for routine actions and introducing stricter requirements for emergencies.
 
-### Copyright
+## Copyright
 
-All copyrights and related rights in this work are waived under CC0 1.0 Universal.
+All copyrights and related rights in this work are waived under [CCO 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
